@@ -1,0 +1,62 @@
+﻿呼ぶ呼びます呼ばない呼びません呼んだ呼びました呼ばなかった呼びませんでした呼んで呼びまして呼ばないで呼びませんで呼ばなくて呼んでいる呼んでいます呼んでいない呼んでいません呼ぼう呼びましょう呼ぶまい呼びますまい呼べ呼びなさい呼ぶな呼びなさるな呼んでください呼ばないでください呼べば呼ばなければ呼んだら呼びましたら呼ばなかったら呼びませんでしたら呼べる呼べます呼べない呼べません呼ばれる呼ばれます呼ばれない呼ばれません呼ばせる呼ばせます呼ばせない呼ばせません呼ばせられる呼ばせられます呼ばせられない呼ばせられません呼ばねば呼ばぬ
+呼ぶ；　；　呼ぶ
+呼びます； [polite]　　；　呼ぶ
+呼ばない；　[negative]　；　呼ぶ
+呼びません；　[polite] [negative]　；　呼ぶ
+呼んだ；　[past] ；　呼ぶ
+呼びました；　[polite] [past]　；　呼ぶ
+呼ばなかった；　　[negative] [past] ；　呼ぶ
+呼びませんでした；　[polite] [negative] [past]　；　呼ぶ
+呼んで；[-te]　；　呼ぶ
+呼びまして；　[polite] [-te]　　；　呼ぶ
+呼ばないで； [negative] [-te]　；　呼ぶ
+呼びませんで； [polite] [negative] [-te]；　呼ぶ
+呼ばなくて； [negative] [-te]　；　呼ぶ
+呼んで； [-te]　；　呼ぶ
+いる；　；　いる
+呼んで； [-te]　；　呼ぶ
+います； [polite]　；　いる
+呼んで； [-te]　；　呼ぶ
+いない； [negative]　；　いる
+呼んで； [-te]　；　呼ぶ
+いません； [polite] [negative]　；　いる
+呼ぼう； [volitional]　；　呼ぶ
+呼びましょう； [polite] [volitional]　；　呼ぶ
+呼ぶ；   ； 呼ぶ
+まい； ；　まい
+呼びます； [polite]　；　呼ぶ
+まい； 　；　まい
+呼べ； [imperative]　；　呼ぶ
+呼びなさい； [imperative]　；　呼ぶ
+呼ぶ；　；　呼ぶ
+な；　；　な
+呼びなさる； [imperative]　；　呼ぶ
+な；　；　な
+呼んで； [-te]　；　呼ぶ
+ください； [imperative]　；　くださる
+呼ばないで； [negative] [-te]　；　呼ぶ
+ください； [imperative]　；　くださる
+呼べば； [-ba]　；　呼ぶ
+呼ばなければ； [negative] [-ba]　；　呼ぶ
+呼んだら； [-tara]　；　呼ぶ
+呼びましたら； [polite] [-tara]　；　呼ぶ
+呼ばなかったら； [negative] [-tara]　；　呼ぶ
+呼びませんでしたら； [polite] [negative] [-tara]　；　呼ぶ
+呼べる；　[potential] ；　呼ぶ
+呼べます； [potential] [polite]　；　呼ぶ
+呼べない； [potential] [negative]　；　呼ぶ
+呼べません； [potential] [polite] [negative]　；　呼ぶ
+呼ばれる；　 [passive]　； 呼ぶ
+呼ばれます； [passive] [polite]　； 呼ぶ
+呼ばれない； [passive] [negative]　；呼ぶ
+呼ばれません； [passive] [polite] [negative]　； 呼ぶ
+呼ばせる； [causative]　；　呼ぶ
+呼ばせます； [causative] [polite]；　呼ぶ
+呼ばせない； [causative] [negative]　；　呼ぶ
+呼ばせません； [causative] [polite] [negative]　；　呼ぶ
+呼ばせられる； [causative] [passive]　；　呼ぶ
+呼ばせられます； [causative] [passive] [polite] 　；　呼ぶ
+呼ばせられない； [causative] [passive] [negative]　；　呼ぶ
+呼ばせられません； [causative] [passive] [polite] [negative]　；　呼ぶ
+呼ばねば;  [negative] [-ba]; 呼ぶ
+呼ばぬ; [negative]; 呼ぶ

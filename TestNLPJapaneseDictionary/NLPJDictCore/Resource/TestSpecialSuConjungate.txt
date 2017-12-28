@@ -1,0 +1,58 @@
+﻿する　します しない しません した　しました　しなかった　しませんでした　して　しまして　しないで　しませんで　しなくて　している　しています　していない　していません　しよう　しましょう　するまい　しますまい　しろ　せよ　しなさい　するな　しなさるな　してください　しないでください　すれば　しなければ しましたら　しなかったら　しませんでしたら　される されます　されない されません　させる させます　させない させません　させられる させられます　させられない させられません したら せず
+する；　；　する
+します； [polite]　　；　する
+しない; [negative]; する
+しません; [polite] [negative]; する
+した；　[past] ；　する
+しました；　[polite] [past]　；　する
+しなかった；　　[negative] [past] ；　する
+しませんでした；　[polite] [negative] [past]　；　する
+して；[-te]　；　する
+しまして；　[polite] [-te]　　；　する
+しないで； [negative] [-te]　；　する
+しませんで； [polite] [negative] [-te]　；　する
+しなくて； [negative] [-te]　；　する
+して； [-te]　；　する
+いる；　；　いる
+して； [-te]　；　する
+います； [polite]　；　いる
+して； [-te]　；　する
+いない； [negative]　；　いる
+して； [-te]　；　する
+いません； [polite] [negative]　；　いる
+しよう； [volitional]　；　する
+しましょう； [polite] [volitional]　；　する
+する； ；　する
+まい； ；　まい
+します； [polite]　；　する
+まい； 　；　まい
+しろ； [imperative]　；　する
+せよ； [imperative]　；　する
+しなさい； [imperative]　；　する
+する；　；　する
+な；　；　な
+しなさる； [imperative]　；　する
+な；　；　な
+して； [-te]　；　する
+ください； [imperative]　；　くださる
+しないで； [negative] [-te]　；　する
+ください； [imperative]　；　くださる
+すれば； [-ba]　；　する
+しなければ； [negative] [-ba]　；　する
+しましたら； [polite] [-tara]　；　する
+しなかったら； [negative] [-tara]　；　する
+しませんでしたら； [polite] [negative] [-tara]　；　する
+される； [passive]　；　する
+されます; [passive] [polite] ; する
+されない； [passive] [negative]　；　する
+されません; [passive] [polite] [negative] ; する
+させる； [causative] ；　する
+させます; [causative] [polite] ; する
+させない； [causative] [negative]　；　する
+させません; [causative] [polite] [negative]　；　する
+させられる； [causative] [passive]　；　する
+させられます; [causative] [passive] [polite] ; する
+させられない； [causative] [passive] [negative]　；　する
+させられません; [causative] [passive] [polite] [negative]　; する
+したら; [-tara] ; する
+せず; [negative]; する

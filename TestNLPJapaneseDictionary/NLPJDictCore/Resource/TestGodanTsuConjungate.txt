@@ -1,0 +1,62 @@
+﻿断つ断ちます断たない断ちません断った断ちました断たなかった断ちませんでした断って断ちまして断たないで断ちませんで断たなくて断っている断っています断っていない断っていません断とう断ちましょう断つまい断ちますまい断て断ちなさい断つな断ちなさるな断ってください断たないでください断てば断たなければ断ったら断ちましたら断たなかったら断ちませんでしたら断てる断てます断てない断てません断たれる断たれます断たれない断たれません断たせる断たせます断たせない断たせません断たせられる断たせられます断たせられない断たせられません断たねば断たぬ
+断つ；　；　断つ
+断ちます； [polite]　　；　断つ
+断たない；　[negative]　；　断つ
+断ちません；　[polite] [negative]　；　断つ
+断った；　[past] ；　断つ
+断ちました；　[polite] [past]　；　断つ
+断たなかった；　　[negative] [past] ；　断つ
+断ちませんでした；　[polite] [negative] [past]　；　断つ
+断って；[-te]　；　断つ
+断ちまして；　[polite] [-te]　　；　断つ
+断たないで； [negative] [-te]　；　断つ
+断ちませんで； [polite] [negative] [-te]；　断つ
+断たなくて； [negative] [-te]　；　断つ
+断って； [-te]　；　断つ
+いる；　；　いる
+断って； [-te]　；　断つ
+います； [polite]　；　いる
+断って； [-te]　；　断つ
+いない； [negative]　；　いる
+断って； [-te]　；　断つ
+いません； [polite] [negative]　；　いる
+断とう； [volitional]　；　断つ
+断ちましょう； [polite] [volitional]　；　断つ
+断つ；   ； 断つ
+まい； ；　まい
+断ちます； [polite]　；　断つ
+まい； 　；　まい
+断て； [imperative]　；　断つ
+断ちなさい； [imperative]　；　断つ
+断つ；　；　断つ
+な；　；　な
+断ちなさる； [imperative]　；　断つ
+な；　；　な
+断って； [-te]　；　断つ
+ください； [imperative]　；　くださる
+断たないで； [negative] [-te]　；　断つ
+ください； [imperative]　；　くださる
+断てば； [-ba]　；　断つ
+断たなければ； [negative] [-ba]　；　断つ
+断ったら； [-tara]　；　断つ
+断ちましたら； [polite] [-tara]　；　断つ
+断たなかったら； [negative] [-tara]　；　断つ
+断ちませんでしたら； [polite] [negative] [-tara]　；　断つ
+断てる；　[potential] ；　断つ
+断てます； [potential] [polite]　；　断つ
+断てない； [potential] [negative]　；　断つ
+断てません； [potential] [polite] [negative]　；　断つ
+断たれる；　 [passive]　； 断つ
+断たれます； [passive] [polite]　； 断つ
+断たれない； [passive] [negative]　；断つ
+断たれません； [passive] [polite] [negative]　； 断つ
+断たせる； [causative]　；　断つ
+断たせます； [causative] [polite]；　断つ
+断たせない； [causative] [negative]　；　断つ
+断たせません； [causative] [polite] [negative]　；　断つ
+断たせられる； [causative] [passive]　；　断つ
+断たせられます； [causative] [passive] [polite] 　；　断つ
+断たせられない； [causative] [passive] [negative]　；　断つ
+断たせられません； [causative] [passive] [polite] [negative]　；　断つ
+断たねば;  [negative] [-ba]; 断つ
+断たぬ; [negative]; 断つ

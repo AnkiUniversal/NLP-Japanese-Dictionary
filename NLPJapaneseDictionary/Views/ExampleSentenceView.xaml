@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="NLPJapaneseDictionary.Views.ExampleSentenceView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NLPJapaneseDictionary.Views"
+             xmlns:data="clr-namespace:NLPJDict.Models" 
+             mc:Ignorable="d" 
+             x:Name="userControl"
+             Background="White"
+             Foreground="Black"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Popup IsOpen="False" 
+           Placement="MousePoint"
+           AllowsTransparency="True" 
+           x:Name="popup"
+           StaysOpen="False">
+        <Border BorderThickness="1" BorderBrush="{StaticResource OceanBlue}" Padding="10,10,10,0"
+                Background="{Binding Background,ElementName=userControl,Mode=OneWay}">
+            <ListView x:Name="sentenceListView" 
+            Background="Transparent"
+            BorderThickness="0"
+			HorizontalAlignment="Stretch"  			
+			VerticalAlignment="Stretch"                 
+            ScrollViewer.VerticalScrollBarVisibility="Auto"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            VirtualizingPanel.IsVirtualizing="True"
+            VirtualizingPanel.ScrollUnit="Pixel"
+			AutomationProperties.AutomationId="SentenceListView"
+			AutomationProperties.Name="Example Sentences"
+            ItemContainerStyle="{StaticResource SimpleListViewItem}"
+			ItemsSource="{Binding}">
+                <ListView.ItemTemplate>
+                    <DataTemplate  DataType="{x:Type data:ExampleSentenceModel}"  >
+                        <StackPanel Orientation="Vertical"  Margin="0,0,0,15">
+                            <TextBox Text="{Binding Japanese, Mode=OneWay}" 
+                                     Background="Transparent" BorderThickness="0" 
+                                     IsReadOnly="True" FontSize="20" 
+                                     Foreground="{Binding Foreground,ElementName=userControl,Mode=OneWay}"
+                                     HorizontalAlignment="Left"
+                                     TextAlignment="Left" 
+                                     TextWrapping="Wrap"                                      />
+                            <TextBox Text="{Binding English, Mode=OneWay}"
+                                     Foreground="{Binding Foreground,ElementName=userControl,Mode=OneWay}"
+                                     HorizontalAlignment="Left"
+                                     Background="Transparent" 
+                                     BorderThickness="0" 
+                                     IsReadOnly="True" 
+                                     FontSize="20" 
+                                     TextAlignment="Left"   
+                                     TextWrapping="Wrap" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Border>
+    </Popup>
+</UserControl>

@@ -1,0 +1,62 @@
+﻿死ぬ死にます死なない死にません死んだ死にました死ななかった死にませんでした死んで死にまして死なないで死にませんで死ななくて死んでいる死んでいます死んでいない死んでいません死のう死にましょう死ぬまい死にますまい死ね死になさい死ぬな死になさるな死んでください死なないでください死ねば死ななければ死んだら死にましたら死ななかったら死にませんでしたら死ねる死ねます死ねない死ねません死なれる死なれます死なれない死なれません死なせる死なせます死なせない死なせません死なせられる死なせられます死なせられない死なせられません死なねば死なぬ
+死ぬ；　；　死ぬ
+死にます； [polite]　　；　死ぬ
+死なない；　[negative]　；　死ぬ
+死にません；　[polite] [negative]　；　死ぬ
+死んだ；　[past] ；　死ぬ
+死にました；　[polite] [past]　；　死ぬ
+死ななかった；　　[negative] [past] ；　死ぬ
+死にませんでした；　[polite] [negative] [past]　；　死ぬ
+死んで；[-te]　；　死ぬ
+死にまして；　[polite] [-te]　　；　死ぬ
+死なないで； [negative] [-te]　；　死ぬ
+死にませんで； [polite] [negative] [-te]；　死ぬ
+死ななくて； [negative] [-te]　；　死ぬ
+死んで； [-te]　；　死ぬ
+いる；　；　いる
+死んで； [-te]　；　死ぬ
+います； [polite]　；　いる
+死んで； [-te]　；　死ぬ
+いない； [negative]　；　いる
+死んで； [-te]　；　死ぬ
+いません； [polite] [negative]　；　いる
+死のう； [volitional]　；　死ぬ
+死にましょう； [polite] [volitional]　；　死ぬ
+死ぬ；   ； 死ぬ
+まい； ；　まい
+死にます； [polite]　；　死ぬ
+まい； 　；　まい
+死ね； [imperative]　；　死ぬ
+死になさい； [imperative]　；　死ぬ
+死ぬ；　；　死ぬ
+な；　；　な
+死になさる； [imperative]　；　死ぬ
+な；　；　な
+死んで； [-te]　；　死ぬ
+ください； [imperative]　；　くださる
+死なないで； [negative] [-te]　；　死ぬ
+ください； [imperative]　；　くださる
+死ねば； [-ba]　；　死ぬ
+死ななければ； [negative] [-ba]　；　死ぬ
+死んだら； [-tara]　；　死ぬ
+死にましたら； [polite] [-tara]　；　死ぬ
+死ななかったら； [negative] [-tara]　；　死ぬ
+死にませんでしたら； [polite] [negative] [-tara]　；　死ぬ
+死ねる；　[potential] ；　死ぬ
+死ねます； [potential] [polite]　；　死ぬ
+死ねない； [potential] [negative]　；　死ぬ
+死ねません； [potential] [polite] [negative]　；　死ぬ
+死なれる；　 [passive]　； 死ぬ
+死なれます； [passive] [polite]　； 死ぬ
+死なれない； [passive] [negative]　；死ぬ
+死なれません； [passive] [polite] [negative]　； 死ぬ
+死なせる； [causative]　；　死ぬ
+死なせます； [causative] [polite]；　死ぬ
+死なせない； [causative] [negative]　；　死ぬ
+死なせません； [causative] [polite] [negative]　；　死ぬ
+死なせられる； [causative] [passive]　；　死ぬ
+死なせられます； [causative] [passive] [polite] 　；　死ぬ
+死なせられない； [causative] [passive] [negative]　；　死ぬ
+死なせられません； [causative] [passive] [polite] [negative]　；　死ぬ
+死なねば;  [negative] [-ba]; 死ぬ
+死なぬ; [negative]; 死ぬ

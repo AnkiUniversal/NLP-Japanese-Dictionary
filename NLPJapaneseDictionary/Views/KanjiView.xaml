@@ -1,0 +1,148 @@
+﻿<UserControl x:Class="NLPJapaneseDictionary.Views.KanjiView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NLPJapaneseDictionary.Views"
+             x:Name="userControl"    
+             Background="White"
+             Foreground="Black"
+             xmlns:DataBindingConverters="clr-namespace:NLPJDict.ConvertClasses.DataBindingConverters"
+             mc:Ignorable="d" >
+    
+    <UserControl.Resources>
+        <DataBindingConverters:AnimationSliderTooltipConverter x:Key="AnimationSliderTooltipConverter"/>
+        <DataBindingConverters:PriorityToColor x:Key="PriorityToColor"/>
+        <Thickness x:Key="FirstColumnSectionMargin">0,5,0,0</Thickness>
+        <Thickness x:Key="SecondColumnSectionMargin">0,5,0,0</Thickness>
+        
+    </UserControl.Resources>
+
+    <Popup IsOpen="False" 
+           Placement="MousePoint"                     
+           x:Name="popup"
+           AllowsTransparency="True" 
+           StaysOpen="False">
+        <Border BorderThickness="1" 
+                Padding="15,15,15,10"
+                BorderBrush="{StaticResource OceanBlue}" 
+                Background="{Binding Background,ElementName=userControl,Mode=OneWay}">
+            <ScrollViewer  VerticalScrollBarVisibility="Auto"              
+                       VirtualizingPanel.ScrollUnit="Pixel"
+                       VerticalAlignment="Stretch"
+                       HorizontalAlignment="Stretch"
+                       x:Name="scrollViewer"
+                       HorizontalScrollBarVisibility="Disabled">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Vertical">
+                        <TextBox BorderThickness="0" Background="Transparent" IsReadOnly="True" 
+                             x:Name="kanjiElement" Text="Kanji" FontSize="40" TextAlignment="Center"  
+                                 Foreground="{Binding Foreground,ElementName=userControl,Mode=OneWay}"/>
+
+                        <Border Margin="{StaticResource FirstColumnSectionMargin}" x:Name="frequencyRankBorder" Width="90" HorizontalAlignment="Stretch" Padding="0">
+                            <TextBlock x:Name="frequencyRank" Text="Frequency" TextAlignment="Center" VerticalAlignment="Center" Foreground="White"
+                                               TextWrapping="Wrap" FontSize="14"/>
+                        </Border>
+
+                        <StackPanel Margin="{StaticResource FirstColumnSectionMargin}" x:Name="jlptStack" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock TextAlignment="Left" Text="Old JLPT: N" FontSize="14" TextWrapping="Wrap"  />
+                            <TextBlock TextAlignment="Left" Text="5" x:Name="oldJlpt" FontSize="14" TextWrapping="Wrap" />
+                        </StackPanel>
+
+                        <StackPanel Margin="{StaticResource FirstColumnSectionMargin}" x:Name="strokCountStack" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock TextAlignment="Left" Text="Strokes:" Margin="0,0,4,0" FontSize="14" TextWrapping="Wrap" />
+                            <TextBlock TextAlignment="Left" Text="5" x:Name="strokCount" FontSize="14" TextWrapping="Wrap" />
+                        </StackPanel>
+
+                        <StackPanel Margin="0,10,0,0" x:Name="radicalListStack" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock TextAlignment="Center" FontWeight="SemiBold" Text="PARTS" Margin="0,5,5,0" FontSize="20"  TextWrapping="Wrap" />
+                            <TextBlock TextAlignment="Center" Text="5" x:Name="radicalList" FontSize="20"  TextWrapping="Wrap" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" x:Name="variantStack">
+                            <TextBlock  Text="VARIANTS" FontWeight="SemiBold" 
+                       FontSize="20" Margin="0,5,0,0" TextAlignment="Center" TextWrapping="Wrap"/>
+                            <TextBox x:Name="variants"  Text="variants" IsReadOnly="True"  BorderThickness="0" Background="Transparent"
+                                     Foreground="{Binding Foreground,ElementName=userControl,Mode=OneWay}"
+                                     FontSize="20" TextAlignment="Center" TextWrapping="Wrap" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" x:Name="vietnamStack" Margin="0,5,0,0">
+                            <TextBlock  Text="VIETNAMESE" FontWeight="SemiBold" 
+                       FontSize="20" Margin="{StaticResource FirstColumnSectionMargin}" TextAlignment="Center"  TextWrapping="Wrap" />
+                            <TextBox x:Name="vietnam"  Text="vietnam" BorderThickness="0" Background="Transparent" IsReadOnly="True"
+                       FontSize="18" TextAlignment="Center"  TextWrapping="Wrap" Foreground="{Binding Foreground,ElementName=userControl,Mode=OneWay}"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" x:Name="koreaStack">
+                            <TextBlock  Text="KOREA" FontWeight="SemiBold" 
+                       FontSize="20" Margin="{StaticResource FirstColumnSectionMargin}" TextAlignment="Center"  TextWrapping="Wrap" />
+                            <TextBox x:Name="korea"  Text="korea" BorderThickness="0" Background="Transparent" IsReadOnly="True"
+                       FontSize="18" TextAlignment="Center"  TextWrapping="Wrap" Foreground="{Binding Foreground,ElementName=userControl,Mode=OneWay}"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2">
+                        <StackPanel Orientation="Vertical"  x:Name="engMeanStack">
+                            <TextBlock  Text="MEANINGS" FontWeight="SemiBold" 
+                       FontSize="20" Margin="{StaticResource SecondColumnSectionMargin}" TextAlignment="Left" TextWrapping="Wrap"/>
+                            <TextBox x:Name="englishMean"  Text="MEANINGS" BorderThickness="0" Background="Transparent" IsReadOnly="True"
+                                     Foreground="{Binding Foreground,ElementName=userControl,Mode=OneWay}"
+                       FontSize="18" TextAlignment="Left"  TextWrapping="Wrap" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" x:Name="radicalNameStack">
+                            <TextBlock  Text="RADICAL NAME" FontWeight="SemiBold" 
+                       FontSize="20" Margin="{StaticResource SecondColumnSectionMargin}" TextAlignment="Left" TextWrapping="Wrap"/>
+                            <TextBox x:Name="radicalName"  Text="radical name" BorderThickness="0" Background="Transparent" IsReadOnly="True"
+                                     Foreground="{Binding Foreground,ElementName=userControl,Mode=OneWay}"
+                       FontSize="18" TextAlignment="Left"  TextWrapping="Wrap" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" x:Name="kunStack">
+                            <TextBlock  Text="KUNYOMI" FontWeight="SemiBold" 
+                       FontSize="20" Margin="{StaticResource SecondColumnSectionMargin}" TextAlignment="Left"  TextWrapping="Wrap"/>
+                            <TextBox x:Name="kunyomi"  Text="kunyomi" BorderThickness="0" Background="Transparent" IsReadOnly="True"
+                       FontSize="18" TextAlignment="Left" TextWrapping="Wrap" Foreground="{Binding Foreground,ElementName=userControl,Mode=OneWay}"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" x:Name="onStack">
+                            <TextBlock  Text="ONYOMI" FontWeight="SemiBold" 
+                       FontSize="20" Margin="{StaticResource SecondColumnSectionMargin}" TextAlignment="Left"  TextWrapping="Wrap" />
+                            <TextBox x:Name="onyomi"  Text="onyomi" BorderThickness="0" Background="Transparent" IsReadOnly="True"
+                       FontSize="18" TextAlignment="Left"  TextWrapping="Wrap" Foreground="{Binding Foreground,ElementName=userControl,Mode=OneWay}"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" x:Name="nanoriStack">
+                            <TextBlock  Text="NANORI" FontWeight="SemiBold" 
+                       FontSize="20" Margin="{StaticResource SecondColumnSectionMargin}" TextAlignment="Left" TextWrapping="Wrap"/>
+                            <TextBox x:Name="nanori"  Text="nanori" BorderThickness="0" Background="Transparent" IsReadOnly="True"
+                       FontSize="18" TextAlignment="Left"  TextWrapping="Wrap" Foreground="{Binding Foreground,ElementName=userControl,Mode=OneWay}"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" x:Name="pinyinStack">
+                            <TextBlock  Text="PINYIN" FontWeight="SemiBold" 
+                       FontSize="20" Margin="{StaticResource SecondColumnSectionMargin}" TextAlignment="Left"  TextWrapping="Wrap" />
+                            <TextBox x:Name="pinyin"  Text="pinyin" BorderThickness="0" Background="Transparent" IsReadOnly="True"
+                       FontSize="18" TextAlignment="Left"  TextWrapping="Wrap" Foreground="{Binding Foreground,ElementName=userControl,Mode=OneWay}"/>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                    <WrapPanel x:Name="kanjiImageView" Grid.Row="1" Grid.ColumnSpan="3" Margin="10" >
+                   
+                    </WrapPanel>
+                </Grid>
+            </ScrollViewer>
+        </Border>
+    </Popup>
+</UserControl>

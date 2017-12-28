@@ -1,0 +1,206 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sw="clr-namespace:NLPJapaneseDictionary.StyleableWindow" 
+                    xmlns:local="clr-namespace:NLPJapaneseDictionary.Styles">
+
+    <SolidColorBrush x:Key="WindowColor" Color="Green"/>
+    <SolidColorBrush x:Key="WindowBackColor" Color="#FF2B2B2B"/>
+    <SolidColorBrush x:Key="WindowForeColor" Color="White"/>
+    <SolidColorBrush x:Key="WindowForeHighlightColor" Color="White"/>
+    <SolidColorBrush x:Key="WindowButtonColor" Color="Transparent"/>
+    <SolidColorBrush x:Key="WindowButtonOverColor" Color="DarkGray"/>
+    <SolidColorBrush x:Key="WindowButtonPressedColor" Color="Gray"/>
+
+
+    <sw:WindowMinimizeCommand x:Key="MinimizeCommand"></sw:WindowMinimizeCommand>
+    <sw:WindowMaximizeCommand x:Key="MaximizeCommand"></sw:WindowMaximizeCommand>
+    <sw:WindowCloseCommand x:Key="CloseCommand"></sw:WindowCloseCommand>
+
+    <Style TargetType="{x:Type Button}" x:Key="WindowButton">
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Width" Value="35"/>
+        <Setter Property="Background" Value="{StaticResource WindowButtonColor}"/>
+        <Setter Property="Foreground" Value="{StaticResource WindowForeColor}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" Padding="0">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{StaticResource WindowButtonColor}"/>
+                            <Setter Property="Foreground" Value="{StaticResource WindowColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource WindowButtonOverColor}"/>
+                            <Setter Property="Foreground" Value="{StaticResource WindowForeHighlightColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource WindowButtonPressedColor}"/>
+                            <Setter Property="Foreground" Value="{StaticResource WindowForeColor}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Image}" x:Key="WindowIcon">
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="Width" Value="25"/>
+    </Style>
+
+    <Path x:Key="CloseButtonPath" x:Shared="false"
+    		Data="M1,1 L7.5,7.334 M7.5,1 L1,7.334"
+    		Stretch="None"
+    		Stroke="White"
+    		StrokeEndLineCap="Round"
+    		StrokeStartLineCap="Round"
+    		StrokeThickness="1" RenderTransformOrigin="0.5, 0.5">
+        <Path.RenderTransform>
+            <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+        </Path.RenderTransform>
+    </Path>
+
+    <Path x:Key="MaximizeButtonPath" x:Shared="false"
+    		Data="M1,1 L1,7.5 L7.5,7.5 L7.5,1 L1,1 L1,-0.5 L7.5,-0.5"
+    		Stretch="None"
+    		Stroke="White"
+    		StrokeEndLineCap="Square"
+    		StrokeStartLineCap="Square"
+    		StrokeThickness="1.5" RenderTransformOrigin="0.5, 0.5">
+        <Path.RenderTransform>
+            <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
+        </Path.RenderTransform>
+    </Path>
+
+    <Path x:Key="RestoreButtonPath" x:Shared="false"          
+    		Data="M1,1 L1,3.75 L3.75,3.75 L3.75,1 L1,1 M2.375,2.375 L2.375,5.125 L-0.375,5.125 L-0.375,2.375 L2.375,2.375"
+    		Stretch="None"
+    		Stroke="White"
+    		StrokeEndLineCap="Square"
+    		StrokeStartLineCap="Square"
+    		StrokeThickness="0.5" RenderTransformOrigin="0.5, 0.5">
+        <Path.RenderTransform>
+            <ScaleTransform ScaleX="3" ScaleY="3"/>
+        </Path.RenderTransform>
+    </Path>
+
+    <Path x:Key="MinimizeButtonPath" x:Shared="false"
+    		Data="M1,1 M1,9 L7.5,9"                    
+    		Stretch="None"
+    		Stroke="White"
+    		StrokeEndLineCap="Square"
+    		StrokeStartLineCap="Square" RenderTransformOrigin="0.5, 0.5"
+    		StrokeThickness="3" />
+    
+    
+    <ControlTemplate x:Key="WindowTemplate" TargetType="{x:Type Window}">
+        <Grid Background="{StaticResource WindowBackColor}" Margin="5">
+            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Margin="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" MinWidth="10" />
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0"                                  
+                                    sw:ControlDoubleClickBehavior.ExecuteCommand="{StaticResource CloseCommand}"                                               
+                                    sw:ControlDoubleClickBehavior.ExecuteCommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" Padding="0">
+                            <Path DockPanel.Dock="Left"                                    
+                                  Width="20"  Margin="10,5,15,5"                                          
+                                  sw:ShowSystemMenuBehavior.TargetWindow="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"                                           
+                                  sw:ShowSystemMenuBehavior.LeftButtonShowAt="{Binding ElementName=WindowContent}"
+                                  Fill="White"
+                                  Stroke="Transparent"
+                                  StrokeThickness="2"
+                                  Stretch="Uniform"
+                                  Data="M9.61346817016602,16.2110977172852L14.0787372589111,22.2762622833252 18.0807571411133,28.6126556396484 20.0354156494141,32.1396980285645 22.0271015167236,36.0431022644043 24.106761932373,40.425724029541 26.3253440856934,45.3904190063477 M11.4229068756104,18.5486297607422L17.4420738220215,24.5270004272461 23.941520690918,30.1804618835449 30.5514640808105,35.1789894104004 36.9021263122559,39.1925582885742 M5.93978881835938,21.1807479858398L6.59307527542114,17.6954708099365 6.68979406356812,14.4747629165649 6.38131427764893,11.8036193847656 5.81900405883789,9.96703338623047 M5.90717506408691,10.1487808227539L6.53073692321777,11.0795888900757 7.65462970733643,11.9961080551147 9.2410945892334,12.8494672775269 11.2523727416992,13.5907926559448 13.6507024765015,14.1712121963501 16.3983249664307,14.5418539047241 22.790412902832,14.4583129882813 M38.149787902832,50.5183410644531L37.9009284973145,50.1876640319824 37.2184715270996,49.2856788635254 36.1985893249512,47.947452545166 34.9374580383301,46.3080520629883 32.0761566162109,42.6659965515137 29.4039688110352,39.4400634765625 24.6456050872803,34.0190315246582 20.1020259857178,28.8279838562012 15.5249605178833,23.4770641326904 10.6661376953125,17.5764236450195 7.29893159866333,12.6909961700439 5.05316066741943,8.34729385375977 4.31058645248413,6.59417104721069 3.80009818077087,5.23517656326294 3.5056049823761,4.35654306411743 3.4110164642334,4.04450225830078 M2.1058177947998,0.611595153808594L2.55029153823853,1.51373827457428 4.05007171630859,2.46011090278625 6.45219802856445,3.55056643486023 9.60371017456055,4.88495826721191 13.3516483306885,6.56313991546631 17.5430507659912,8.68496513366699 22.024959564209,11.3502864837646 26.6444129943848,14.6589584350586 29.2424030303955,17.0443878173828 31.524284362793,19.7883434295654 35.2200584411621,26.0701236724854 37.8924102783203,32.9408836364746 39.7020149230957,39.8372192382813 40.8095436096191,46.1957054138184 41.1502380371094,48.9971923828125 41.3756713867188,51.452938079834 41.5059204101563,53.4925193786621 41.5610694885254,55.0455055236816 41.561206817627,56.0414695739746 41.5264167785645,56.4099884033203 41.3780250549316,56.2762603759766 40.7998809814453,55.7798385620117 39.4599075317383,54.8690490722656 37.0260314941406,53.4922180175781 34.953987121582,52.4830360412598 31.9912548065186,51.069652557373 28.3806858062744,49.2326698303223 24.3651218414307,46.9526977539063 20.1874046325684,44.2103424072266 16.0903816223145,40.986213684082 12.3168935775757,37.260913848877 9.10978698730469,33.0150527954102 6.23190879821777,27.5632801055908 4.21847820281982,22.0241012573242 2.9249005317688,16.6299610137939 2.20658278465271,11.613302230835 1.91893124580383,7.20657062530518 1.91735208034515,3.64220976829529 2.05725169181824,1.152663230896 2.13507056236267,0.383584082126617 2.19403648376465,-0.0296249389648438 2.1702983379364,0.166012763977051 2.1058177947998,0.611595153808594 2.1058177947998,0.611595153808594z" 
+                                  RenderTransformOrigin="0.5,0.5">
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+
+                        </Label>
+                        <Label Grid.Column="1" DockPanel.Dock="Left" Content="{TemplateBinding Property=Title}" Padding="0"                                                                                  
+                                    HorizontalContentAlignment="Left"
+                                    VerticalContentAlignment="Center"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Stretch"
+                                    Foreground="{StaticResource WindowForeColor}"                                           
+                                    FontSize="16"
+                                    sw:WindowDragBehavior.LeftMouseButtonDrag="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                    sw:ControlDoubleClickBehavior.ExecuteCommand="{StaticResource MaximizeCommand}"
+                                    sw:ControlDoubleClickBehavior.ExecuteCommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                    sw:ShowSystemMenuBehavior.TargetWindow="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                    sw:ShowSystemMenuBehavior.RightButtonShow="true">
+                        </Label>
+                        <StackPanel Grid.Column="2" Orientation="Horizontal">
+                            <Button DockPanel.Dock="Right" Style="{StaticResource WindowButton}" Command="{StaticResource MinimizeCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                    Content="{StaticResource MinimizeButtonPath}"/>
+
+                            <Button x:Name="maximizeButton" DockPanel.Dock="Right" Style="{StaticResource WindowButton}" Command="{StaticResource MaximizeCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                    Content="{StaticResource MaximizeButtonPath}">
+                            </Button>
+
+                            <Button DockPanel.Dock="Right"  Style="{StaticResource WindowButton}" Command="{StaticResource CloseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                    Content="{StaticResource CloseButtonPath}"/>
+                        </StackPanel>
+                    </Grid>
+                    <Border Grid.Row="1" Background="{TemplateBinding Background}">
+                        <Grid>
+                            <AdornerDecorator>
+                                <ContentPresenter x:Name="WindowContent"/>
+                            </AdornerDecorator>
+                            <ResizeGrip  x:Name="WindowResizeGrip" HorizontalAlignment="Right" IsTabStop="false" Visibility="Collapsed" VerticalAlignment="Bottom"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Thumb x:Name="ThumbTop" Height="6" Margin="14,0" VerticalAlignment="Top" Cursor="SizeNS"  Opacity="0" sw:WindowResizeBehavior.TopResize="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
+            <Thumb x:Name="ThumbTopLeft" Height="6" Width="6" VerticalAlignment="Top" HorizontalAlignment="Left" Cursor="SizeNWSE"  Opacity="0" sw:WindowResizeBehavior.TopLeftResize="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
+            <Thumb x:Name="ThumbBottom" Height="6" Margin="14,0" VerticalAlignment="Bottom" Cursor="SizeNS" Opacity="0" sw:WindowResizeBehavior.BottomResize="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
+            <Thumb x:Name="ThumbTopRight" Height="6" Width="6" VerticalAlignment="Top" HorizontalAlignment="Right" Cursor="SizeNESW"  Opacity="0" sw:WindowResizeBehavior.TopRightResize="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
+            <Thumb x:Name="ThumbRight" HorizontalAlignment="Right" Margin="0,14" Width="6" Cursor="SizeWE"  Opacity="0" sw:WindowResizeBehavior.RightResize="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
+            <Thumb x:Name="ThumbBottomRight" Height="6" Width="6" VerticalAlignment="Bottom" HorizontalAlignment="Right" Cursor="SizeNWSE"  Opacity="0" sw:WindowResizeBehavior.BottomRightResize="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
+            <Thumb x:Name="ThumbLeft" HorizontalAlignment="Left" Margin="0,14" Width="6" Cursor="SizeWE"  Opacity="0" sw:WindowResizeBehavior.LeftResize="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
+            <Thumb x:Name="ThumbBottomLeft" Height="6" Width="6" VerticalAlignment="Bottom" HorizontalAlignment="Left" Cursor="SizeNESW"  Opacity="0" sw:WindowResizeBehavior.BottomLeftResize="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="CanResizeWithGrip"/>
+                    <Condition Property="WindowState" Value="Normal"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="Visibility" TargetName="WindowResizeGrip" Value="Visible"/>
+            </MultiTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- the custom window style and the window template 
+        Here you can customize the look of the window without having to touch the control template 
+        or comment out the brushes and create a new style (see the red style below)-->
+
+    <Style x:Key="CustomWindowStyle" TargetType="{x:Type Window}">
+        <Setter Property="WindowStyle" Value="None"/>
+        <Setter Property="AllowsTransparency" Value="True"/>
+        <Setter Property="MinWidth" Value="200"/>
+        <Setter Property="MinHeight" Value="200"/>
+        <!--CaptionHeight + ResizeBorderThickness * 2-->
+        <Setter Property="Background" Value="LightGray"/>
+        <Setter Property="BorderBrush" Value="DodgerBlue"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Template" Value="{StaticResource WindowTemplate}"/>
+    </Style>
+
+</ResourceDictionary>

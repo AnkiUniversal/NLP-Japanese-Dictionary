@@ -1,0 +1,57 @@
+﻿食べる食べます食べた食べました食べなかった食べませんでした食べて食べまして食べないで食べませんで食べなくて食べている食べています食べていない食べていません食べよう食べましょう食べまい食べますまい食べろ食べよ食べなさい食べるな食べなさるな食べてください食べないでください食べれば食べなければ食べたら食べましたら食べなかったら食べませんでしたら食べられる食べられます食べられない食べられません食べさせる食べさせます食べさせない食べさせません食べさせられる食べさせられます食べさせられない食べさせられませんたべなければたべねば食べぬ
+食べる；　；　食べる
+食べます； [polite]　　；　食べる
+食べた；　[past] ；　食べる
+食べました；　[polite] [past]　；　食べる
+食べなかった；　　[negative] [past] ；　食べる
+食べませんでした；　[polite] [negative] [past]　；　食べる
+食べて；[-te]　；　食べる
+食べまして；　[polite] [-te]　　；　食べる
+食べないで； [negative] [-te]　；　食べる
+食べませんで； [polite] [negative] [-te]　；　食べる
+食べなくて； [negative] [-te]　；　食べる
+食べて； [-te]　；　食べる
+いる；　；　いる
+食べて； [-te]　；　食べる
+います； [polite]　；　いる
+食べて； [-te]　；　食べる
+いない； [negative]　；　いる
+食べて； [-te]　；　食べる
+いません； [polite] [negative]　；　いる
+食べよう； [volitional]　；　食べる
+食べましょう； [polite] [volitional]　；　食べる
+食べまい； [negative volitional]　；　食べる
+食べます； [polite]　；　食べる
+まい； 　；　まい
+食べろ； [imperative]　；　食べる
+食べよ； [imperative]　；　食べる
+食べなさい； [imperative]　；　食べる
+食べる；　；　食べる
+な；　；　な
+食べなさる； [imperative]　；　食べる
+な；　；　な
+食べて； [-te]　；　食べる
+ください； [imperative]　；　くださる
+食べないで； [negative] [-te]　；　食べる
+ください； [imperative]　；　くださる
+食べれば； [-ba]　；　食べる
+食べなければ； [negative] [-ba]　；　食べる
+食べたら； [-tara]　；　食べる
+食べましたら； [polite] [-tara]　；　食べる
+食べなかったら； [negative] [-tara]　；　食べる
+食べませんでしたら； [polite] [negative] [-tara]　；　食べる
+食べられる；　[passive or potential] ；　食べる
+食べられます； [passive or potential] [polite]　；　食べる
+食べられない； [passive or potential] [negative]　；　食べる
+食べられません； [passive or potential] [polite] [negative]　；　食べる
+食べさせる； [causative]　；　食べる
+食べさせます； [causative] [polite]；　食べる
+食べさせない； [causative] [negative]　；　食べる
+食べさせません； [causative] [polite] [negative]　；　食べる
+食べさせられる； [causative] [passive]　；　食べる
+食べさせられます； [causative] [passive] [polite] 　；　食べる
+食べさせられない； [causative] [passive] [negative]　；　食べる
+食べさせられません； [causative] [passive] [polite] [negative]　；　食べる
+たべなければ; [negative] [-ba]; たべる
+たべねば;  [negative] [-ba]; たべる
+食べぬ; [negative]; 食べる

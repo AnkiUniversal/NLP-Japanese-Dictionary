@@ -1,0 +1,55 @@
+﻿くるきますこない きません きたきた きました こなかった きませんでした きて きましてこないできませんでこなくてきている きています きていない きていません こよう きましょう くるまい きますまい きなさい くるな きてください こないでください くれば こなければ きたら きましたら こなかったら きませんでしたら　こられる　こられます こられない こられません こさせる こさせます こさせない こさせません こさせられる こさせられます こさせられない こさせられません こい
+くる；　；　くる
+きます； [polite]　　；　くる
+こない；　[negative] ；　くる
+きません；　[polite] [negative]　；　くる
+きた； [past]　；　くる
+きた； ；　きた
+きました；　[polite] [past]　；　くる
+こなかった;  [negative] [past]; くる
+きませんでした; [polite] [negative] [past]; くる
+きて；[-te]　；　くる
+きまして；　[polite] [-te]　　；　くる
+こないで； [negative] [-te]　；　くる
+きませんで； [polite] [negative] [-te]　；　くる
+こなくて； [negative] [-te]　；　くる
+きて； [-te]　；　くる
+いる；　；　いる
+きて； [-te]　；　くる
+います； [polite]　；　いる
+きて； [-te]　；　くる
+いない； [negative]　；　いる
+きて； [-te]　；　くる
+いません； [polite] [negative]　；　いる
+こよう； [volitional]　；　くる
+きましょう； [polite] [volitional]　；　くる
+くる； ；　くる
+まい； ；　まい
+きます； [polite]　；　くる
+まい； 　；　まい
+きなさい； [imperative]　；　くる
+くる；　；　くる
+な；　；　な
+きて； [-te]　；　くる
+ください； [imperative]　；　くださる
+こないで； [negative] [-te]　；　くる
+ください； [imperative]　；　くださる
+くれば； [-ba]　；　くる
+こなければ； [negative] [-ba]　；　くる
+きたら； [-tara]　；　くる
+きましたら；[polite] [-tara]　；　くる
+こなかったら； [negative] [-tara]　；　くる
+きませんでしたら; [polite] [negative] [-tara]; くる
+こられる; [passive or potential] ; くる
+こられます; [passive or potential] [polite] ; くる
+こられない;  [passive or potential] [negative] ; くる
+こられません; [passive or potential] [polite] [negative]; くる
+こさせる； [causative] ；　くる
+こさせます; [causative] [polite]　；　くる
+こさせない； [causative] [negative]　；　くる
+こさせません;  [causative] [polite] [negative] ; くる
+こさせられる； [causative] [passive]　；　くる
+こさせられます; [causative] [passive] [polite] ; くる
+こさせられない； [causative] [passive] [negative]　；　くる
+こさせられません; [causative] [passive] [polite] [negative]　；　くる
+こい; [imperative] ；　くる

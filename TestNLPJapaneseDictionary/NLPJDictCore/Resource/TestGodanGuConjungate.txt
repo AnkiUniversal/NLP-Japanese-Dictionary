@@ -1,0 +1,62 @@
+﻿防ぐ防ぎます防がない防ぎません防いだ防ぎました防がなかった防ぎませんでした防いで防ぎまして防がないで防ぎませんで防がなくて防いでいる防いでいます防いでいない防いでいません防ごう防ぎましょう防ぐまい防ぎますまい防げ防ぎなさい防ぐな防ぎなさるな防いでください防がないでください防げば防がなければ防いだら防ぎましたら防がなかったら防ぎませんでしたら防げる防げます防げない防げません防がれる防がれます防がれない防がれません防がせる防がせます防がせない防がせません防がせられる防がせられます防がせられない防がせられません防がねば防がぬ
+防ぐ；　；　防ぐ
+防ぎます； [polite]　　；　防ぐ
+防がない；　[negative]　；　防ぐ
+防ぎません；　[polite] [negative]　；　防ぐ
+防いだ；　[past] ；　防ぐ
+防ぎました；　[polite] [past]　；　防ぐ
+防がなかった；　　[negative] [past] ；　防ぐ
+防ぎませんでした；　[polite] [negative] [past]　；　防ぐ
+防いで；[-te]　；　防ぐ
+防ぎまして；　[polite] [-te]　　；　防ぐ
+防がないで； [negative] [-te]　；　防ぐ
+防ぎませんで； [polite] [negative] [-te]；　防ぐ
+防がなくて； [negative] [-te]　；　防ぐ
+防いで； [-te]　；　防ぐ
+いる；　；　いる
+防いで； [-te]　；　防ぐ
+います； [polite]　；　いる
+防いで； [-te]　；　防ぐ
+いない； [negative]　；　いる
+防いで； [-te]　；　防ぐ
+いません； [polite] [negative]　；　いる
+防ごう； [volitional]　；　防ぐ
+防ぎましょう； [polite] [volitional]　；　防ぐ
+防ぐ；   ； 防ぐ
+まい； ；　まい
+防ぎます； [polite]　；　防ぐ
+まい； 　；　まい
+防げ； [imperative]　；　防ぐ
+防ぎなさい； [imperative]　；　防ぐ
+防ぐ；　；　防ぐ
+な；　；　な
+防ぎなさる； [imperative]　；　防ぐ
+な；　；　な
+防いで； [-te]　；　防ぐ
+ください； [imperative]　；　くださる
+防がないで； [negative] [-te]　；　防ぐ
+ください； [imperative]　；　くださる
+防げば； [-ba]　；　防ぐ
+防がなければ； [negative] [-ba]　；　防ぐ
+防いだら； [-tara]　；　防ぐ
+防ぎましたら； [polite] [-tara]　；　防ぐ
+防がなかったら； [negative] [-tara]　；　防ぐ
+防ぎませんでしたら； [polite] [negative] [-tara]　；　防ぐ
+防げる；　[potential] ；　防ぐ
+防げます； [potential] [polite]　；　防ぐ
+防げない； [potential] [negative]　；　防ぐ
+防げません； [potential] [polite] [negative]　；　防ぐ
+防がれる；　 [passive]　； 防ぐ
+防がれます； [passive] [polite]　； 防ぐ
+防がれない； [passive] [negative]　；防ぐ
+防がれません； [passive] [polite] [negative]　； 防ぐ
+防がせる； [causative]　；　防ぐ
+防がせます； [causative] [polite]；　防ぐ
+防がせない； [causative] [negative]　；　防ぐ
+防がせません； [causative] [polite] [negative]　；　防ぐ
+防がせられる； [causative] [passive]　；　防ぐ
+防がせられます； [causative] [passive] [polite] 　；　防ぐ
+防がせられない； [causative] [passive] [negative]　；　防ぐ
+防がせられません； [causative] [passive] [polite] [negative]　；　防ぐ
+防がねば;  [negative] [-ba]; 防ぐ
+防がぬ; [negative]; 防ぐ

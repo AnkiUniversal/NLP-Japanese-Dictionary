@@ -13,6 +13,8 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -23,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,9 +36,40 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>NLPJapaneseDictionary.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="SQLite-net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sqlite-net-pcl.1.4.118\lib\netstandard1.1\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a84b7dcfb1391f7f, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\net45\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\net45\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.5\lib\net45\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.e_sqlite3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9c301db686d0bd12, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.net45.1.1.5\lib\net45\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.4.4.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -48,12 +82,130 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ConvertClasses\DataBindingConverters\AnimationSliderTooltipConverter.xaml.cs" />
+    <Compile Include="ConvertClasses\DataBindingConverters\BoolToVisibilityConverter.cs" />
+    <Compile Include="ConvertClasses\DataBindingConverters\DimensionConverter.cs" />
+    <Compile Include="ConvertClasses\DataBindingConverters\NullToVisibilyConverter.cs" />
+    <Compile Include="ConvertClasses\DataBindingConverters\PriorityToColor.cs" />
+    <Compile Include="ConvertClasses\KataHiraConvert.cs" />
+    <Compile Include="ConvertClasses\RomaConvert.cs" />
+    <Compile Include="Core\Hooks\ClipBoardHook.cs" />
+    <Compile Include="Core\Collections\ObservableCollectionAutoResize.cs" />
+    <Compile Include="Core\DatabaseTable\Database.cs" />
+    <Compile Include="Core\DatabaseTable\ExampleTable.cs" />
+    <Compile Include="Core\DatabaseTable\GeneralPreference.cs" />
+    <Compile Include="Core\DatabaseTable\JmdictEntity.cs" />
+    <Compile Include="Core\DatabaseTable\KanjiDict.cs" />
+    <Compile Include="Core\Hooks\MouseHook.cs" />
+    <Compile Include="Core\Interfaces\INLPPopup.cs" />
+    <Compile Include="Core\Interfaces\IRepresentWord.cs" />
+    <Compile Include="Core\JmdictElements\KanjiElement.cs" />
+    <Compile Include="Core\JmdictElements\ReadElement.cs" />
+    <Compile Include="Core\JmdictElements\SenseElement.cs" />
+    <Compile Include="Core\JmdictWord.cs" />
+    <Compile Include="Core\Hooks\KeyboardHook.cs" />
+    <Compile Include="Core\NLPTokenizer.cs" />
+    <Compile Include="Core\TokensDictSearcher.cs" />
+    <Compile Include="Core\WordConjungateCombiner.cs" />
+    <Compile Include="Core\WordInformation.cs" />
+    <Compile Include="Core\WordListReducer.cs" />
+    <Compile Include="Helpers\Locations.cs" />
+    <Compile Include="Helpers\NativeMethods.cs" />
+    <Compile Include="Helpers\ScreenHelper.cs" />
+    <Compile Include="Models\DictionaryWordModel.cs" />
+    <Compile Include="Models\ExampleSentenceModel.cs" />
+    <Compile Include="Models\InkToWord.cs" />
+    <Compile Include="Models\InkToWordList.cs" />
+    <Compile Include="Models\KanjiModel.cs" />
+    <Compile Include="Models\OcrOneWordModel.cs" />
+    <Compile Include="Models\OcrWordsModel.cs" />
+    <Compile Include="Models\OneWordModel.cs" />
+    <Compile Include="Models\SearchTextModel.cs" />
+    <Compile Include="Models\SenseElementModel.cs" />
+    <Compile Include="Models\SenseElementRichTextModel.cs" />
+    <Compile Include="Models\TokenModel.cs" />
+    <Compile Include="Models\WordInformationModel.cs" />
+    <Compile Include="Pages\SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AlignableWrapPanel.cs" />
+    <Compile Include="UserControls\BindableRichTextBox.cs" />
+    <Compile Include="UserControls\HotkeysPopup.xaml.cs">
+      <DependentUpon>HotkeysPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PageControl.xaml.cs">
+      <DependentUpon>PageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProgressRing.xaml.cs">
+      <DependentUpon>ProgressRing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\DictionaryWordViewModel.cs" />
+    <Compile Include="ViewModels\ExampleSentenceViewModel.cs" />
+    <Compile Include="ViewModels\InkToWordListViewModel.cs" />
+    <Compile Include="ViewModels\InkToWordViewModel.cs" />
+    <Compile Include="ViewModels\KanjiViewModel.cs" />
+    <Compile Include="ViewModels\OcrOneWordViewModel.cs" />
+    <Compile Include="ViewModels\OcrWordsViewModel.cs" />
+    <Compile Include="ViewModels\OneWordViewModel.cs" />
+    <Compile Include="ViewModels\SearchTextViewModel.cs" />
+    <Compile Include="ViewModels\SenseElementRichTextViewModel.cs" />
+    <Compile Include="ViewModels\SenseElementViewModel.cs" />
+    <Compile Include="ViewModels\TokenViewModel.cs" />
+    <Compile Include="ViewModels\WordInformationViewModel.cs" />
+    <Compile Include="Views\DictionaryWordView.xaml.cs">
+      <DependentUpon>DictionaryWordView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExampleSentenceView.xaml.cs">
+      <DependentUpon>ExampleSentenceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KanjiView.xaml.cs">
+      <DependentUpon>KanjiView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OcrOneWordView.xaml.cs">
+      <DependentUpon>OcrOneWordView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OneWordView.xaml.cs">
+      <DependentUpon>OneWordView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchTextView.xaml.cs">
+      <DependentUpon>SearchTextView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WordInformationGridView.xaml.cs">
+      <DependentUpon>WordInformationGridView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WordInformationView.xaml.cs">
+      <DependentUpon>WordInformationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ImageWindow.xaml.cs">
+      <DependentUpon>ImageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SnippingTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\SnippingTool.Designer.cs">
+      <DependentUpon>SnippingTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StyleableWindow\ControlDoubleClickBehavior.cs" />
+    <Compile Include="Windows\StyleableWindow\ShowSystemMenuBehavior.cs" />
+    <Compile Include="Windows\StyleableWindow\SystemMenuManager.cs" />
+    <Compile Include="Windows\StyleableWindow\WindowCloseCommand.cs" />
+    <Compile Include="Windows\StyleableWindow\WindowDragBehavior.cs" />
+    <Compile Include="Windows\StyleableWindow\WindowMaximizeCommand.cs" />
+    <Compile Include="Windows\StyleableWindow\WindowMinimizeCommand.cs" />
+    <Compile Include="Windows\StyleableWindow\WindowResizeBehavior.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,12 +214,120 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Helpers\BitmapHelper.cs" />
+    <Compile Include="Helpers\UIUtilities.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\SearchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ComboBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ItemPanelStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\MergeDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ScrollViewStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\SliderStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\TabControlStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\TextBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\WindowsStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\HotkeysPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ProgressRing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DictionaryWordView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Views\ExampleSentenceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KanjiView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OcrOneWordView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OneWordView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Views\SearchTextView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WordInformationGridView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Views\WordInformationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Windows\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ImageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OCR\JocrImageConvert.cs" />
+    <Compile Include="OCR\JocrWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -85,13 +345,92 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="html\kanji.html" />
+    <Content Include="html\kanjianimate.js" />
+    <Content Include="html\kanjistyles.css" />
+    <Content Include="html\vivus.min.js" />
+    <Content Include="AppIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictCompiled\characterDefinitions.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictCompiled\connectionCosts.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictCompiled\fst.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictCompiled\tokenInfoDictionary.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictCompiled\tokenInfoFeaturesMap.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictCompiled\tokenInfoPartOfSpeechMap.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictCompiled\tokenInfoTargetMap.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictCompiled\unknownDictionary.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictConvert\Example.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictConvert\JapEngDict.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictConvert\KanjiDict.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictConvert\RomaHiraKata.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jocr\Jocr.csproj">
+      <Project>{ae460e56-82f7-47d9-abfe-db25c48d207e}</Project>
+      <Name>Jocr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\kuromoji\Kuromoji.csproj">
+      <Project>{fcb0be0c-50ec-4df3-a894-3bcbbe2c7af9}</Project>
+      <Name>Kuromoji</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\InkRecognition\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\DictCompiled\userDict.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictConvert\HiraKata.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\DictConvert\RomaHiraKata.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets'))" />
+  </Target>
+  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets')" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets')" />
 </Project>

@@ -4,9 +4,145 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NLPJapaneseDictionary"
+        xmlns:usercontrols="clr-namespace:NLPJapaneseDictionary.UserControls"
+        x:Name="mainPage"
+        Style="{StaticResource CustomWindowStyle}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Loaded="OnMainWindowLoaded"
+        Closing="OnMainWindowClosing"
+        Icon="./AppIcon.ico"
+        Title="NLP Japanese Dictionary" Height="800" Width="400">
+
+    <Window.Resources>
+        <Storyboard  x:Key="MenuClose">
+            <DoubleAnimation Storyboard.TargetName="splitPlane" Storyboard.TargetProperty="Width"
+                                 To="0.0" Duration="00:00:00.2" />
+        </Storyboard>
+        <Storyboard  x:Key="MenuOpen">
+            <DoubleAnimation Storyboard.TargetName="splitPlane" Storyboard.TargetProperty="Width"
+                                 From="0" To="150" Duration="00:00:00.2" />
+        </Storyboard>
+
+        <Storyboard  x:Key="NoticeMe">
+            <ColorAnimation Storyboard.TargetName="showTextBoxButton" 
+                            Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                            To="Green" Duration="0:0:0.5" AutoReverse="True" RepeatBehavior="2x">
+            </ColorAnimation>
+        </Storyboard>
+    </Window.Resources>
+
+    <Grid x:Name="rootGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="commanBarGrid" Background="{StaticResource MoreDarkerGray}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="splitPlaneToggle" ToolTip="Menu Panel"
+                    Style="{StaticResource CommanBarButton}"
+                    Click="OnSplitPlaneToggleClick">
+                <Path Style="{StaticResource MenuIcon}" Stretch="None" Height="30" Width="32" ></Path>
+            </Button>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Stretch">
+
+                <Button ToolTip="Show Textbox"
+                    x:Name="showTextBoxButton"
+                    Style="{StaticResource CommanBarButton}"
+                    Content="TEXT"
+                    Visibility="Collapsed"
+                    Click="OnShowTextBoxButtonClick">
+                </Button>
+                
+                <Button ToolTip="OCR"
+                    Style="{StaticResource CommanBarButton}"
+                    Click="OnOCRButtonClick">
+                    <Path Style="{StaticResource ImageIcon}" Stretch="Uniform" Fill="White" Stroke="White" >
+                    </Path>
+                </Button>
+                
+                <Button ToolTip="Read Mode"
+                    Style="{StaticResource CommanBarButton}"
+                    Click="OnReadModeClick">
+                    <Path x:Name="readModeButtonSymbol" Style="{StaticResource MoonPathIcon}" Stretch="Uniform" Fill="White" Stroke="White" >
+                    </Path>
+                </Button>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1" x:Name="mainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid x:Name="contentPlane" Grid.Column="0"  Grid.ColumnSpan="2" >
+                <Frame  x:Name="contentFrame"/>
+            </Grid>
+
+            <Grid x:Name="splitPlane" Grid.Column="0" Background="{StaticResource MoreDarkerGray}" Opacity="0.92" Width="0">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+                    <Button  HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="OnHotkeysButtonClick"
+                             Background="Transparent" Padding="7,5,15,5"  BorderThickness="0">
+                        <StackPanel Orientation="Horizontal">
+                            <Path Style="{StaticResource BookIcon}" Stroke="Transparent" Fill="White" Width="20" Height="20"/>
+                            <TextBlock Margin="15,0,0,0" Text="Hotkeys" Foreground="White" VerticalAlignment="Center" FontSize="15"/>
+                            <usercontrols:HotkeysPopup x:Name="hotkeyPopup" />
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button  HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" 
+                             Background="Transparent" Padding="7,5,15,5"  BorderThickness="0"
+                             Click="OnFAQButtonClick">
+                        <StackPanel Orientation="Horizontal">
+                            <Path Margin="4,0,0,0" Style="{StaticResource QuestionIcon}" Stroke="Transparent" Fill="White" Width="13" Height="20"/>
+                            <TextBlock Margin="18,0,0,0" Text="FAQ" Foreground="White"  VerticalAlignment="Center" FontSize="15"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button  HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" 
+                             Background="Transparent" Padding="7,5,15,5"  BorderThickness="0"
+                             Click="OnContactButtonClick">
+                        <StackPanel Orientation="Horizontal">
+                            <Path Style="{StaticResource MailIcon}" Stroke="Transparent" Fill="White" Width="20" Height="15"/>
+                            <TextBlock Margin="15,0,0,0" Text="Contact" Foreground="White"  VerticalAlignment="Center" FontSize="15"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button  HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" 
+                             Background="Transparent" Padding="7,5,15,5"  BorderThickness="0"
+                             Click="OnAboutButtonClick">
+                        <StackPanel Orientation="Horizontal">
+                            <Path Style="{StaticResource InfoIcon}" Stroke="Transparent" Fill="White" Width="20" Height="20"/>
+                            <TextBlock Margin="15,0,0,0" Text="About" Foreground="White" VerticalAlignment="Center" FontSize="15"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Border BorderThickness="0,0,0,1" BorderBrush="White" Margin="0,5,0,0"/>
+
+                    <Button  HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" 
+                             Background="Transparent" Padding="7,5,15,5"  BorderThickness="0"
+                             Click="OnSettingButtonClick">
+                        <StackPanel Orientation="Horizontal">
+                            <Path Style="{StaticResource SettingIcon}" Stroke="Transparent" Fill="White" Width="20" Height="20"/>
+                            <TextBlock Margin="15,0,0,0" Text="Settings" Foreground="White"  VerticalAlignment="Center" FontSize="15"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <Button Grid.Column="1"
+                    Style="{StaticResource StaticButton}" 
+                    Background="Transparent" BorderThickness="0"
+                    Visibility="Collapsed"
+                    Click="OnOutOfSplitPlaneDetectClick"
+                    x:Name="outOfSplitPlaneDetect"/>
+        </Grid>
     </Grid>
 </Window>

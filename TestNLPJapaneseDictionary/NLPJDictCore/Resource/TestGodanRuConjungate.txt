@@ -1,0 +1,72 @@
+﻿借る借ります借らない借りません借った借りました借らなかった借りませんでした借って借りまして借らないで借りませんで借らなくて借っている借っています借っていない借っていません借ろう借りましょう借るまい借りますまい借れ借りなさい借るな借りなさるな借ってください借らないでください借れば借らなければ借ったら借りましたら借らなかったら借りませんでしたら借れる借れます借れない借れません借られる借られます借られない借られません借らせる借らせます借らせない借らせません借らせられる借らせられます借らせられない借らせられません借らねば借らぬ
+借る；　；　借る
+借ります； [polite]　　；　借る
+借らない；　[negative]　；　借る
+借りません；　[polite] [negative]　；　借る
+借った；　[past] ；　借る
+借りました；　[polite] [past]　；　借る
+借らなかった；　　[negative] [past] ；　借る
+借りませんでした；　[polite] [negative] [past]　；　借る
+借って；[-te]　；　借る
+借りまして；　[polite] [-te]　　；　借る
+借らない； [negative]　；　借る
+で ; ; で
+借りませんで； [polite] [negative] [-te]；　借る
+借らなくて； [negative] [-te]　；　借る
+借って； [-te]　；　借る
+いる；　；　いる
+借って； [-te]　；　借る
+います； [polite]　；　いる
+借って； [-te]　；　借る
+いない； [negative]　；　いる
+借って； [-te]　；　借る
+いません； [polite] [negative]　；　いる
+借ろう； [volitional]　；　借る
+借りましょう； [polite] [volitional]　；　借る
+借る；   ； 借る
+まい； ；　まい
+借ります； [polite]　；　借る
+まい； 　；　まい
+借れ； [imperative]　；　借る
+借りなさい； [imperative]　；　借る
+借る；　；　借る
+な；　；　な
+借りなさる； [imperative]　；　借る
+な；　；　な
+借って； [-te]　；　借る
+ください； [imperative]　；　くださる
+借らないで； [negative] [-te]　；　借る
+ください； [imperative]　；　くださる
+借れば； [-ba]　；　借る
+借らなければ； [negative] [-ba]　；　借る
+借ったら； [-tara]　；　借る
+借りましたら； [polite] [-tara]　；　借る
+借らなかったら； [negative] [-tara]　；　借る
+借りませんでしたら； [polite] [negative] [-tara]　；　借る
+借れる；　[potential] ；　借る
+借れます； [potential] [polite]　；　借る
+借れない； [potential] [negative]　；　借る
+借れません； [potential] [polite] [negative]　；　借る
+借られる；　 [passive]　； 借る
+借られます； [passive] [polite]　； 借る
+借られない； [passive] [negative]　；借る
+借られません； [passive] [polite] [negative]　； 借る
+借らせる； [causative]　；　借る
+借らせます； [causative] [polite]；　借る
+借らせない； [causative] [negative]　；　借る
+借らせません； [causative] [polite] [negative]　；　借る
+借らせられる； [causative] [passive]　；　借る
+借らせられます； [causative] [passive] [polite] 　；　借る
+借らせられない； [causative] [passive] [negative]　；　借る
+借らせられません； [causative] [passive] [polite] [negative]　；　借る
+借らねば;  [negative] [-ba]; 借る
+借らぬ; [negative]; 借る
+
+
+
+
+
+
+
+
+

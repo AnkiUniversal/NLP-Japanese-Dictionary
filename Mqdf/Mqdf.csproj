@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Params\ldaeig.bin" />
+    <None Remove="Params\qdf.bin" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Params\ldaeig.bin" />
+    <EmbeddedResource Include="Params\qdf.bin" />
+  </ItemGroup>
+
+</Project>

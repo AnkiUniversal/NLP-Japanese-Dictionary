@@ -1,0 +1,247 @@
+﻿<Window x:Class="NLPJapaneseDictionary.Windows.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NLPJapaneseDictionary.Windows"
+        mc:Ignorable="d"
+        Background="White"        
+        Style="{StaticResource CustomWindowStyle}"
+        Title="About" Height="600" Width="400">
+    
+    <Grid >
+        <ScrollViewer 
+                HorizontalScrollBarVisibility="Disabled"
+                VerticalScrollBarVisibility="Auto" >
+            <RichTextBox   Margin="5,20,15,5" 
+                           IsReadOnly="True" 
+                           BorderThickness="0" 
+                           FontSize="15"
+                           IsDocumentEnabled="True"
+                           Background="Transparent">
+                <FlowDocument TextAlignment="Center">
+                    <Paragraph >
+                        <Bold FontSize="25">Copyright (C) 2017 - 2018 Anki Universal Team.</Bold>
+                        <LineBreak />
+                        <Bold>Email:</Bold> ankiuniversal@gmail.com
+                        <LineBreak />
+                        <Hyperlink NavigateUri="https://github.com/AnkiUniversal/NLP-Japanese-Dictionary" RequestNavigate="OnHyperlinkRequestNavigate">Project Page</Hyperlink>
+                        <LineBreak />
+                        <Hyperlink NavigateUri="https://github.com/AnkiUniversal/NLP-Japanese-Dictionary/LICENSE.md" RequestNavigate="OnHyperlinkRequestNavigate">Apache Licence 2.0</Hyperlink>
+                        <LineBreak/>
+                    </Paragraph>
+
+                    <Paragraph >
+                        <Bold FontSize="25">CREDITS</Bold>
+                        <LineBreak />
+                        Below is the list of Open Source libraries used in this application.                                    
+                        We acknowledge and are grateful to the developers of these projects for their contributions to open source.
+                        <LineBreak />
+                    </Paragraph>
+
+                    <Paragraph >
+                        <Bold FontSize="22">Kuromoji Japanese Morphological Analyzer</Bold>
+                        <LineBreak/>
+                         A java library for japanese sentence segmentation. The library used in this project is ported to C# by Anki Universal Team.
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="https://github.com/atilika/kuromoji" RequestNavigate="OnHyperlinkRequestNavigate">https://github.com/atilika/kuromoji</Hyperlink>
+                        <LineBreak/>
+                        Copyright 2010-2015 Atilika Inc. and contributors
+                        <LineBreak />
+                        <Hyperlink NavigateUri="https://github.com/atilika/kuromoji/blob/master/LICENSE.md" RequestNavigate="OnHyperlinkRequestNavigate">Apache Licence 2.0</Hyperlink>
+                        <LineBreak/>
+                    </Paragraph>
+
+                    <Paragraph >
+                        <Bold FontSize="22">Japanese-Multilingual Dictionary File</Bold>
+                        <LineBreak/>
+                        The database for Japanese - English definitions.
+                        <LineBreak/> (Only Japanese and English components are used.)
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="http://www.edrdg.org/jmdict/j_jmdict.html" RequestNavigate="OnHyperlinkRequestNavigate">http://www.edrdg.org/jmdict/j_jmdict.html</Hyperlink>
+                        <LineBreak/>
+                        Copyright James William BREEN and The Electronic Dictionary Research and Development Group
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="http://www.edrdg.org/edrdg/licence.html" RequestNavigate="OnHyperlinkRequestNavigate">Creative Commons Attribution-ShareAlike Licence (V3.0)</Hyperlink>
+                        <LineBreak/>
+                    </Paragraph>
+
+                    <Paragraph >
+                        <Bold FontSize="22">KANJIDIC2</Bold>
+                        <LineBreak/>
+                        The database for Kanji details such as meaning, reading, etc.
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="http://www.csse.monash.edu.au/~jwb/kanjidic.html" RequestNavigate="OnHyperlinkRequestNavigate">http://www.csse.monash.edu.au/~jwb/kanjidic.html</Hyperlink>
+                        <LineBreak/>
+                        Copyright James William BREEN and The Electronic Dictionary Research and Development Group
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="http://www.edrdg.org/edrdg/licence.html" RequestNavigate="OnHyperlinkRequestNavigate">Creative Commons Attribution-ShareAlike Licence (V3.0)</Hyperlink>
+                        <LineBreak/>
+                    </Paragraph>
+
+                    <Paragraph >
+                        <Bold FontSize="22">KanjiVG</Bold>
+                        <LineBreak/>
+                        The database for SVG data of Kanji.
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="http://kanjivg.tagaini.net/index.html" RequestNavigate="OnHyperlinkRequestNavigate">http://kanjivg.tagaini.net/index.html</Hyperlink>
+                        <LineBreak/>
+                        Copyright 2009-2015 Ulrich Apel
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="http://creativecommons.org/licenses/by-sa/3.0/" RequestNavigate="OnHyperlinkRequestNavigate">Creative Commons Attribution-ShareAlike Licence (V3.0)</Hyperlink>
+                        <LineBreak/>
+                    </Paragraph>
+
+                    <Paragraph >
+                        <Bold FontSize="22">Kradfile-U</Bold>
+                        <LineBreak/>
+                        The database for radical data of Kanji.
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="http://www.kanjicafe.com/kradfile_license.htm" RequestNavigate="OnHyperlinkRequestNavigate">http://www.kanjicafe.com/kradfile_license.htm</Hyperlink>
+                        <LineBreak/>
+                        Copyright 2001/2007/2009 Jim Rose, Michael Raine, Jim Breen, The EDR&amp;D Group at Monash University, The KanjiCafe.com
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="http://www.kanjicafe.com/kradfile_license.htm" RequestNavigate="OnHyperlinkRequestNavigate">Licence</Hyperlink>
+                        <LineBreak/>
+                    </Paragraph>
+
+                    <Paragraph >
+                        <Bold FontSize="22">Tanaka Corpus and Tatoeba Project</Bold>
+                        <LineBreak/>
+                         The database for example sentences and their English translation.
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="http://www.edrdg.org/wiki/index.php/Tanaka_Corpus" RequestNavigate="OnHyperlinkRequestNavigate">http://www.edrdg.org/wiki/index.php/Tanaka_Corpus</Hyperlink>
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="https://creativecommons.org/licenses/by/2.0/" RequestNavigate="OnHyperlinkRequestNavigate">Creative Commons Attribution Licence 2.0</Hyperlink>
+                        <LineBreak/>
+                    </Paragraph>
+
+                    <Paragraph>
+                        <Bold  FontSize="22">SQLite-net</Bold>
+                        <LineBreak/>
+                        The libary for database management.
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="https://github.com/praeclarum/sqlite-net" RequestNavigate="OnHyperlinkRequestNavigate">https://github.com/praeclarum/sqlite-net</Hyperlink>
+                        <LineBreak/>
+                        Copyright (c) 2009-2016 Krueger Systems, Inc.
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="https://raw.githubusercontent.com/praeclarum/sqlite-net/master/LICENSE.md" RequestNavigate="OnHyperlinkRequestNavigate">MIT Licence</Hyperlink>
+                        <LineBreak/>
+                    </Paragraph>
+
+                    <Paragraph>
+                        <Bold  FontSize="22">Newtonsoft.Json</Bold>
+                        <LineBreak/>
+                        The libary for interacting with JSON objects.
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="https://github.com/JamesNK/Newtonsoft.Json" RequestNavigate="OnHyperlinkRequestNavigate">https://github.com/JamesNK/Newtonsoft.Json</Hyperlink>
+                        <LineBreak/>
+                        Copyright (c) 2007 James Newton-King
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="https://github.com/JamesNK/Newtonsoft.Json/blob/master/LICENSE.md" RequestNavigate="OnHyperlinkRequestNavigate">MIT Licence</Hyperlink>
+                        <LineBreak/>
+                    </Paragraph>
+
+                    <Paragraph >
+                        <Bold FontSize="22">Mecab-Ipadic</Bold>
+                        <LineBreak/>
+                        The database for Kuromoji.
+                        <LineBreak/>
+                        Nara Institute of Science and Technology (NAIST),
+                        the copyright holders, disclaims all warranties with regard to this
+                        software, including all implied warranties of merchantability and
+                        fitness, in no event shall NAIST be liable for
+                        any special, indirect or consequential damages or any damages
+                        whatsoever resulting from loss of use, data or profits, whether in an
+                        action of contract, negligence or other tortuous action, arising out
+                        of or in connection with the use or performance of this software.
+                        <LineBreak/>
+                        A large portion of the dictionary entries
+                        originate from ICOT Free Software.  The following conditions for ICOT
+                        Free Software applies to the current dictionary as well.
+                        <LineBreak/>
+                        Each User may also freely distribute the Program, whether in its
+                        original form or modified, to any third party or parties, PROVIDED
+                        that the provisions of Section 3 ("NO WARRANTY") will ALWAYS appear
+                        on, or be attached to, the Program, which is distributed substantially
+                        in the same form as set out herein and that such intended
+                        distribution, if actually made, will neither violate or otherwise
+                        contravene any of the laws and regulations of the countries having
+                        jurisdiction over the User or the intended distribution itself.
+                        <LineBreak/>
+                        NO WARRANTY
+                        <LineBreak/>
+                        The program was produced on an experimental basis in the course of the
+                        research and development conducted during the project and is provided
+                        to users as so produced on an experimental basis.  Accordingly, the
+                        program is provided without any warranty whatsoever, whether express,
+                        implied, statutory or otherwise.  The term "warranty" used herein
+                        includes, but is not limited to, any warranty of the quality,
+                        performance, merchantability and fitness for a particular purpose of
+                        the program and the nonexistence of any infringement or violation of
+                        any right of any third party.
+                        <LineBreak/>
+                        Each user of the program will agree and understand, and be deemed to
+                        have agreed and understood, that there is no warranty whatsoever for
+                        the program and, accordingly, the entire risk arising from or
+                        otherwise connected with the program is assumed by the user.
+                        <LineBreak/>
+                        Therefore, neither ICOT, the copyright holder, or any other
+                        organization that participated in or was otherwise related to the
+                        development of the program and their respective officials, directors,
+                        officers and other employees shall be held liable for any and all
+                        damages, including, without limitation, general, special, incidental
+                        and consequential damages, arising out of or otherwise in connection
+                        with the use or inability to use the program or any product, material
+                        or result produced or otherwise obtained by using the program,
+                        regardless of whether they have been advised of, or otherwise had
+                        knowledge of, the possibility of such damages at any time during the
+                        project or thereafter.  Each user will be deemed to have agreed to the
+                        foregoing by his or her commencement of use of the program.  The term
+                        "use" as used herein includes, but is not limited to, the use,
+                        modification, copying and distribution of the program and the
+                        production of secondary products from the program.
+                        <LineBreak/>
+                        In the case where the program, whether in its original form or
+                        modified, was distributed or delivered to or received by a user from
+                        any person, organization or entity other than ICOT, unless it makes or
+                        grants independently of ICOT any specific warranty to the user in
+                        writing, such person, organization or entity, will also be exempted
+                        from and not be held liable to the user for any such damages as noted
+                        above as far as the program is concerned.
+                        <LineBreak/>
+                    </Paragraph>
+
+                    <Paragraph>
+                        <Bold  FontSize="22">Icons: Elegant Font</Bold>
+                        <LineBreak/>
+                        <Hyperlink NavigateUri="http://www.elegantthemes.com/" RequestNavigate="OnHyperlinkRequestNavigate">http://www.elegantthemes.com/</Hyperlink>
+                        <LineBreak/>
+                        Copyright (c) 2013 Elegant Themes, Inc.
+                        <LineBreak/>
+                        Elegant Font MIT Licence
+                        <LineBreak/>
+                        Permission is hereby granted, free of charge, to any person obtaining a copy
+                            of this software and associated documentation files (the "Software"), to deal
+                            in the Software without restriction, including without limitation the rights
+                            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                            copies of the Software, and to permit persons to whom the Software is
+                            furnished to do so, subject to the following conditions:
+                        <LineBreak/>
+                        The above copyright notice and this permission notice shall be included in
+                            all copies or substantial portions of the Software.
+                        <LineBreak/>
+                        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                            THE SOFTWARE.
+                        <LineBreak/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>            
+        </ScrollViewer>
+    </Grid>
+</Window>

@@ -1,0 +1,44 @@
+﻿<UserControl
+    x:Class="NLPJapaneseDictionary.Views.OneWordView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:NLPJapaneseDictionary.Views"
+    xmlns:data="clr-namespace:NLPJDict.Models" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:usercontrols="clr-namespace:NLPJapaneseDictionary.UserControls"
+    x:Name="userControl"
+    mc:Ignorable="d">
+
+    <ListBox  AutomationProperties.AutomationId="GroupGridView"
+               Margin="5"
+              PreviewMouseWheel="OnPreviewMouseWheel"
+               BorderThickness="0"
+                x:Name="wordsView"
+                VerticalAlignment="Stretch" 
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Top"
+                ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                ScrollViewer.VerticalScrollBarVisibility="Auto"
+                AutomationProperties.Name="TokenizedSentence"
+                ItemsSource="{Binding}"         
+                ItemContainerStyle="{StaticResource OneWordListBoxItem}"
+                Background="Transparent" >
+        <ListBox.ItemsPanel>
+            <ItemsPanelTemplate>
+                <usercontrols:AlignableWrapPanel HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            </ItemsPanelTemplate>
+        </ListBox.ItemsPanel>
+        <ListBox.ItemTemplate>
+            <DataTemplate DataType="{x:Type data:OneWordModel}">
+                <Button Padding="0" Click="OnButtonClick" Style="{StaticResource ContentOpacityButton}"
+                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                        Foreground="ForestGreen" Background="Transparent">
+                    <TextBlock Text="{Binding Word, Mode=OneTime}" FontSize="30" />
+                </Button>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>
+       
+</UserControl>

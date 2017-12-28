@@ -1,0 +1,94 @@
+﻿<UserControl
+    x:Class="NLPJapaneseDictionary.Views.WordInformationGridView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:NLPJapaneseDictionary.Views"
+    xmlns:usercontrols="clr-namespace:NLPJapaneseDictionary.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    HorizontalAlignment="Stretch"
+    VerticalAlignment="Stretch"
+    HorizontalContentAlignment="Stretch"
+    VerticalContentAlignment="Stretch"
+    mc:Ignorable="d"
+    x:Name="userControl"
+    xmlns:data="clr-namespace:NLPJDict.Models">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Column="0" Style="{StaticResource ContentOpacityButton}" VerticalAlignment="Stretch" HorizontalAlignment="Left" x:Name="previousButton" Click="OnPreviousButtonClick"
+                Background="Transparent" Width="25"  Margin="0,-5,0,0" Padding="0"  >
+            <Path Style="{StaticResource TriangleLeftIcon}" Fill="Green" Width="14" Height="14" >
+            </Path>
+        </Button>
+        <Button Grid.Column="2" Style="{StaticResource ContentOpacityButton}" VerticalAlignment="Stretch" HorizontalAlignment="Right" x:Name="nextButton" Click="OnNextButtonClick"
+                Background="Transparent"  Width="25" Margin="0,-5,0,0" Padding="0">
+            <Path Style="{StaticResource TriangleRightIcon}" Fill="Green" Width="14" Height="14">
+            </Path>
+        </Button>
+
+        <Ellipse x:Name="readingBindingElement" Opacity="0" IsHitTestVisible="False" Visibility="Visible"/>
+        <Ellipse x:Name="pronunBindingElement" Opacity="0" IsHitTestVisible="False" Visibility="Visible"/>
+
+        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" x:Name="scrollViewer"  BorderThickness="0"
+                      HorizontalScrollBarVisibility="Disabled" Padding="0,5,0,5">
+            <ListBox 
+                AutomationProperties.AutomationId="GroupGridView"
+                x:Name="wordsView"
+                VerticalAlignment="Stretch" 
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Stretch"
+                VerticalContentAlignment="Stretch"
+                ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                ScrollViewer.VerticalScrollBarVisibility="Disabled"                 
+                AutomationProperties.Name="TokenizedSentence"
+                ItemsSource="{Binding}"        
+                ItemContainerStyle="{StaticResource OneWordListBoxItem}"
+                Background="Transparent"        
+                PreviewMouseWheel="OnWordsViewPreviewMouseWheel" 
+                BorderThickness="0"                
+                Padding="0">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <usercontrols:AlignableWrapPanel HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate DataType="{x:Type data:WordInformationModel}" >
+                        <Button Click="OnWordsViewItemClick" 
+                                Style="{StaticResource StaticButton}"
+                                Background="Transparent"
+                                BorderThickness="0">
+                            <RadioButton Style="{StaticResource WordSelectRadioButton}" 
+                                     Padding="0,0,0,3" 
+                                     Margin="2,0,2,0" VerticalAlignment="Stretch" 
+                                     IsEnabled="{Binding IsSelectable, Mode=OneTime}" 
+                                     Checked="OnRadioButtonChecked" 
+                                     BorderBrush="{Binding BorderColor, Mode=OneTime}" 
+                                     HorizontalAlignment="Center" 
+                                     GroupName="WordSelectGroup" 
+                                     Foreground="{Binding Foreground, ElementName= userControl, Mode=OneWay}" >
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Margin="0,-2,0,0" Grid.Row="1" Text="{Binding Reading, Mode=OneTime}" Visibility="{Binding Visibility, ElementName=readingBindingElement, Mode=OneWay}" TextAlignment="Center" FontSize="13"  TextWrapping="Wrap"  />
+                                    <TextBlock Margin="0,0,0,0" Grid.Row="0" Text="{Binding Pronunciation, Mode=OneTime}" Visibility="{Binding Visibility, ElementName=pronunBindingElement, Mode=OneWay}" FontSize="13" TextAlignment="Center"  TextWrapping="Wrap" />
+                                    <TextBlock Margin="0,-4,0,0" Grid.Row="2"  Text="{Binding Surface, Mode=OneTime}" TextAlignment="Center" FontSize="20"  TextWrapping="Wrap"  />
+                                </Grid>
+                            </RadioButton>
+                        </Button>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>

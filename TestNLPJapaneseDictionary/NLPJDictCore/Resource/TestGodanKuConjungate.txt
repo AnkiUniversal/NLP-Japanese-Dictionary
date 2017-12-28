@@ -1,0 +1,62 @@
+﻿歩く歩きます歩かない歩きません歩いた歩きました歩かなかった歩きませんでした歩いて歩きまして歩かないで歩きませんで歩かなくて歩いている歩いています歩いていない歩いていません歩こう歩きましょう歩くまい歩きますまい歩け歩きなさい歩くな歩きなさるな歩いてください歩かないでください歩けば歩かなければ歩いたら歩きましたら歩かなかったら歩きませんでしたら歩ける歩けます歩けない歩けません歩かれる歩かれます歩かれない歩かれません歩かせる歩かせます歩かせない歩かせません歩かせられる歩かせられます歩かせられない歩かせられません歩かねば歩かぬ
+歩く；　；　歩く
+歩きます； [polite]　　；　歩く
+歩かない；　[negative]　；　歩く
+歩きません；　[polite] [negative]　；　歩く
+歩いた；　[past] ；　歩く
+歩きました；　[polite] [past]　；　歩く
+歩かなかった；　　[negative] [past] ；　歩く
+歩きませんでした；　[polite] [negative] [past]　；　歩く
+歩いて；[-te]　；　歩く
+歩きまして；　[polite] [-te]　　；　歩く
+歩かないで； [negative] [-te]　；　歩く
+歩きませんで； [polite] [negative] [-te]；　歩く
+歩かなくて； [negative] [-te]　；　歩く
+歩いて； [-te]　；　歩く
+いる；　；　いる
+歩いて； [-te]　；　歩く
+います； [polite]　；　いる
+歩いて； [-te]　；　歩く
+いない； [negative]　；　いる
+歩いて； [-te]　；　歩く
+いません； [polite] [negative]　；　いる
+歩こう； [volitional]　；　歩く
+歩きましょう； [polite] [volitional]　；　歩く
+歩く；   ； 歩く
+まい； ；　まい
+歩きます； [polite]　；　歩く
+まい； 　；　まい
+歩け； [imperative]　；　歩く
+歩きなさい； [imperative]　；　歩く
+歩く；　；　歩く
+な；　；　な
+歩きなさる； [imperative]　；　歩く
+な；　；　な
+歩いて； [-te]　；　歩く
+ください； [imperative]　；　くださる
+歩かないで； [negative] [-te]　；　歩く
+ください； [imperative]　；　くださる
+歩けば； [-ba]　；　歩く
+歩かなければ； [negative] [-ba]　；　歩く
+歩いたら； [-tara]　；　歩く
+歩きましたら； [polite] [-tara]　；　歩く
+歩かなかったら； [negative] [-tara]　；　歩く
+歩きませんでしたら； [polite] [negative] [-tara]　；　歩く
+歩ける；　[potential] ；　歩く
+歩けます； [potential] [polite]　；　歩く
+歩けない； [potential] [negative]　；　歩く
+歩けません； [potential] [polite] [negative]　；　歩く
+歩かれる；　 [passive]　； 歩く
+歩かれます； [passive] [polite]　； 歩く
+歩かれない； [passive] [negative]　；歩く
+歩かれません； [passive] [polite] [negative]　； 歩く
+歩かせる； [causative]　；　歩く
+歩かせます； [causative] [polite]；　歩く
+歩かせない； [causative] [negative]　；　歩く
+歩かせません； [causative] [polite] [negative]　；　歩く
+歩かせられる； [causative] [passive]　；　歩く
+歩かせられます； [causative] [passive] [polite] 　；　歩く
+歩かせられない； [causative] [passive] [negative]　；　歩く
+歩かせられません； [causative] [passive] [polite] [negative]　；　歩く
+歩かねば;  [negative] [-ba]; 歩く
+歩かぬ; [negative]; 歩く

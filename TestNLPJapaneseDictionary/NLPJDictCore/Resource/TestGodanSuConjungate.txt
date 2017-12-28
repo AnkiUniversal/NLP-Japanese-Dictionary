@@ -1,0 +1,62 @@
+﻿押す押します押さない押しません押した押しました押さなかった押しませんでした押して押しまして押さないで押しませんで押さなくて押している押しています押していない押していません押そう押しましょう押すまい押しますまい押せ押しなさい押すな押しなさるな押してください押さないでください押せば押さなければ押したら押しましたら押さなかったら押しませんでしたら押せる押せます押せない押せません押される押されます押されない押されません押させる押させます押させない押させません押させられる押させられます押させられない押させられません押さねば押さぬ
+押す；　；　押す
+押します； [polite]　　；　押す
+押さない；　[negative]　；　押す
+押しません；　[polite] [negative]　；　押す
+押した；　[past] ；　押す
+押しました；　[polite] [past]　；　押す
+押さなかった；　　[negative] [past] ；　押す
+押しませんでした；　[polite] [negative] [past]　；　押す
+押して；[-te]　；　押す
+押しまして；　[polite] [-te]　　；　押す
+押さないで； [negative] [-te]　；　押す
+押しませんで； [polite] [negative] [-te]；　押す
+押さなくて； [negative] [-te]　；　押す
+押して； [-te]　；　押す
+いる；　；　いる
+押して； [-te]　；　押す
+います； [polite]　；　いる
+押して； [-te]　；　押す
+いない； [negative]　；　いる
+押して； [-te]　；　押す
+いません； [polite] [negative]　；　いる
+押そう； [volitional]　；　押す
+押しましょう； [polite] [volitional]　；　押す
+押す；   ； 押す
+まい； ；　まい
+押します； [polite]　；　押す
+まい； 　；　まい
+押せ； [imperative]　；　押す
+押しなさい； [imperative]　；　押す
+押す；　；　押す
+な；　；　な
+押しなさる； [imperative]　；　押す
+な；　；　な
+押して； [-te]　；　押す
+ください； [imperative]　；　くださる
+押さないで； [negative] [-te]　；　押す
+ください； [imperative]　；　くださる
+押せば； [-ba]　；　押す
+押さなければ； [negative] [-ba]　；　押す
+押したら； [-tara]　；　押す
+押しましたら； [polite] [-tara]　；　押す
+押さなかったら； [negative] [-tara]　；　押す
+押しませんでしたら； [polite] [negative] [-tara]　；　押す
+押せる；　[potential] ；　押す
+押せます； [potential] [polite]　；　押す
+押せない； [potential] [negative]　；　押す
+押せません； [potential] [polite] [negative]　；　押す
+押される；　 [passive]　； 押す
+押されます； [passive] [polite]　； 押す
+押されない； [passive] [negative]　；押す
+押されません； [passive] [polite] [negative]　； 押す
+押させる； [causative]　；　押す
+押させます； [causative] [polite]；　押す
+押させない； [causative] [negative]　；　押す
+押させません； [causative] [polite] [negative]　；　押す
+押させられる； [causative] [passive]　；　押す
+押させられます； [causative] [passive] [polite] 　；　押す
+押させられない； [causative] [passive] [negative]　；　押す
+押させられません； [causative] [passive] [polite] [negative]　；　押す
+押さねば;  [negative] [-ba]; 押す
+押さぬ; [negative]; 押す

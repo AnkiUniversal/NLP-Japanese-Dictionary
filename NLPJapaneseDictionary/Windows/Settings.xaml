@@ -1,0 +1,82 @@
+﻿<Window x:Class="NLPJapaneseDictionary.Windows.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NLPJapaneseDictionary.Windows"
+        Style="{StaticResource CustomWindowStyle}"
+        mc:Ignorable="d"
+        Background="{StaticResource MoreDarkerGray}"
+        Foreground="Black"
+        Title="Settings" Height="600" Width="400">
+    <Grid>
+        <TabControl 
+            HorizontalAlignment="Stretch" 
+            Background="White"        
+            VerticalAlignment="Stretch" >
+            <TabItem Header="MISC" Width="90" FontSize="18" Foreground="White" >
+                <StackPanel >
+                    <CheckBox IsChecked="True" Height="30" 
+                              HorizontalAlignment="Stretch"
+                              FontSize="15"
+                              VerticalContentAlignment="Center" 
+                              HorizontalContentAlignment="Left" 
+                              Content="Show Katakana Reading"
+                              x:Name="katakanaReading"
+                              Click="OnShowKatakanaCheckBoxClick"/>
+                    
+                    <CheckBox IsChecked="True" Height="30" 
+                              FontSize="15"                              
+                              x:Name="romajiReading"
+                              HorizontalAlignment="Stretch"
+                              VerticalContentAlignment="Center" 
+                              HorizontalContentAlignment="Left" 
+                              Content="Show Romaji Pronunciation"
+                              Click="OnRomajiReadingClick"/>
+
+                    <CheckBox IsChecked="False" Height="30" 
+                              FontSize="15"                              
+                              x:Name="omitCtrl"
+                              HorizontalAlignment="Stretch"
+                              VerticalContentAlignment="Center" 
+                              HorizontalContentAlignment="Left" 
+                              Content="Omit Ctrl in hotkeys"
+                              Click="OnOmitCtrlClick"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="TTS" Width="90" FontSize="18" Foreground="White">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="5" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" FontSize="15" Text="Voice" Foreground="Black" VerticalAlignment="Top"/>
+                    <ComboBox Grid.Column="2" FontSize="15" Height="25" Margin="6,0,6,0"
+                              x:Name="voiceList"
+                              SelectionChanged="OnVoiceListSelectionChanged"
+                              VerticalAlignment="Top" HorizontalContentAlignment="Stretch"                               
+                              HorizontalAlignment="Stretch"
+                              SelectedIndex="0">
+                    </ComboBox>
+                    
+                    <TextBlock Grid.Row="1" Grid.Column="0" FontSize="15" Text="Voice Speed" Foreground="Black" VerticalAlignment="Top"/>
+                    <Slider Grid.Row="1" VerticalAlignment="Top" 
+                            x:Name="ttsSpeed"
+                            Grid.Column="2" 
+                            SmallChange="1"
+                            Minimum="-10" 
+                            Margin="0,2,0,0"                             
+                            ValueChanged="OnSliderValueChanged"
+                            AutoToolTipPlacement="TopLeft" 
+                            />
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

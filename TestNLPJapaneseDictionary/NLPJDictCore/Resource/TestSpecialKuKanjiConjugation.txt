@@ -1,0 +1,54 @@
+﻿来る来ます来ない来ません来た来ました来なかった来ませんでした来て来まして来ないで来ませんで来なくて来ている来ています来ていない来ていません来よう来ましょう来るまい来ますまい来なさい来るな来てください来ないでくださいくれば来なければ来たら来ましたら来なかったら来ませんでしたら来られる来られます来られない来られません来させる来させます来させない来させません来させられる来させられます来させられない来させられません来い
+来る；　；　来る
+来ます； [polite]　　；　来る
+来ない；　[negative] ；　来る
+来ません；　[polite] [negative]　；　来る
+来た； [past]　；　来る
+来ました；　[polite] [past]　；　来る
+来なかった;  [negative] [past]; 来る
+来ませんでした; [polite] [negative] [past]; 来る
+来て；[-te]　；　来る
+来まして；　[polite] [-te]　　；　来る
+来ないで； [negative] [-te]　；　来る
+来ませんで； [polite] [negative] [-te]　；　来る
+来なくて； [negative] [-te]　；　来る
+来て； [-te]　；　来る
+いる；　；　いる
+来て； [-te]　；　来る
+います； [polite]　；　いる
+来て； [-te]　；　来る
+いない； [negative]　；　いる
+来て； [-te]　；　来る
+いません； [polite] [negative]　；　いる
+来よう； [volitional]　；　来る
+来ましょう； [polite] [volitional]　；　来る
+来る； ；　来る
+まい； ；　まい
+来ます； [polite]　；　来る
+まい； 　；　まい
+来なさい； [imperative]　；　来る
+来る；　；　来る
+な；　；　な
+来て； [-te]　；　来る
+ください； [imperative]　；　くださる
+来ないで； [negative] [-te]　；　来る
+ください； [imperative]　；　くださる
+くれば； [-ba]　；　来る
+来なければ； [negative] [-ba]　；　来る
+来たら； [-tara]　；　来る
+来ましたら；[polite] [-tara]　；　来る
+来なかったら； [negative] [-tara]　；　来る
+来ませんでしたら; [polite] [negative] [-tara]; 来る
+来られる; [passive] ; 来る
+来られます; [passive] [polite] ; 来る
+来られない;  [passive or potential] [negative] ; 来る
+来られません; [passive] [polite] [negative]; 来る
+来させる； [causative] ；　来る
+来させます; [causative] [polite]　；　来る
+来させない； [causative] [negative]　；　来る
+来させません;  [causative] [polite] [negative] ; 来る
+来させられる； [causative] [passive]　；　来る
+来させられます; [causative] [passive] [polite] ; 来る
+来させられない； [causative] [passive] [negative]　；　来る
+来させられません; [causative] [passive] [polite] [negative]　；　来る
+来い; [imperative] ；　来る

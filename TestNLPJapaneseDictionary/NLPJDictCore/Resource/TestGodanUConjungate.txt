@@ -1,0 +1,71 @@
+﻿買う買います買わない買いません買った買いました買わなかった買いませんでした買って買いまして買わないで買いませんで買わなくて買っている買っています買っていない買っていません買おう買いましょう買うまい買いますまい買え買いなさい買うな買いなさるな買ってください買わないでください買えば買わなければ買ったら買いましたら買わなかったら買いませんでしたら買える買えます買えない買えません買われる買われます買われない買われません買わせる買わせます買わせない買わせません買わせられる買わせられます買わせられない買わせられません買わねば買わぬ
+買う；　；　買う
+買います； [polite]　　；　買う
+買わない；　[negative]　；　買う
+買いません；　[polite] [negative]　；　買う
+買った；　[past] ；　買う
+買いました；　[polite] [past]　；　買う
+買わなかった；　　[negative] [past] ；　買う
+買いませんでした；　[polite] [negative] [past]　；　買う
+買って；[-te]　；　買う
+買いまして；　[polite] [-te]　　；　買う
+買わないで； [negative] [-te]　；　買う
+買いませんで； [polite] [negative] [-te]　；　買う
+買わなくて； [negative] [-te]　；　買う
+買って； [-te]　；　買う
+いる；　；　いる
+買って； [-te]　；　買う
+います； [polite]　；　いる
+買って； [-te]　；　買う
+いない； [negative]　；　いる
+買って； [-te]　；　買う
+いません； [polite] [negative]　；　いる
+買おう； [volitional]　；　買う
+買いましょう； [polite] [volitional]　；　買う
+買う；   ； 買う
+まい； ；　まい
+買います； [polite]　；　買う
+まい； 　；　まい
+買え； [imperative]　；　買う
+買いなさい； [imperative]　；　買う
+買う；　；　買う
+な；　；　な
+買いなさる； [imperative]　；　買う
+な；　；　な
+買って； [-te]　；　買う
+ください； [imperative]　；　くださる
+買わないで； [negative] [-te]　；　買う
+ください； [imperative]　；　くださる
+買えば； [-ba]　；　買う
+買わなければ； [negative] [-ba]　；　買う
+買ったら； [-tara]　；　買う
+買いましたら； [polite] [-tara]　；　買う
+買わなかったら； [negative] [-tara]　；　買う
+買いませんでしたら； [polite] [negative] [-tara]　；　買う
+買える；　[potential] ；　買う
+買えます； [potential] [polite]　；　買う
+買えない； [potential] [negative]　；　買う
+買えません； [potential] [polite] [negative]　；　買う
+買われる；　 [passive]　； 買う
+買われます； [passive] [polite]　； 買う
+買われない； [passive] [negative]　； 買う
+買われません； [passive] [polite] [negative]　； 買う
+買わせる； [causative]　；　買う
+買わせます； [causative] [polite]；　買う
+買わせない； [causative] [negative]　；　買う
+買わせません； [causative] [polite] [negative]　；　買う
+買わせられる； [causative] [passive]　；　買う
+買わせられます； [causative] [passive] [polite] 　；　買う
+買わせられない； [causative] [passive] [negative]　；　買う
+買わせられません； [causative] [passive] [polite] [negative]　；　買う
+買わねば;  [negative] [-ba]; 買う
+買わぬ; [negative]; 買う
+
+
+
+
+
+
+
+
+

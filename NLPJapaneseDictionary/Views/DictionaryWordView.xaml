@@ -1,0 +1,197 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:NLPJapaneseDictionary.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="clr-namespace:NLPJDict.Models" 
+    xmlns:DataBindingConverters="clr-namespace:NLPJDict.ConvertClasses.DataBindingConverters"
+    x:Class="NLPJapaneseDictionary.Views.DictionaryWordView"
+    x:Name="userControl"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:views="clr-namespace:NLPJapaneseDictionary.Views"
+    xmlns:usercontrols="clr-namespace:NLPJapaneseDictionary.UserControls"
+    Background="Transparent"    
+    SizeChanged="OnWindowSizeChanged"
+    mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <DataBindingConverters:DimensionConverter x:Key="DimensionConverter"/>
+        <DataBindingConverters:PriorityToColor x:Key="PriorityToColor"/>
+        <DataBindingConverters:NullToVisibilyConverter x:Key="NullToVisibilyConverter"/>
+        <DataBindingConverters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <Thickness x:Key="SectionHeaderMargin">0,10,0,0</Thickness>
+        <sys:Double x:Key="SectionHeaderFontSize">20</sys:Double>
+        <sys:Double x:Key="SectionBodyFontSize">18</sys:Double>
+        <TextWrapping x:Key="GlobalTextWrapping">Wrap</TextWrapping>
+
+        <Style TargetType="{x:Type Paragraph}">
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+    </UserControl.Resources>
+
+
+    <Grid >
+        <ListBox x:Name="twoColumnListView" 
+			HorizontalAlignment="Stretch"  
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch"
+			Canvas.ZIndex="0"
+            Background="Transparent"
+            Foreground="{Binding Foreground, ElementName=userControl, Mode=OneWay}" 
+            BorderThickness="0"
+			VerticalAlignment="Stretch"                  
+			AutomationProperties.AutomationId="TokenListView"
+			AutomationProperties.Name="List Items"
+            ScrollViewer.VerticalScrollBarVisibility="Auto"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            IsSynchronizedWithCurrentItem="true"	        
+		    VirtualizingPanel.IsVirtualizing="True"           
+            VirtualizingPanel.ScrollUnit="Pixel"               
+			SelectionMode="Single"  
+            ItemContainerStyle="{StaticResource DictWordListBoxItem}"
+			ItemsSource="{Binding}">
+            <ListBox.ItemTemplate>
+                <DataTemplate DataType="{x:Type data:DictionaryWordModel}">
+                    <Border BorderThickness="{Binding BorderThickness, Mode=OneTime}" Background="Transparent"
+                                BorderBrush="{Binding BorderBrush, ElementName= userControl, Mode=OneWay}"
+                            Padding="5,10,15,9" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="15" />
+                                <ColumnDefinition Width="7*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <TextBox Foreground="{Binding Foreground, ElementName=userControl, Mode=OneWay}"  IsReadOnly="True" BorderThickness="0" Text="{Binding FirstWord, Mode=OneTime}" TextAlignment="Center" VerticalAlignment="Top" TextWrapping="{StaticResource GlobalTextWrapping}" FontSize="40" Background="Transparent"/>
+                                <TextBox Foreground="{Binding Foreground, ElementName=userControl, Mode=OneWay}"  IsReadOnly="True" BorderThickness="0" Grid.Row="1" Visibility="{Binding FirstWordInformation, Converter={StaticResource NullToVisibilyConverter}, Mode=OneTime}" Text="{Binding FirstWordInformation, Mode=OneTime}" TextAlignment="Center" VerticalAlignment="Top" TextWrapping="{StaticResource GlobalTextWrapping}"  FontSize="20" Background="Transparent"/>
+
+                                <TextBlock  Grid.Row="2" Text="{Binding Conjungation, Mode=OneTime}"  Visibility="{Binding IsConjungationVisible, Mode=OneTime}"  TextAlignment="Center" VerticalAlignment="Top" TextWrapping="{StaticResource GlobalTextWrapping}"  FontSize="15"/>
+
+                                <Border Grid.Row="3" Margin="0,5,0,0"  Padding="5,2,5,2" MinWidth="90" Background="{Binding Priority, Converter={StaticResource PriorityToColor}, Mode=OneTime}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding Priority, Mode=OneTime}" TextAlignment="Center" VerticalAlignment="Center" Foreground="White" 
+                                               TextWrapping="{StaticResource GlobalTextWrapping}" FontSize="14"/>
+                                </Border>
+
+                                <views:OneWordView Grid.Row="4" DataContext="{Binding KanjiList.Words}" WordClickEvent="OnKanjiWordClickEvent"/>
+
+                                <Button Grid.Row="5" Style="{StaticResource GreenButton}"  
+                                         Visibility="{Binding IsHaveExample, Converter={StaticResource BoolToVisibilityConverter}, Mode=OneTime}"                                                                                          
+                                         HorizontalAlignment="Center" 
+                                         VerticalAlignment="Center" 
+                                         Width="Auto"
+                                         Height="25"                                         
+                                         Margin="0,0,0,10" 
+                                         Tag="5"
+                                         Click="OnExampleButtonClick">
+                                    <TextBlock Margin="10,2,10,2" Text="EXAMPLES" TextAlignment="Left"  FontSize="13"  />
+                                </Button>
+                            </Grid>
+
+                            <StackPanel Orientation="Vertical" Grid.Column="2" >
+                                <TextBlock  Text="(OTHER) READINGS"  Visibility="{Binding IsAllReadingVisible, Mode=OneTime}" FontSize="{StaticResource SectionHeaderFontSize}" FontWeight="SemiBold" TextWrapping="{StaticResource GlobalTextWrapping}"/>
+                                <TextBox Foreground="{Binding Foreground, ElementName=userControl, Mode=OneWay}"  IsReadOnly="True" BorderThickness="0" Visibility="{Binding IsAllReadingVisible, Mode=OneTime}"  Text="{Binding ReadingApplyToAll, Mode=OneTime}" Grid.Row="1" TextAlignment="Left"  TextWrapping="{StaticResource GlobalTextWrapping}"  FontSize="{StaticResource SectionBodyFontSize}" Background="Transparent"/>
+
+                                <TextBlock Margin="{StaticResource SectionHeaderMargin}" Text="MEANINGS" FontSize="{StaticResource SectionHeaderFontSize}" FontWeight="SemiBold"  TextWrapping="{StaticResource GlobalTextWrapping}"/>
+                                <usercontrols:BindableRichTextBox Foreground="{Binding Foreground, ElementName=userControl, Mode=OneWay}" Document="{Binding Sense.SenseDocument}"  BorderThickness="0"  IsReadOnly="True" Background="Transparent" Unloaded="OnBindableRichTextBoxUnloaded"/>
+
+                                <TextBlock Visibility="{Binding IsOtherKanjiFormsVisible, Mode=OneTime}" Margin="{StaticResource SectionHeaderMargin}" Text="OTHER FORMS" FontSize="{StaticResource SectionHeaderFontSize}" FontWeight="SemiBold" TextWrapping="{StaticResource GlobalTextWrapping}"/>
+                                <TextBox Foreground="{Binding Foreground, ElementName=userControl, Mode=OneWay}"  IsReadOnly="True" BorderThickness="0" Visibility="{Binding IsOtherKanjiFormsVisible, Mode=OneTime}" Text="{Binding OtherKanjiForms, Mode=OneTime}" FontSize="{StaticResource SectionBodyFontSize}" TextAlignment="Left"  TextWrapping="{StaticResource GlobalTextWrapping}" Background="Transparent"/>
+
+                                <TextBlock Visibility="{Binding IsRestrictReadingVisible, Mode=OneTime}" Margin="{StaticResource SectionHeaderMargin}" Text="RESTRICTED READINGS" FontSize="{StaticResource SectionHeaderFontSize}" FontWeight="SemiBold"  TextWrapping="{StaticResource GlobalTextWrapping}"/>
+                                <TextBox Foreground="{Binding Foreground, ElementName=userControl, Mode=OneWay}"  IsReadOnly="True" BorderThickness="0" Visibility="{Binding IsRestrictReadingVisible, Mode=OneTime}" Text="{Binding RestrictReading, Mode=OneTime}" FontSize="{StaticResource SectionBodyFontSize}" TextAlignment="Left"  TextWrapping="{StaticResource GlobalTextWrapping}" Background="Transparent" />
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListBox x:Name="oneColumnListView" 
+            BorderThickness="0"
+            Foreground="{Binding Foreground, ElementName=userControl, Mode=OneWay}" 
+            Background="Transparent"
+			HorizontalAlignment="Stretch"  
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch"       
+			Canvas.ZIndex="0"
+			VerticalAlignment="Stretch"                  
+			AutomationProperties.AutomationId="TokenListView"
+			AutomationProperties.Name="List Items"
+			SelectionMode="Single"                 
+            ScrollViewer.VerticalScrollBarVisibility="Auto"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"                        
+            IsSynchronizedWithCurrentItem="true"	        
+		    VirtualizingPanel.IsVirtualizing="True"           
+            VirtualizingPanel.ScrollUnit="Pixel"
+            ItemContainerStyle="{StaticResource DictWordListBoxItem}"
+			ItemsSource="{Binding}">
+            <ListBox.ItemTemplate>
+                <DataTemplate DataType="{x:Type data:DictionaryWordModel}">
+                    <Border BorderThickness="{Binding BorderThickness, Mode=OneTime}" Background="Transparent"
+                            BorderBrush="{Binding BorderBrush, ElementName= userControl, Mode=OneWay}" 
+                            Padding="5,10,15,9" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                        <Grid >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <TextBox Foreground="{Binding Foreground, ElementName=userControl, Mode=OneWay}"  IsReadOnly="True" BorderThickness="0" Text="{Binding FirstWord, Mode=OneTime}" TextAlignment="Center" VerticalAlignment="Top" TextWrapping="{StaticResource GlobalTextWrapping}" FontSize="40" Background="Transparent" />
+                            <TextBox Foreground="{Binding Foreground, ElementName=userControl, Mode=OneWay}"  IsReadOnly="True" BorderThickness="0" Grid.Row="1" Visibility="{Binding FirstWordInformation, Converter={StaticResource NullToVisibilyConverter}, Mode=OneTime}" Text="{Binding FirstWordInformation, Mode=OneTime}" TextAlignment="Center" VerticalAlignment="Top" TextWrapping="{StaticResource GlobalTextWrapping}"  FontSize="20" Background="Transparent" />
+
+                            <TextBlock  Grid.Row="2" Text="{Binding Conjungation, Mode=OneTime}"  Visibility="{Binding IsConjungationVisible, Mode=OneTime}"  TextAlignment="Center" VerticalAlignment="Top" TextWrapping="{StaticResource GlobalTextWrapping}"  FontSize="15"/>
+
+                            <Border Grid.Row="3" Margin="0,5,0,0"  Padding="5,2,5,2" MinWidth="90" Background="{Binding Priority, Converter={StaticResource PriorityToColor}, Mode=OneTime}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <TextBlock Text="{Binding Priority, Mode=OneTime}" TextAlignment="Center" VerticalAlignment="Center" Foreground="White" 
+                                               TextWrapping="{StaticResource GlobalTextWrapping}" FontSize="14"/>
+                            </Border>
+
+                            <views:OneWordView Grid.Row="4" DataContext="{Binding KanjiList.Words}" WordClickEvent="OnKanjiWordClickEvent"/>
+
+                            <Button Grid.Row="5" Style="{StaticResource GreenButton}"  
+                                         Visibility="{Binding IsHaveExample, Converter={StaticResource BoolToVisibilityConverter}, Mode=OneTime}"                                                                                          
+                                         HorizontalAlignment="Center" 
+                                         VerticalAlignment="Center" 
+                                         Width="Auto"
+                                         Height="25"                                         
+                                         Margin="0,0,0,10" 
+                                         Tag="5"
+                                         Click="OnExampleButtonClick">
+                                <TextBlock Margin="10,2,10,2" Text="EXAMPLES" TextAlignment="Left"  FontSize="13"  />
+                            </Button>
+                            
+                            <StackPanel Orientation="Vertical" Grid.Row="6" HorizontalAlignment="Left">
+                                <TextBlock Text="(OTHER) READINGS"  Visibility="{Binding IsAllReadingVisible, Mode=OneTime}" FontSize="{StaticResource SectionHeaderFontSize}" FontWeight="SemiBold" TextWrapping="{StaticResource GlobalTextWrapping}" TextAlignment="Left" HorizontalAlignment="Left"/>
+                                <TextBox Foreground="{Binding Foreground, ElementName=userControl, Mode=OneWay}"  IsReadOnly="True" BorderThickness="0" Visibility="{Binding IsAllReadingVisible, Mode=OneTime}"  Text="{Binding ReadingApplyToAll, Mode=OneTime}"  Grid.Row="1" TextAlignment="Left"  TextWrapping="{StaticResource GlobalTextWrapping}"  FontSize="{StaticResource SectionBodyFontSize}" HorizontalAlignment="Left" Background="Transparent"/>
+
+                                <TextBlock Margin="{StaticResource SectionHeaderMargin}" Text="MEANINGS" FontSize="{StaticResource SectionHeaderFontSize}" FontWeight="SemiBold"  TextWrapping="{StaticResource GlobalTextWrapping}"/>
+                                <usercontrols:BindableRichTextBox Foreground="{Binding Foreground, ElementName= userControl, Mode=OneWay}" BorderThickness="0" Document="{Binding Sense.SenseDocument}" IsReadOnly="True" Background="Transparent" Unloaded="OnBindableRichTextBoxUnloaded"/>
+
+                                <TextBlock Visibility="{Binding IsOtherKanjiFormsVisible, Mode=OneTime}" Margin="{StaticResource SectionHeaderMargin}" Text="OTHER FORMS" FontSize="{StaticResource SectionHeaderFontSize}" FontWeight="SemiBold" TextWrapping="{StaticResource GlobalTextWrapping}" TextAlignment="Left" HorizontalAlignment="Left"/>
+                                <TextBox Foreground="{Binding Foreground, ElementName=userControl, Mode=OneWay}"  IsReadOnly="True" BorderThickness="0" Visibility="{Binding IsOtherKanjiFormsVisible, Mode=OneTime}" Text="{Binding OtherKanjiForms, Mode=OneTime}" FontSize="{StaticResource SectionBodyFontSize}" TextAlignment="Left"  TextWrapping="{StaticResource GlobalTextWrapping}" HorizontalAlignment="Left" Background="Transparent"/>
+
+                                <TextBlock Visibility="{Binding IsRestrictReadingVisible, Mode=OneTime}" Margin="{StaticResource SectionHeaderMargin}" Text="RESTRICTED READINGS" FontSize="{StaticResource SectionHeaderFontSize}" FontWeight="SemiBold"  TextWrapping="{StaticResource GlobalTextWrapping}" TextAlignment="Left" HorizontalAlignment="Left"/>
+                                <TextBox Foreground="{Binding Foreground, ElementName=userControl, Mode=OneWay}"  IsReadOnly="True" BorderThickness="0" Visibility="{Binding IsRestrictReadingVisible, Mode=OneTime}" Text="{Binding RestrictReading, Mode=OneTime}" FontSize="{StaticResource SectionBodyFontSize}" TextAlignment="Left"  TextWrapping="{StaticResource GlobalTextWrapping}" HorizontalAlignment="Left" Background="Transparent"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+</UserControl>

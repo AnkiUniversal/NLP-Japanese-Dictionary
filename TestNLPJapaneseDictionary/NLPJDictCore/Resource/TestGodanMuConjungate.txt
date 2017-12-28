@@ -1,0 +1,62 @@
+﻿読む読みます読まない読みません読んだ読みました読まなかった読みませんでした読んで読みまして読まないで読みませんで読まなくて読んでいる読んでいます読んでいない読んでいません読もう読みましょう読むまい読みますまい読め読みなさい読むな読みなさるな読んでください読まないでください読めば読まなければ読んだら読みましたら読まなかったら読みませんでしたら読める読めます読めない読めません読まれる読まれます読まれない読まれません読ませる読ませます読ませない読ませません読ませられる読ませられます読ませられない読ませられません読まねば読まぬ
+読む；　；　読む
+読みます； [polite]　　；　読む
+読まない；　[negative]　；　読む
+読みません；　[polite] [negative]　；　読む
+読んだ；　[past] ；　読む
+読みました；　[polite] [past]　；　読む
+読まなかった；　　[negative] [past] ；　読む
+読みませんでした；　[polite] [negative] [past]　；　読む
+読んで；[-te]　；　読む
+読みまして；　[polite] [-te]　　；　読む
+読まないで； [negative] [-te]　；　読む
+読みませんで； [polite] [negative] [-te]；　読む
+読まなくて； [negative] [-te]　；　読む
+読んで； [-te]　；　読む
+いる；　；　いる
+読んで； [-te]　；　読む
+います； [polite]　；　いる
+読んで； [-te]　；　読む
+いない； [negative]　；　いる
+読んで； [-te]　；　読む
+いません； [polite] [negative]　；　いる
+読もう； [volitional]　；　読む
+読みましょう； [polite] [volitional]　；　読む
+読む；   ； 読む
+まい； ；　まい
+読みます； [polite]　；　読む
+まい； 　；　まい
+読め； [imperative]　；　読む
+読みなさい； [imperative]　；　読む
+読む；　；　読む
+な；　；　な
+読みなさる； [imperative]　；　読む
+な；　；　な
+読んで； [-te]　；　読む
+ください； [imperative]　；　くださる
+読まないで； [negative] [-te]　；　読む
+ください； [imperative]　；　くださる
+読めば； [-ba]　；　読む
+読まなければ； [negative] [-ba]　；　読む
+読んだら； [-tara]　；　読む
+読みましたら； [polite] [-tara]　；　読む
+読まなかったら； [negative] [-tara]　；　読む
+読みませんでしたら； [polite] [negative] [-tara]　；　読む
+読める；　[potential] ；　読む
+読めます； [potential] [polite]　；　読む
+読めない； [potential] [negative]　；　読む
+読めません； [potential] [polite] [negative]　；　読む
+読まれる；　 [passive]　； 読む
+読まれます； [passive] [polite]　； 読む
+読まれない； [passive] [negative]　；読む
+読まれません； [passive] [polite] [negative]　； 読む
+読ませる； [causative]　；　読む
+読ませます； [causative] [polite]；　読む
+読ませない； [causative] [negative]　；　読む
+読ませません； [causative] [polite] [negative]　；　読む
+読ませられる； [causative] [passive]　；　読む
+読ませられます； [causative] [passive] [polite] 　；　読む
+読ませられない； [causative] [passive] [negative]　；　読む
+読ませられません； [causative] [passive] [polite] [negative]　；　読む
+読まねば;  [negative] [-ba]; 読む
+読まぬ; [negative]; 読む

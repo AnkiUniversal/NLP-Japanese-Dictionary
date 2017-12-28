@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Colors.xaml"/>
+        <ResourceDictionary Source="Icons.xaml"/>
+        <ResourceDictionary Source="ButtonStyles.xaml"/>
+        <ResourceDictionary Source="WindowsStyles.xaml"/>
+        <ResourceDictionary Source="ItemPanelStyles.xaml"/>
+        <ResourceDictionary Source="TextBoxStyles.xaml"/>
+        <ResourceDictionary Source="ScrollViewStyles.xaml"/>
+        <ResourceDictionary Source="TabControlStyles.xaml"/>
+        <ResourceDictionary Source="ComboBoxStyles.xaml"/>
+        <ResourceDictionary Source="SliderStyles.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

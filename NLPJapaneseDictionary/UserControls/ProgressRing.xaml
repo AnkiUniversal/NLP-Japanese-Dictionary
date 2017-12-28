@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="NLPJapaneseDictionary.UserControls.ProgressRing"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NLPJapaneseDictionary.UserControls"
+             mc:Ignorable="d" 
+             x:Name="userControl"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Storyboard x:Key="Loading">
+            <DoubleAnimation
+                Storyboard.TargetName="loadingRotate"
+                Storyboard.TargetProperty="Angle"
+                From="0"
+                To="360" Duration="0:0:1.5" RepeatBehavior="Forever" />
+        </Storyboard>
+
+        <Storyboard x:Key="FadeOut" Completed="OnFadeOutStoryboardCompleted">
+            <DoubleAnimation 
+                Storyboard.TargetName="loadingIcon"
+                BeginTime="0:0:0.0" 
+                Storyboard.TargetProperty="Opacity" 
+                From="1" 
+                To="0" 
+                Duration="0:0:0.2"/>
+        </Storyboard>
+
+    </UserControl.Resources>
+
+    <Path x:Name="loadingIcon"
+          Style="{StaticResource LoadingIcon}" 
+          Fill="{StaticResource OceanBlue}" 
+          Stroke="Transparent" RenderTransformOrigin="0.5,0.5">
+        <Path.RenderTransform>
+            <TransformGroup>
+                <RotateTransform x:Name="loadingRotate" Angle="0"/>
+            </TransformGroup>
+        </Path.RenderTransform>
+    </Path>
+</UserControl>
