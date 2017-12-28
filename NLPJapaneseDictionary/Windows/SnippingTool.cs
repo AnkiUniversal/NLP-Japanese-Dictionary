@@ -1,4 +1,21 @@
-﻿using NLPJapaneseDictionary.Helpers;
+﻿/**
+ * Copyright © 2017-2018 Anki Universal Team.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License.  A copy of the
+ * License is distributed with this work in the LICENSE.md file.  You may
+ * also obtain a copy of the License from
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+using NLPJapaneseDictionary.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,28 +96,25 @@ namespace NLPJapaneseDictionary.Windows
             forms = new SnippingTool[screens.Count];
             for (int i = 0; i < screens.Count; i++)
             {
-                int hRes = screens[i].HorizontalResolution;
-                int vRes = screens[i].VerticalResolution;
+                int horResolution = screens[i].HorizontalResolution;
+                int verResolution = screens[i].VerticalResolution;
                 int top = screens[i].MonitorArea.Top;
                 int left = screens[i].MonitorArea.Left;
-                var bmp = new Bitmap(hRes, vRes, PixelFormat.Format32bppPArgb);
-                using (var g = Graphics.FromImage(bmp))
+                var bitmap = new Bitmap(horResolution, verResolution, PixelFormat.Format32bppPArgb);
+                using (var g = Graphics.FromImage(bitmap))
                 {
-                    g.CopyFromScreen(left, top, 0, 0, bmp.Size);
+                    g.CopyFromScreen(left, top, 0, 0, bitmap.Size);
                 }
-                forms[i] = new SnippingTool(bmp, left, top, hRes, vRes);
+                forms[i] = new SnippingTool(bitmap, left, top, horResolution, verResolution);
                 forms[i].Show();
             }
         }
 
-        #region Overrides
         protected override void OnMouseDown(MouseEventArgs e)
         {
-            // Start the snip on mouse down
             if (e.Button != MouseButtons.Left)
-            {
                 return;
-            }
+       
             pointStart = e.Location;
             rectSelection = new Rectangle(e.Location, new Size(0, 0));
             Invalidate();
@@ -108,11 +122,9 @@ namespace NLPJapaneseDictionary.Windows
 
         protected override void OnMouseMove(MouseEventArgs e)
         {
-            // Modify the selection on mouse move
             if (e.Button != MouseButtons.Left)
-            {
                 return;
-            }
+           
             int x1 = Math.Min(e.X, pointStart.X);
             int y1 = Math.Min(e.Y, pointStart.Y);
             int x2 = Math.Max(e.X, pointStart.X);
@@ -130,18 +142,14 @@ namespace NLPJapaneseDictionary.Windows
                     OnCancel(new EventArgs());
                     return;
                 }
-                foreach (var f in forms)
-                    f.Opacity = 0;
+                foreach (var form in forms)
+                    form.Opacity = 0;
 
                 var point = PointToScreen(rectSelection.Location);
-                if (rectSelection.Width < MIN_CAPTURE_WIDTH || rectSelection.Height < MIN_CAPTURE_HEIGHT)
-                {
-                    MessageBox.Show("Capture region is too small.", "Invalid Capture Size");
-                }
-                else if (rectSelection.Width > MAX_CAPTURE_WIDTH || rectSelection.Height > MAX_CAPTURE_HEIGHT)
-                {
-                    MessageBox.Show("Capture region is too large.", "Invalid Capture Size");
-                }
+                if (rectSelection.Width < MIN_CAPTURE_WIDTH || rectSelection.Height < MIN_CAPTURE_HEIGHT)                
+                    UIUtilities.ShowMessageDialog("Capture region is too small.", "Invalid Capture Size");                
+                else if (rectSelection.Width > MAX_CAPTURE_WIDTH || rectSelection.Height > MAX_CAPTURE_HEIGHT)                
+                    UIUtilities.ShowMessageDialog("Capture region is too large.", "Invalid Capture Size");                
                 else
                 {
                     Bitmap = ScreenHelper.CaptureScreen(point, rectSelection.Width, rectSelection.Height);
@@ -156,7 +164,6 @@ namespace NLPJapaneseDictionary.Windows
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            // Draw the current selection
             using (Brush br = new SolidBrush(Color.FromArgb(120, Color.White)))
             {
                 int x1 = rectSelection.X;
@@ -176,11 +183,9 @@ namespace NLPJapaneseDictionary.Windows
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            // Allow canceling the snip with the Escape key
             if (keyData == Keys.Escape)
-            {
                 CancelSnipping();
-            }
+            
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
@@ -196,6 +201,5 @@ namespace NLPJapaneseDictionary.Windows
             CloseForms();
             OnCancel(new EventArgs());
         }
-        #endregion
     }
 }

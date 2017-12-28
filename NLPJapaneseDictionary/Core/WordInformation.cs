@@ -1,4 +1,21 @@
-﻿using NLPJDict.ConvertClasses;
+﻿/**
+ * Copyright © 2017-2018 Anki Universal Team.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License.  A copy of the
+ * License is distributed with this work in the LICENSE.md file.  You may
+ * also obtain a copy of the License from
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+using NLPJDict.ConvertClasses;
 using NLPJDict.DatabaseTable.NLPJDictCore;
 using NLPJDict.Kuromoji.Core.HelperClasses;
 using NLPJDict.Kuromoji.Core.util;
@@ -15,6 +32,18 @@ namespace NLPJDict.NLPJDictCore
 {
     public class WordInformation
     {
+        //Translate from Japanese
+        //連用形 -masu stem
+        //未然形 imperfective form
+        //連用タ接続 conjunctive ta connection
+        //連用テ接続 conjunctive te connection
+        //連用デ接続 conjunctive de connection
+        //未然ウ接続 conjunctive u connection
+        //未然レル接続 suru - sa(reru) form
+        //命令ｉ imperative
+        //命令ｒｏ imperative
+        //仮定形 hypothetical form    
+
         public const string JAP_BASE_FORM = "基本形";        
         public const string JAP_SYMBOL = "記号";
         public const string JAP_PRONOUN = "代名詞";
@@ -45,17 +74,7 @@ namespace NLPJDict.NLPJDictCore
 
         private const string JAP_TE_FORM = "連用テ接続";
         private const string JAP_IADJ_AUO = "形容詞・アウオ段";
-        private const string JAP_OU_FORM = "未然ウ接続";        
-        //連用形 -masu stem
-        //未然形 imperfective form
-        //連用タ接続 conjunctive ta connection
-        //連用テ接続 conjunctive te connection
-        //連用デ接続 conjunctive de connection
-        //未然ウ接続 conjunctive u connection
-        //未然レル接続 suru - sa(reru) form
-        //命令ｉ imperative
-        //命令ｒｏ imperative
-        //仮定形 hypothetical form        
+        private const string JAP_OU_FORM = "未然ウ接続";            
 
         private bool hasCausative = false;
         private bool hasImperative = false;

@@ -350,10 +350,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="html\kanji.html" />
-    <Content Include="html\kanjianimate.js" />
-    <Content Include="html\kanjistyles.css" />
-    <Content Include="html\vivus.min.js" />
     <Content Include="AppIcon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -407,9 +403,7 @@
       <Name>Kuromoji</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Core\InkRecognition\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Resource\DictCompiled\userDict.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
