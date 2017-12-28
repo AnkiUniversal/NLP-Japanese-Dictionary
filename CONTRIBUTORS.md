@@ -1,0 +1,2 @@
+# Authors
+- Anki Universal Team
