@@ -38,16 +38,14 @@ This is a port from java to C# by us. For more details, please view the original
 The main project provides user interface written in WPF (and WinForms). 
 
 # [Wiki](https://github.com/AnkiUniversal/NLP-Japanese-Dictionary/wiki)
-For normal users, please read our [FAQ](https://github.com/AnkiUniversal/NLP-Japanese-Dictionary/wiki/Users'-FAQ)
-
-For developers, we plan to add a few white papers on how our OCR engine work so that you can help us improve it or write a new OCR engine for other languages. Though we don't expect to finish these papers anytime soon. 
+For normal users, please read our [FAQ](https://github.com/AnkiUniversal/NLP-Japanese-Dictionary/wiki/Users'-FAQ).
 
 # Contributing
 We welcome any contributions from submitting bug reports to new feature recommendations. 
 
 For pull requests, please license your contributions under Apache License V2.0. We will retain your copyright and include your name in the CONTRIBUTORS.md file.
 
-If you want to increase the accuracy of the OCR engine, please concentrate on preprocessing steps such as light source correction or skew detection. The core of our engine is optimized for speed with many parts are hard-coded. Thus, a strong background is needed if you want to improve the classifier speed or accuracy. 
+We plan to add a few white papers on how the OCR engine works so that you can help us improve it or write a new engine for other languages. Though we don't expect to finish these papers anytime soon. At the moment, the engine does not work well with uneven lighting images, text with noisy background, or skew text. Thus, preprocessing steps are really needed to be improved.
 
 # License
 NLP Japanese Dictionary is licensed under the Apache License, Version 2.0. Please see `LICENSE` for details.
