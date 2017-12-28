@@ -35,7 +35,7 @@ This is a port from java to C# by us. For more details, please view the original
 ## 3. NLPJapaneseDictionary WPF
 **Required nuget packets** `sqlite-net-pcl`, `Newtonsoft.Json`, and `System.Text.Encoding.CodePages`.
 
-The main project provides user interface written in WPF (and WinForms). 
+The main project provides the user interface written in WPF (and WinForms). 
 
 # [Wiki](https://github.com/AnkiUniversal/NLP-Japanese-Dictionary/wiki)
 For normal users, please read our [FAQ](https://github.com/AnkiUniversal/NLP-Japanese-Dictionary/wiki/Users'-FAQ).
