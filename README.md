@@ -1,4 +1,4 @@
-# NLP-Japanese-Dictionary
+# NLP Japanese Dictionary
 More than just a simple dictionary software, NLP Japanese Dictionary integrates advanced natural language processing algorithms to help you read Japanese as effortlessly as possible.
 
 **Main Features:**
@@ -11,3 +11,10 @@ More than just a simple dictionary software, NLP Japanese Dictionary integrates 
 - Extract text from images using OCR.
 - Support text-to-speech for Japanese.
 - Allow switching between day and night mode instantly.
+
+# 3rd Party Open Source Projects
+This application uses various open source projects. The list below provides a quick overview of the most important projects.
+- Japanese sentence segmentation: Kuromoji under Apache License 2.0 and Mecab-Ipadic.
+- Japanese - English dictionary: Japanese-Multilingual Dictionary under Creative Commons Attribution-ShareAlike Licence 3.0.
+- Kanji databases: KANJIDIC2, KanjiVG under Creative Commons Attribution-ShareAlike Licence 3.0.
+- Example sentences: Tanaka Corpus and Tatoeba Project under Creative Commons Attribution Licence 2.0.
