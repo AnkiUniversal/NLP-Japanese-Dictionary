@@ -68,7 +68,7 @@ Copyright (c) 2012 Simon Cropp and contributors. (MIT Licence)
 
 # Mecab-Ipadic
 The database for Kuromoji.
-
+```
 Nara Institute of Science and Technology (NAIST),
 the copyright holders, disclaims all warranties with regard to this
 software, including all implied warranties of merchantability and
@@ -131,3 +131,4 @@ grants independently of ICOT any specific warranty to the user in
 writing, such person, organization or entity, will also be exempted
 from and not be held liable to the user for any such damages as noted
 above as far as the program is concerned.
+```
