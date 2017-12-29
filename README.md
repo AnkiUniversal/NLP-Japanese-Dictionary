@@ -1,5 +1,5 @@
 # NLP Japanese Dictionary
-A Japanese - English dictionary software with OCR for Windows 7, 8, 10.
+A Japanese - English dictionary software with OCR for Windows 7, 8, 10. (Require .Net Framework 4.6.1)
 
 More than just a simple dictionary, NLP Japanese Dictionary integrates advanced natural language processing algorithms to help you read Japanese as effortlessly as possible.
 
