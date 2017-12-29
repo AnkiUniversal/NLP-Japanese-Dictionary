@@ -18,7 +18,7 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NLPJDict.Kuromoji.Core.FST;
+using NLPJapaneseDictionary.Kuromoji.Core.FST;
 
 namespace NLPJDictTest.kuromoji.Core.FST
 {

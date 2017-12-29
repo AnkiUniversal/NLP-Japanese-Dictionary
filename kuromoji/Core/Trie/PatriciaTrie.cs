@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +25,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 
-namespace NLPJDict.Kuromoji.Core.Trie
+namespace NLPJapaneseDictionary.Kuromoji.Core.Trie
 {
     public class PatriciaTrie<V> : IDictionary<string, V>  
     {

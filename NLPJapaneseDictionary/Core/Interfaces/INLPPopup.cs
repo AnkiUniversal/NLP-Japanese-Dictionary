@@ -21,7 +21,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Core.Interfaces
+namespace NLPJapaneseDictionary.Core.Interfaces
 {
     public interface INLPPopup
     {

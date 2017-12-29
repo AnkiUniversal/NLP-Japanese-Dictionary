@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.Dict
+namespace NLPJapaneseDictionary.Kuromoji.Core.Dict
 {
     public class GenericDictionaryEntry : DictionaryEntryBase
     {

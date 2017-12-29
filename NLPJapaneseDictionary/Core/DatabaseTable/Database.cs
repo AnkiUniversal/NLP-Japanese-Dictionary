@@ -24,7 +24,7 @@ using SQLitePCL;
 using SQLite;
 using System.Collections;
 
-namespace NLPJDict.DatabaseTable.NLPJDictCore
+namespace NLPJapaneseDictionary.DatabaseTable.NLPJDictCore
 {
     public class DBCorruptException : Exception
     {

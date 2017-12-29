@@ -16,8 +16,8 @@
  */
 
 using NLPJapaneseDictionary.Helpers;
-using NLPJDict.DatabaseTable.NLPJDictCore;
-using NLPJDict.HelperClasses;
+using NLPJapaneseDictionary.DatabaseTable.NLPJDictCore;
+using NLPJapaneseDictionary.HelperClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -25,7 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Core.DatabaseTable
+namespace NLPJapaneseDictionary.Core.DatabaseTable
 {
     public enum OcrEngineType
     {

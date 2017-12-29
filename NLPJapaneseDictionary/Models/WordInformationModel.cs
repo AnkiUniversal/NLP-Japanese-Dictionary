@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-using NLPJDict.KuromojiIpadic.Ipadic;
-using NLPJDict.Core;
-using NLPJDict.Core.Interfaces;
+using NLPJapaneseDictionary.KuromojiIpadic.Ipadic;
+using NLPJapaneseDictionary.Core;
+using NLPJapaneseDictionary.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +27,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
-namespace NLPJDict.Models
+namespace NLPJapaneseDictionary.Models
 {
     public class WordInformationModel : INotifyPropertyChanged
     {

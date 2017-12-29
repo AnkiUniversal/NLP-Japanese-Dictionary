@@ -15,23 +15,23 @@
  * limitations under the License.
  */
 
-using NLPJDict.Models;
+using NLPJapaneseDictionary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
-using NLPJDict.KuromojiIpadic.Ipadic;
-using NLPJDict.Core;
-using NLPJDict.ConvertClasses;
+using NLPJapaneseDictionary.KuromojiIpadic.Ipadic;
+using NLPJapaneseDictionary.Core;
+using NLPJapaneseDictionary.ConvertClasses;
 using System.Diagnostics;
-using NLPJDict.DatabaseTable.NLPJDictCore;
-using NLPJDict.HelperClasses;
+using NLPJapaneseDictionary.DatabaseTable.NLPJDictCore;
+using NLPJapaneseDictionary.HelperClasses;
 using System.Windows.Media;
 using NLPJapaneseDictionary.Helpers;
 
-namespace NLPJDict.ViewModels
+namespace NLPJapaneseDictionary.ViewModels
 {
     public class WordInformationViewModel
     {

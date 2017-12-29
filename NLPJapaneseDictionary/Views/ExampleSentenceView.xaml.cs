@@ -18,9 +18,9 @@
  */
 
 using NLPJapaneseDictionary.Helpers;
-using NLPJDict.DatabaseTable.NLPJDictCore;
-using NLPJDict.Models;
-using NLPJDict.ViewModels;
+using NLPJapaneseDictionary.DatabaseTable.NLPJDictCore;
+using NLPJapaneseDictionary.Models;
+using NLPJapaneseDictionary.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

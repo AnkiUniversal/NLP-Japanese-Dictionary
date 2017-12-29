@@ -18,20 +18,20 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NLPJDict.Kuromoji.Core.Compile;
-using NLPJDict.Kuromoji.Core.IO;
-using NLPJDict.Kuromoji.Core;
-using NLPJDict.Kuromoji.Core.HelperClasses;
-using NLPJDict.Kuromoji.Core.Buffer;
+using NLPJapaneseDictionary.Kuromoji.Core.Compile;
+using NLPJapaneseDictionary.Kuromoji.Core.IO;
+using NLPJapaneseDictionary.Kuromoji.Core;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core.Buffer;
 using System;
 using System.Collections.Generic;
-using NLPJDict.Kuromoji.Core.Trie;
+using NLPJapaneseDictionary.Kuromoji.Core.Trie;
 using System.Text;
 using System.Threading.Tasks;
-using NLPJDict.KuromojiIpadic.Ipadic;
+using NLPJapaneseDictionary.KuromojiIpadic.Ipadic;
 using System.IO;
 using System.Linq;
-using NLPJDict.Kuromoji.Core.Dict;
+using NLPJapaneseDictionary.Kuromoji.Core.Dict;
 
 namespace NLPJDictTest.kuromoji.Core.Compile
 {

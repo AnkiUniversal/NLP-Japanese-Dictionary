@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace NLPJDict.HelperClasses
+namespace NLPJapaneseDictionary.HelperClasses
 {
     public static class Locations
     {

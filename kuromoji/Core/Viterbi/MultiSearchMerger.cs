@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.Viterbi
+namespace NLPJapaneseDictionary.Kuromoji.Core.Viterbi
 {
     public class MultiSearchMerger
     {

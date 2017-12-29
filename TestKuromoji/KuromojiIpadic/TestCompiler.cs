@@ -40,7 +40,7 @@ namespace NLPJDictTest.kuromojiIpadic
                 Directory.Delete(outputDir, true);
             Directory.CreateDirectory(outputDir);
 
-            NLPJDict.KuromojiIpadic.Compile.DictionaryCompiler.StartCompile(new string[] { inputDir, outputDir, "euc-jp" }, CodePagesEncodingProvider.Instance);
+            NLPJapaneseDictionary.KuromojiIpadic.Compile.DictionaryCompiler.StartCompile(new string[] { inputDir, outputDir, "euc-jp" }, CodePagesEncodingProvider.Instance);
             Assert.IsTrue(true);
         }
     }

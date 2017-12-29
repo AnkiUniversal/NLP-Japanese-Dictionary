@@ -24,10 +24,10 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Text.RegularExpressions;
 using SQLite;
-using NLPJDict.Kuromoji.Core.util;
-using NLPJDict.Core;
+using NLPJapaneseDictionary.Kuromoji.Core.util;
+using NLPJapaneseDictionary.Core;
 
-namespace NLPJDict.DatabaseTable.NLPJDictCore
+namespace NLPJapaneseDictionary.DatabaseTable.NLPJDictCore
 {
     public class JmdictEntity
     {

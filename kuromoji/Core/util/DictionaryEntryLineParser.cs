@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.util
+namespace NLPJapaneseDictionary.Kuromoji.Core.util
 {
     public class DictionaryEntryLineParser
     {

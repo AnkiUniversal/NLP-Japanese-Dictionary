@@ -16,12 +16,12 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NLPJDict.ConvertClasses;
-using NLPJDict.DatabaseTable.NLPJDictCore;
-using NLPJDict.HelperClasses;
-using NLPJDict.Kuromoji.Core;
-using NLPJDict.KuromojiIpadic.Ipadic;
-using NLPJDict.Core;
+using NLPJapaneseDictionary.ConvertClasses;
+using NLPJapaneseDictionary.DatabaseTable.NLPJDictCore;
+using NLPJapaneseDictionary.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core;
+using NLPJapaneseDictionary.KuromojiIpadic.Ipadic;
+using NLPJapaneseDictionary.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;

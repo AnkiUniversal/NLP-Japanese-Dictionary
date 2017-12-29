@@ -16,9 +16,9 @@
  */
 
 using NLPJapaneseDictionary.Helpers;
-using NLPJDict.HelperClasses;
-using NLPJDict.Models;
-using NLPJDict.Core.DatabaseTable;
+using NLPJapaneseDictionary.HelperClasses;
+using NLPJapaneseDictionary.Models;
+using NLPJapaneseDictionary.Core.DatabaseTable;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -29,7 +29,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
-namespace NLPJDict.ViewModels
+namespace NLPJapaneseDictionary.ViewModels
 {
     public class OcrOneWordViewModel
     {

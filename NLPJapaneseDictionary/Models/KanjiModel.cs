@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-using NLPJDict.Core;
-using NLPJDict.Core.DatabaseTable;
-using NLPJDict.ViewModels;
+using NLPJapaneseDictionary.Core;
+using NLPJapaneseDictionary.Core.DatabaseTable;
+using NLPJapaneseDictionary.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +26,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Models
+namespace NLPJapaneseDictionary.Models
 {
     public class KanjiModel : INotifyPropertyChanged
     {

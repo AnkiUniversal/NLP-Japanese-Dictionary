@@ -23,7 +23,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace NLPJDict.ConvertClasses.DataBindingConverters
+namespace NLPJapaneseDictionary.ConvertClasses.DataBindingConverters
 {
     public class DimensionConverter : IValueConverter
     {

@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-using NLPJDict.HelperClasses;
+using NLPJapaneseDictionary.HelperClasses;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace NLPJDict.ConvertClasses
+namespace NLPJapaneseDictionary.ConvertClasses
 {
     public static class KataHiraConvert
     {

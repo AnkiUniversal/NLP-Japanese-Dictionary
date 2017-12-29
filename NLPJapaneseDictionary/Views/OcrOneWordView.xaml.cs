@@ -18,8 +18,8 @@
  */
 
 using NLPJapaneseDictionary.Helpers;
-using NLPJDict.Models;
-using NLPJDict.ViewModels;
+using NLPJapaneseDictionary.Models;
+using NLPJapaneseDictionary.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

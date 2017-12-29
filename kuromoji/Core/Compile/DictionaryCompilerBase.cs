@@ -17,14 +17,14 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.Dict;
+using NLPJapaneseDictionary.Kuromoji.Core.Dict;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.Compile
+namespace NLPJapaneseDictionary.Kuromoji.Core.Compile
 {
     public abstract class DictionaryCompilerBase<T> where T : DictionaryEntryBase
     {

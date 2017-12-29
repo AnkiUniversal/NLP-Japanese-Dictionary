@@ -17,10 +17,10 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.Compile;
+using NLPJapaneseDictionary.Kuromoji.Core.Compile;
 using System.Text;
 
-namespace NLPJDict.KuromojiIpadic.Compile
+namespace NLPJapaneseDictionary.KuromojiIpadic.Compile
 {
     public class DictionaryCompiler : DictionaryCompilerBase<DictionaryEntry>
     {

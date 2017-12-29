@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-using NLPJDict.HelperClasses;
+using NLPJapaneseDictionary.HelperClasses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +26,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Documents;
 
-namespace NLPJDict.Models
+namespace NLPJapaneseDictionary.Models
 {
     public class SenseElementRichTextModel
     {      

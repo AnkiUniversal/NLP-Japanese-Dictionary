@@ -17,11 +17,11 @@
  * limitations under the License.
  */
 
-namespace NLPJDict.Kuromoji.Interfaces
+namespace NLPJapaneseDictionary.Kuromoji.Interfaces
 {
     public interface IToken
     {
-        NLPJDict.Kuromoji.Core.Viterbi.ViterbiNode.NodeType NodeType { get; }
+        NLPJapaneseDictionary.Kuromoji.Core.Viterbi.ViterbiNode.NodeType NodeType { get; }
         string Surface { get;  }
         string ConjugationType { get; }
         string ConjugationForm { get; }

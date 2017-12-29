@@ -20,7 +20,7 @@
 using System;
 using System.IO;
 
-namespace NLPJDict.Kuromoji.Core.HelperClasses
+namespace NLPJapaneseDictionary.Kuromoji.Core.HelperClasses
 {
     public class MemoryStreamWrapper : IDisposable
     {

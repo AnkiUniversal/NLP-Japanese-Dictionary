@@ -18,7 +18,7 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NLPJDict.Kuromoji.Core.Buffer;
+using NLPJapaneseDictionary.Kuromoji.Core.Buffer;
 using System;
 using System.Collections.Generic;
 using System.Linq;

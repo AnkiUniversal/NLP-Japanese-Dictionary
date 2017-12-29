@@ -17,13 +17,13 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.Compile;
-using NLPJDict.Kuromoji.Core.Dict;
-using NLPJDict.Kuromoji.Core.util;
+using NLPJapaneseDictionary.Kuromoji.Core.Compile;
+using NLPJapaneseDictionary.Kuromoji.Core.Dict;
+using NLPJapaneseDictionary.Kuromoji.Core.util;
 using System.Collections.Generic;
 using System.Text;
 
-namespace NLPJDict.KuromojiIpadic.Compile
+namespace NLPJapaneseDictionary.KuromojiIpadic.Compile
 {
     public class TokenInfoDictionaryCompiler : TokenInfoDictionaryCompilerBase<DictionaryEntry>
     {

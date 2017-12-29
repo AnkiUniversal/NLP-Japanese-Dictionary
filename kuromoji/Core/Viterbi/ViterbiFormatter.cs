@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.Dict;
+using NLPJapaneseDictionary.Kuromoji.Core.Dict;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -25,7 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.Viterbi
+namespace NLPJapaneseDictionary.Kuromoji.Core.Viterbi
 {
     public class ViterbiFormatter : IDisposable
     {

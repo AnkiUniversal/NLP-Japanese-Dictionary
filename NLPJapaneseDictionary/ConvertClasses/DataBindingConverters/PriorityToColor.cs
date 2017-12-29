@@ -24,7 +24,7 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace NLPJDict.ConvertClasses.DataBindingConverters
+namespace NLPJapaneseDictionary.ConvertClasses.DataBindingConverters
 {
     public class PriorityToColor : IValueConverter
     {

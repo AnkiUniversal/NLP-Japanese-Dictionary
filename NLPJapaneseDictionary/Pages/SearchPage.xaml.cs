@@ -19,13 +19,13 @@ using Jocr;
 using NLPJapaneseDictionary.Helpers;
 using NLPJapaneseDictionary.OCR;
 using NLPJapaneseDictionary.Views;
-using NLPJDict.ConvertClasses;
-using NLPJDict.DatabaseTable.NLPJDictCore;
-using NLPJDict.Kuromoji.Core.HelperClasses;
-using NLPJDict.KuromojiIpadic.Ipadic;
-using NLPJDict.Core;
-using NLPJDict.Core.DatabaseTable;
-using NLPJDict.ViewModels;
+using NLPJapaneseDictionary.ConvertClasses;
+using NLPJapaneseDictionary.DatabaseTable.NLPJDictCore;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.KuromojiIpadic.Ipadic;
+using NLPJapaneseDictionary.Core;
+using NLPJapaneseDictionary.Core.DatabaseTable;
+using NLPJapaneseDictionary.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -33,7 +33,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
-using static NLPJDict.Core.DatabaseTable.GeneralPreference;
+using static NLPJapaneseDictionary.Core.DatabaseTable.GeneralPreference;
 
 namespace NLPJapaneseDictionary.Pages
 {
@@ -183,7 +183,7 @@ namespace NLPJapaneseDictionary.Pages
                 string inputWord = text.Trim();
 
                 noResultsMessage.Visibility = Visibility.Collapsed;
-                searchTextViewModel.AddFirstNonDuplicate(new NLPJDict.Models.SearchTextModel(inputWord));
+                searchTextViewModel.AddFirstNonDuplicate(new NLPJapaneseDictionary.Models.SearchTextModel(inputWord));
 
                 wordsGridViewRoot.Visibility = Visibility.Collapsed;
                 pageControl.Hide();
@@ -329,14 +329,14 @@ namespace NLPJapaneseDictionary.Pages
                 return false;
         }
         
-        private void OnDictionaryWordViewKanjiClickEvent(NLPJDict.Models.OneWordModel word)
+        private void OnDictionaryWordViewKanjiClickEvent(NLPJapaneseDictionary.Models.OneWordModel word)
         {
             var kanji = KanjiDict.GetKanji(word.Word, MainWindow.KanjiDictionary);
             var kanjiView = new KanjiView();
             kanjiView.ShowKanji(kanji, mainPage);
         }
 
-        private void OnWordsGridViewWordClicked(NLPJDict.Models.WordInformationModel word)
+        private void OnWordsGridViewWordClicked(NLPJapaneseDictionary.Models.WordInformationModel word)
         {
             try
             {
@@ -350,7 +350,7 @@ namespace NLPJapaneseDictionary.Pages
             }
         }
 
-        private void ReflectToOcrWordViewIfNeeded(NLPJDict.Models.WordInformationModel word)
+        private void ReflectToOcrWordViewIfNeeded(NLPJapaneseDictionary.Models.WordInformationModel word)
         {            
             if (ocrOneWordView != null && ocrOneWordView.Visibility == Visibility.Visible)
             {
@@ -431,13 +431,13 @@ namespace NLPJapaneseDictionary.Pages
                 ocrOneWordView.ChangeReadMode(MainWindow.UserPrefs.IsReadNightMode);
         }
 
-        private void OnExampleCliked(NLPJDict.Models.DictionaryWordModel word)
+        private void OnExampleCliked(NLPJapaneseDictionary.Models.DictionaryWordModel word)
         {
             ExampleView.ViewModel.GetExamples(word.FirstWord, exampleDictionary, MAX_NO_EXAMPLES);
             ExampleView.ShowExample(mainPage);
         }
 
-        private void OnSearchedTextClicked(NLPJDict.Models.SearchTextModel model)
+        private void OnSearchedTextClicked(NLPJapaneseDictionary.Models.SearchTextModel model)
         {
             searchOptionsPopup.IsOpen = false;            
             searchTextViewModel.Remove(model);
@@ -484,7 +484,7 @@ namespace NLPJapaneseDictionary.Pages
             UpdateTextboxThenSearch(sentence);
         }
 
-        private void OnWebSearchClicked(NLPJDict.Models.DictionaryWordModel model)
+        private void OnWebSearchClicked(NLPJapaneseDictionary.Models.DictionaryWordModel model)
         {
             string search = webSearchUri.Replace("????", model.FirstWord);
             System.Diagnostics.Process.Start(search);            

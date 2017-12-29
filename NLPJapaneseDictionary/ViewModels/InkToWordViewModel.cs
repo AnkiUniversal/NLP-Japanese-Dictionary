@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-using NLPJDict.Models;
+using NLPJapaneseDictionary.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.ViewModels
+namespace NLPJapaneseDictionary.ViewModels
 {
     public class InkToWordViewModel
     {

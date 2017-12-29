@@ -17,16 +17,16 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.Dict;
-using NLPJDict.Kuromoji.Core.HelperClasses;
-using NLPJDict.Kuromoji.Core.util;
+using NLPJapaneseDictionary.Kuromoji.Core.Dict;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core.util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.Viterbi
+namespace NLPJapaneseDictionary.Kuromoji.Core.Viterbi
 {
     public class ViterbiSearcher : IDisposable
     {

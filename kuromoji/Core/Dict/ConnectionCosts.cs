@@ -17,8 +17,8 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.HelperClasses;
-using NLPJDict.Kuromoji.Core.IO;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core.IO;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,7 +26,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.Dict
+namespace NLPJapaneseDictionary.Kuromoji.Core.Dict
 {
     public class ConnectionCosts : IDisposable
     {

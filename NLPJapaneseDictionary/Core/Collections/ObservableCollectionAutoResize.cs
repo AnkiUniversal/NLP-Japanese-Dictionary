@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Core.Collections
+namespace NLPJapaneseDictionary.Core.Collections
 {
     public class ObservableCollectionAutoResize<T> : ObservableCollection<T>
     {

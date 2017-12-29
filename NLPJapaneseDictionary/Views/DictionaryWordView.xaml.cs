@@ -17,10 +17,10 @@
  * limitations under the License.
  */
 
-using NLPJDict.ConvertClasses;
-using NLPJDict.HelperClasses;
-using NLPJDict.Models;
-using NLPJDict.ViewModels;
+using NLPJapaneseDictionary.ConvertClasses;
+using NLPJapaneseDictionary.HelperClasses;
+using NLPJapaneseDictionary.Models;
+using NLPJapaneseDictionary.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -108,7 +108,7 @@ namespace NLPJapaneseDictionary.Views
             return true;
         }
 
-        private void OnKanjiWordClickEvent(NLPJDict.Models.OneWordModel word)
+        private void OnKanjiWordClickEvent(NLPJapaneseDictionary.Models.OneWordModel word)
         {
             KanjiClickEvent?.Invoke(word);
         }

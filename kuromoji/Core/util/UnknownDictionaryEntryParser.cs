@@ -17,14 +17,14 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.Dict;
+using NLPJapaneseDictionary.Kuromoji.Core.Dict;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.util
+namespace NLPJapaneseDictionary.Kuromoji.Core.util
 {
     public class UnknownDictionaryEntryParser : DictionaryEntryLineParser
     {

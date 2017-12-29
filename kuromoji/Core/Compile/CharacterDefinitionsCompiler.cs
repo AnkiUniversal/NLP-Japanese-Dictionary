@@ -17,8 +17,8 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.HelperClasses;
-using NLPJDict.Kuromoji.Core.IO;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core.IO;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -28,7 +28,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.Compile
+namespace NLPJapaneseDictionary.Kuromoji.Core.Compile
 {
     public class CharacterDefinitionsCompiler : ICompiler
     {

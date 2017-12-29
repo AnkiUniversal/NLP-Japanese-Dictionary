@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-namespace NLPJDict.Kuromoji.Core
+namespace NLPJapaneseDictionary.Kuromoji.Core
 {
     public static class Constant
     {

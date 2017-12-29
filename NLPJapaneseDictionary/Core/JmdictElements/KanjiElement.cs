@@ -16,14 +16,14 @@
  */
 
 using Newtonsoft.Json.Linq;
-using NLPJDict.Core.Interfaces;
+using NLPJapaneseDictionary.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Core.JmdictElements
+namespace NLPJapaneseDictionary.Core.JmdictElements
 {
     public class KanjiElement : IRepresentWord
     {

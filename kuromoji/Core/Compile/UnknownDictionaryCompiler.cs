@@ -17,10 +17,10 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.Dict;
-using NLPJDict.Kuromoji.Core.HelperClasses;
-using NLPJDict.Kuromoji.Core.IO;
-using NLPJDict.Kuromoji.Core.util;
+using NLPJapaneseDictionary.Kuromoji.Core.Dict;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core.IO;
+using NLPJapaneseDictionary.Kuromoji.Core.util;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,7 +28,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.Compile
+namespace NLPJapaneseDictionary.Kuromoji.Core.Compile
 {
     public class UnknownDictionaryCompiler : ICompiler
     {

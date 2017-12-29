@@ -22,7 +22,7 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 
-namespace NLPJDict.ConvertClasses.DataBindingConverters
+namespace NLPJapaneseDictionary.ConvertClasses.DataBindingConverters
 {
     public class NullToVisibilyConverter : System.Windows.Data.IValueConverter
     {

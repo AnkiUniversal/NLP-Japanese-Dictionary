@@ -25,7 +25,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.FST
+namespace NLPJapaneseDictionary.Kuromoji.Core.FST
 {
     public class Builder : IDisposable
     {

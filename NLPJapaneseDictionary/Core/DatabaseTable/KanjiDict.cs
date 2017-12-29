@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-using NLPJDict.DatabaseTable.NLPJDictCore;
+using NLPJapaneseDictionary.DatabaseTable.NLPJDictCore;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Core.DatabaseTable
+namespace NLPJapaneseDictionary.Core.DatabaseTable
 {
     public class KanjiDict
     {

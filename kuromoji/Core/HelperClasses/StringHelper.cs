@@ -24,7 +24,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.HelperClasses
+namespace NLPJapaneseDictionary.Kuromoji.Core.HelperClasses
 {
     public static class StringHelper
     {

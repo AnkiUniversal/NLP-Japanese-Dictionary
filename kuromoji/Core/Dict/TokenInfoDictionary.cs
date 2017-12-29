@@ -17,8 +17,8 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.Buffer;
-using NLPJDict.Kuromoji.Core.util;
+using NLPJapaneseDictionary.Kuromoji.Core.Buffer;
+using NLPJapaneseDictionary.Kuromoji.Core.util;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,7 +26,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.Dict
+namespace NLPJapaneseDictionary.Kuromoji.Core.Dict
 {
     public class TokenInfoDictionary : IDictionary, IDisposable
     {

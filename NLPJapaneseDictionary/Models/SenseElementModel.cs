@@ -24,7 +24,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace NLPJDict.Models
+namespace NLPJapaneseDictionary.Models
 {
     public class SenseElementModel : INotifyPropertyChanged
     {

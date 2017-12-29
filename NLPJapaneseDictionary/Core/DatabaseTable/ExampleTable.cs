@@ -26,7 +26,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 
 
-namespace NLPJDict.DatabaseTable.NLPJDictCore
+namespace NLPJapaneseDictionary.DatabaseTable.NLPJDictCore
 {
     public class ExampleTable
     {

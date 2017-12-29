@@ -16,9 +16,9 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NLPJDict.ConvertClasses;
-using NLPJDict.HelperClasses;
-using NLPJDict.Kuromoji.Core;
+using NLPJapaneseDictionary.ConvertClasses;
+using NLPJapaneseDictionary.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;

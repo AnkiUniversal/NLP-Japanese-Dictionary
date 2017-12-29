@@ -22,7 +22,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Models
+namespace NLPJapaneseDictionary.Models
 {
     public class InkToWordList
     {

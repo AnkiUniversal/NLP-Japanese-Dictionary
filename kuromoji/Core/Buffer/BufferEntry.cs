@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.Buffer
+namespace NLPJapaneseDictionary.Kuromoji.Core.Buffer
 {
     public class BufferEntry
     {

@@ -17,19 +17,19 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core;
-using NLPJDict.Kuromoji.Core.Dict;
-using NLPJDict.Kuromoji.Core.FST;
-using NLPJDict.Kuromoji.Core.Viterbi;
-using NLPJDict.KuromojiIpadic.Compile;
-using NLPJDict.Kuromoji.Interfaces;
+using NLPJapaneseDictionary.Kuromoji.Core;
+using NLPJapaneseDictionary.Kuromoji.Core.Dict;
+using NLPJapaneseDictionary.Kuromoji.Core.FST;
+using NLPJapaneseDictionary.Kuromoji.Core.Viterbi;
+using NLPJapaneseDictionary.KuromojiIpadic.Compile;
+using NLPJapaneseDictionary.Kuromoji.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.KuromojiIpadic.Ipadic
+namespace NLPJapaneseDictionary.KuromojiIpadic.Ipadic
 {
     public class Tokenizer : TokenizerBase<Token>, ITokenizer<Token>
     {

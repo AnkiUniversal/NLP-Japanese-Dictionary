@@ -25,7 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.FST
+namespace NLPJapaneseDictionary.Kuromoji.Core.FST
 {
     public class Compiler : IDisposable
     {

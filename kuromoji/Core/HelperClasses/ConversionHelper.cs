@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.HelperClasses
+namespace NLPJapaneseDictionary.Kuromoji.Core.HelperClasses
 {
     public static class ConversionHelper
     {

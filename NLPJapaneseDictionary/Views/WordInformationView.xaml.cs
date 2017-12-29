@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-using NLPJDict.ViewModels;
+using NLPJapaneseDictionary.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;

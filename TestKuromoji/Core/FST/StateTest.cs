@@ -18,12 +18,12 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NLPJDict.Kuromoji.Core.Compile;
-using NLPJDict.Kuromoji.Core.IO;
-using NLPJDict.Kuromoji.Core;
-using NLPJDict.Kuromoji.Core.HelperClasses;
-using NLPJDict.Kuromoji.Core.Buffer;
-using NLPJDict.Kuromoji.Core.FST;
+using NLPJapaneseDictionary.Kuromoji.Core.Compile;
+using NLPJapaneseDictionary.Kuromoji.Core.IO;
+using NLPJapaneseDictionary.Kuromoji.Core;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core.Buffer;
+using NLPJapaneseDictionary.Kuromoji.Core.FST;
 
 namespace NLPJDictTest.kuromoji.Core.FST
 {

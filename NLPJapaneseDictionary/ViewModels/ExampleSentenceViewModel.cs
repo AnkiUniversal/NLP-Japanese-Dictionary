@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
-using NLPJDict.DatabaseTable.NLPJDictCore;
-using NLPJDict.Models;
+using NLPJapaneseDictionary.DatabaseTable.NLPJDictCore;
+using NLPJapaneseDictionary.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -24,7 +24,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.ViewModels
+namespace NLPJapaneseDictionary.ViewModels
 {
     public class ExampleSentenceViewModel
     {

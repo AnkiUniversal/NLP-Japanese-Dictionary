@@ -17,8 +17,8 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.HelperClasses;
-using NLPJDict.Kuromoji.Core.IO;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core.IO;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -26,10 +26,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NLPJDict.Kuromoji.Core;
-using NLPJDict.Kuromoji.Core.util;
+using NLPJapaneseDictionary.Kuromoji.Core;
+using NLPJapaneseDictionary.Kuromoji.Core.util;
 
-namespace NLPJDict.Kuromoji.Core.Buffer
+namespace NLPJapaneseDictionary.Kuromoji.Core.Buffer
 {
     public class StringValueMapBuffer : IDisposable
     {

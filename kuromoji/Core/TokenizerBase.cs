@@ -17,8 +17,8 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.Dict;
-using NLPJDict.Kuromoji.Core.Viterbi;
+using NLPJapaneseDictionary.Kuromoji.Core.Dict;
+using NLPJapaneseDictionary.Kuromoji.Core.Viterbi;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,7 +26,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core
+namespace NLPJapaneseDictionary.Kuromoji.Core
 {
     /**
      * <p>

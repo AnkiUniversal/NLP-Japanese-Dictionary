@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-using NLPJDict.ConvertClasses;
-using NLPJDict.DatabaseTable.NLPJDictCore;
-using NLPJDict.Kuromoji.Core.HelperClasses;
-using NLPJDict.Core.Interfaces;
+using NLPJapaneseDictionary.ConvertClasses;
+using NLPJapaneseDictionary.DatabaseTable.NLPJDictCore;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Core
+namespace NLPJapaneseDictionary.Core
 {
     public class WordListReducer
     {

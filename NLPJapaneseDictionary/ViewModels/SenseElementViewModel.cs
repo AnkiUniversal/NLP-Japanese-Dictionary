@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
-using NLPJDict.Models;
-using NLPJDict.Core.JmdictElements;
+using NLPJapaneseDictionary.Models;
+using NLPJapaneseDictionary.Core.JmdictElements;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -26,7 +26,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.ViewModels
+namespace NLPJapaneseDictionary.ViewModels
 {
     public class SenseElementViewModel : INotifyPropertyChanged
     {

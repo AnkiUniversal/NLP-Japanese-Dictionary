@@ -16,16 +16,16 @@
  */
 
 using Newtonsoft.Json.Linq;
-using NLPJDict.DatabaseTable.NLPJDictCore;
-using NLPJDict.Core.Interfaces;
-using NLPJDict.Core.JmdictElements;
+using NLPJapaneseDictionary.DatabaseTable.NLPJDictCore;
+using NLPJapaneseDictionary.Core.Interfaces;
+using NLPJapaneseDictionary.Core.JmdictElements;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Core
+namespace NLPJapaneseDictionary.Core
 {
     public class JmdictWord
     {

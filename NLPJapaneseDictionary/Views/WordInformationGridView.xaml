@@ -12,7 +12,7 @@
     VerticalContentAlignment="Stretch"
     mc:Ignorable="d"
     x:Name="userControl"
-    xmlns:data="clr-namespace:NLPJDict.Models">
+    xmlns:data="clr-namespace:NLPJapaneseDictionary.Models">
 
     <Grid>
         <Grid.ColumnDefinitions>

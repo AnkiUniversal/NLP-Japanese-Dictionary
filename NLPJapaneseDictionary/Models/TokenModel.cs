@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Interfaces;
-using NLPJDict.KuromojiIpadic.Ipadic;
-using NLPJDict.Core.Interfaces;
+using NLPJapaneseDictionary.Kuromoji.Interfaces;
+using NLPJapaneseDictionary.KuromojiIpadic.Ipadic;
+using NLPJapaneseDictionary.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +26,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Models
+namespace NLPJapaneseDictionary.Models
 {
     public class TokenModel : INotifyPropertyChanged
     {

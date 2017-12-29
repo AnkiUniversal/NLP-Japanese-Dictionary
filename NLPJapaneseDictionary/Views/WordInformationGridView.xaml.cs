@@ -18,9 +18,9 @@
  */
 
 using NLPJapaneseDictionary;
-using NLPJDict.HelperClasses;
-using NLPJDict.Models;
-using NLPJDict.ViewModels;
+using NLPJapaneseDictionary.HelperClasses;
+using NLPJapaneseDictionary.Models;
+using NLPJapaneseDictionary.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;

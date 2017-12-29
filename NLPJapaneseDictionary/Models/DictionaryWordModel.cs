@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-using NLPJDict.HelperClasses;
-using NLPJDict.Core;
-using NLPJDict.ViewModels;
+using NLPJapaneseDictionary.HelperClasses;
+using NLPJapaneseDictionary.Core;
+using NLPJapaneseDictionary.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +28,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace NLPJDict.Models
+namespace NLPJapaneseDictionary.Models
 {
     public class DictionaryWordModel : INotifyPropertyChanged
     {

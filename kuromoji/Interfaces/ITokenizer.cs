@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Interfaces
+namespace NLPJapaneseDictionary.Kuromoji.Interfaces
 {
     public interface ITokenizer<T> where T :IToken
     {

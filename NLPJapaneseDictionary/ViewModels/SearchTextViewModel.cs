@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-using NLPJDict.Models;
-using NLPJDict.Core.Collections;
+using NLPJapaneseDictionary.Models;
+using NLPJapaneseDictionary.Core.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.ViewModels
+namespace NLPJapaneseDictionary.ViewModels
 {
     public class SearchTextViewModel
     {

@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-using NLPJDict.HelperClasses;
-using NLPJDict.Kuromoji.Core.HelperClasses;
-using NLPJDict.Core;
+using NLPJapaneseDictionary.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,7 +26,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace NLPJDict.ConvertClasses
+namespace NLPJapaneseDictionary.ConvertClasses
 {
     public static class RomaConvert
     {   

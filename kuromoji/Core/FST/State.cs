@@ -17,14 +17,14 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.FST
+namespace NLPJapaneseDictionary.Kuromoji.Core.FST
 {
     public class State
     {

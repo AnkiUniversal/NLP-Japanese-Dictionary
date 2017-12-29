@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -25,7 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.IO
+namespace NLPJapaneseDictionary.Kuromoji.Core.IO
 {
     public class IntegerArrayIO
     {

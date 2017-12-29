@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-using NLPJDict.DatabaseTable.NLPJDictCore;
-using NLPJDict.Kuromoji.Core;
-using NLPJDict.Kuromoji.Core.HelperClasses;
-using NLPJDict.Kuromoji.Interfaces;
-using NLPJDict.Core.Interfaces;
+using NLPJapaneseDictionary.DatabaseTable.NLPJDictCore;
+using NLPJapaneseDictionary.Kuromoji.Core;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Interfaces;
+using NLPJapaneseDictionary.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Core
+namespace NLPJapaneseDictionary.Core
 {
     public static class WordConjungateCombiner
     {

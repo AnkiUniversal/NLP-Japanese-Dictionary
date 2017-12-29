@@ -7,7 +7,7 @@
              x:Name="userControl"    
              Background="White"
              Foreground="Black"
-             xmlns:DataBindingConverters="clr-namespace:NLPJDict.ConvertClasses.DataBindingConverters"
+             xmlns:DataBindingConverters="clr-namespace:NLPJapaneseDictionary.ConvertClasses.DataBindingConverters"
              mc:Ignorable="d" >
     
     <UserControl.Resources>

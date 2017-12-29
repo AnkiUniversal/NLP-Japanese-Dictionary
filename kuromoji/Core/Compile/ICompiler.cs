@@ -24,7 +24,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.Compile
+namespace NLPJapaneseDictionary.Kuromoji.Core.Compile
 {
     public interface ICompiler
     {

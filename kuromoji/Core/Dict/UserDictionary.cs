@@ -17,9 +17,9 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core.HelperClasses;
-using NLPJDict.Kuromoji.Core.Trie;
-using NLPJDict.Kuromoji.Core.util;
+using NLPJapaneseDictionary.Kuromoji.Core.HelperClasses;
+using NLPJapaneseDictionary.Kuromoji.Core.Trie;
+using NLPJapaneseDictionary.Kuromoji.Core.util;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,7 +28,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace NLPJDict.Kuromoji.Core.Dict
+namespace NLPJapaneseDictionary.Kuromoji.Core.Dict
 {
     public class UserDictionary : IDictionary
     {

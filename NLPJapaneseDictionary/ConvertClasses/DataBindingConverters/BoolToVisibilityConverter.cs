@@ -24,7 +24,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 
-namespace NLPJDict.ConvertClasses.DataBindingConverters
+namespace NLPJapaneseDictionary.ConvertClasses.DataBindingConverters
 {
     public class BoolToVisibilityConverter : IValueConverter
     {

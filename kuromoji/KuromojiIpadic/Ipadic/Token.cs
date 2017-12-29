@@ -17,14 +17,14 @@
  * limitations under the License.
  */
 
-using NLPJDict.Kuromoji.Core;
-using NLPJDict.Kuromoji.Core.Dict;
-using NLPJDict.Kuromoji.Core.Viterbi;
-using NLPJDict.KuromojiIpadic.Compile;
-using NLPJDict.Kuromoji.Interfaces;
+using NLPJapaneseDictionary.Kuromoji.Core;
+using NLPJapaneseDictionary.Kuromoji.Core.Dict;
+using NLPJapaneseDictionary.Kuromoji.Core.Viterbi;
+using NLPJapaneseDictionary.KuromojiIpadic.Compile;
+using NLPJapaneseDictionary.Kuromoji.Interfaces;
 using System;
 
-namespace NLPJDict.KuromojiIpadic.Ipadic
+namespace NLPJapaneseDictionary.KuromojiIpadic.Ipadic
 {
     public class Token : TokenBase, IToken
     {

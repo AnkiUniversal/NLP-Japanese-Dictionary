@@ -18,8 +18,8 @@
  */
 
 using NLPJapaneseDictionary.Helpers;
-using NLPJDict.ConvertClasses.DataBindingConverters;
-using NLPJDict.Core.DatabaseTable;
+using NLPJapaneseDictionary.ConvertClasses.DataBindingConverters;
+using NLPJapaneseDictionary.Core.DatabaseTable;
 using System;
 using System.Collections.Generic;
 using System.Linq;
