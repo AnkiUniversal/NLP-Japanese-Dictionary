@@ -25,7 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.NLPJDictCore.DatabaseTable
+namespace NLPJDict.Core.DatabaseTable
 {
     public enum OcrEngineType
     {

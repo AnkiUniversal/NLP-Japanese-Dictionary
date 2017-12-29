@@ -19,14 +19,14 @@ using NLPJDict.DatabaseTable.NLPJDictCore;
 using NLPJDict.Kuromoji.Core;
 using NLPJDict.Kuromoji.Core.HelperClasses;
 using NLPJDict.Kuromoji.Interfaces;
-using NLPJDict.NLPJDictCore.Interfaces;
+using NLPJDict.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.NLPJDictCore
+namespace NLPJDict.Core
 {
     public static class WordConjungateCombiner
     {

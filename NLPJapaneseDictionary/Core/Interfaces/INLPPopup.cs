@@ -21,7 +21,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.NLPJDictCore.Interfaces
+namespace NLPJDict.Core.Interfaces
 {
     public interface INLPPopup
     {

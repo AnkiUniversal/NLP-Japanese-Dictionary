@@ -17,7 +17,7 @@
 
 using NLPJDict.Kuromoji.Interfaces;
 using NLPJDict.KuromojiIpadic.Ipadic;
-using NLPJDict.NLPJDictCore.Interfaces;
+using NLPJDict.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

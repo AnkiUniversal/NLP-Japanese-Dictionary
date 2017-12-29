@@ -23,8 +23,8 @@ using NLPJDict.ConvertClasses;
 using NLPJDict.DatabaseTable.NLPJDictCore;
 using NLPJDict.Kuromoji.Core.HelperClasses;
 using NLPJDict.KuromojiIpadic.Ipadic;
-using NLPJDict.NLPJDictCore;
-using NLPJDict.NLPJDictCore.DatabaseTable;
+using NLPJDict.Core;
+using NLPJDict.Core.DatabaseTable;
 using NLPJDict.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -33,7 +33,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
-using static NLPJDict.NLPJDictCore.DatabaseTable.GeneralPreference;
+using static NLPJDict.Core.DatabaseTable.GeneralPreference;
 
 namespace NLPJapaneseDictionary.Pages
 {

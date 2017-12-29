@@ -16,7 +16,7 @@
  */
 
 using NLPJDict.Models;
-using NLPJDict.NLPJDictCore.JmdictElements;
+using NLPJDict.Core.JmdictElements;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

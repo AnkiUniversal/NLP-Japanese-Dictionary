@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.NLPJDictCore.Collections
+namespace NLPJDict.Core.Collections
 {
     public class ObservableCollectionAutoResize<T> : ObservableCollection<T>
     {

@@ -16,7 +16,7 @@
  */
 
 using NLPJDict.Models;
-using NLPJDict.NLPJDictCore.DatabaseTable;
+using NLPJDict.Core.DatabaseTable;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

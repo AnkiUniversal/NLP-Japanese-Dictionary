@@ -16,7 +16,7 @@
  */
 
 using NLPJDict.HelperClasses;
-using NLPJDict.NLPJDictCore;
+using NLPJDict.Core;
 using NLPJDict.ViewModels;
 using System;
 using System.Collections.Generic;

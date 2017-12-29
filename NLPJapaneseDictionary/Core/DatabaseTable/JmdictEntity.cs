@@ -25,7 +25,7 @@ using System.Xml.Linq;
 using System.Text.RegularExpressions;
 using SQLite;
 using NLPJDict.Kuromoji.Core.util;
-using NLPJDict.NLPJDictCore;
+using NLPJDict.Core;
 
 namespace NLPJDict.DatabaseTable.NLPJDictCore
 {

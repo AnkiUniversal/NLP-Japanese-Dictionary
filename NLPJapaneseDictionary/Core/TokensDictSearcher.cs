@@ -21,7 +21,7 @@ using NLPJDict.Kuromoji.Core;
 using NLPJDict.Kuromoji.Core.HelperClasses;
 using NLPJDict.Kuromoji.Interfaces;
 using NLPJDict.KuromojiIpadic.Ipadic;
-using NLPJDict.NLPJDictCore.Interfaces;
+using NLPJDict.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -30,7 +30,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace NLPJDict.NLPJDictCore
+namespace NLPJDict.Core
 {
     public static class TokensDictSearcher
     {

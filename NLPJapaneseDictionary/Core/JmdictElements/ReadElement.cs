@@ -17,14 +17,14 @@
 
 using Newtonsoft.Json.Linq;
 using NLPJDict.DatabaseTable.NLPJDictCore;
-using NLPJDict.NLPJDictCore.Interfaces;
+using NLPJDict.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.NLPJDictCore.JmdictElements
+namespace NLPJDict.Core.JmdictElements
 {
     public class ReadElement : IRepresentWord
     {

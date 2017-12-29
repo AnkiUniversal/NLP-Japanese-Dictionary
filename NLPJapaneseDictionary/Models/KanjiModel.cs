@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
-using NLPJDict.NLPJDictCore;
-using NLPJDict.NLPJDictCore.DatabaseTable;
+using NLPJDict.Core;
+using NLPJDict.Core.DatabaseTable;
 using NLPJDict.ViewModels;
 using System;
 using System.Collections.Generic;

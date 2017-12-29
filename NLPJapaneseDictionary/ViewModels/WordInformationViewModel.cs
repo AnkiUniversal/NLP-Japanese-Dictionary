@@ -23,7 +23,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using NLPJDict.KuromojiIpadic.Ipadic;
-using NLPJDict.NLPJDictCore;
+using NLPJDict.Core;
 using NLPJDict.ConvertClasses;
 using System.Diagnostics;
 using NLPJDict.DatabaseTable.NLPJDictCore;

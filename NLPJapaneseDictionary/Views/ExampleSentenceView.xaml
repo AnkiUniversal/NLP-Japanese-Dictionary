@@ -15,9 +15,10 @@
            AllowsTransparency="True" 
            x:Name="popup"
            StaysOpen="False">
-        <Border BorderThickness="1" BorderBrush="{StaticResource OceanBlue}" Padding="10,10,10,0"
+        <Border BorderThickness="1" BorderBrush="{StaticResource OceanBlue}" 
                 Background="{Binding Background,ElementName=userControl,Mode=OneWay}">
             <ListView x:Name="sentenceListView" 
+            Padding="10,10,10,0"
             Background="Transparent"
             BorderThickness="0"
 			HorizontalAlignment="Stretch"  			

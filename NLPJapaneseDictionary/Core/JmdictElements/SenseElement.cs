@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.NLPJDictCore.JmdictElements
+namespace NLPJDict.Core.JmdictElements
 {
     public class SenseElement
     {

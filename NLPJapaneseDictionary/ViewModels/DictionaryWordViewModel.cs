@@ -23,7 +23,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using NLPJDict.DatabaseTable.NLPJDictCore;
-using NLPJDict.NLPJDictCore;
+using NLPJDict.Core;
 using System.Text.RegularExpressions;
 
 namespace NLPJDict.ViewModels

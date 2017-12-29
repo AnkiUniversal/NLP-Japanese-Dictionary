@@ -17,15 +17,15 @@
 
 using Newtonsoft.Json.Linq;
 using NLPJDict.DatabaseTable.NLPJDictCore;
-using NLPJDict.NLPJDictCore.Interfaces;
-using NLPJDict.NLPJDictCore.JmdictElements;
+using NLPJDict.Core.Interfaces;
+using NLPJDict.Core.JmdictElements;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLPJDict.NLPJDictCore
+namespace NLPJDict.Core
 {
     public class JmdictWord
     {

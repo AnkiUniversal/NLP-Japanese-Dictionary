@@ -17,7 +17,7 @@
 
 using NLPJDict.HelperClasses;
 using NLPJDict.Kuromoji.Core.HelperClasses;
-using NLPJDict.NLPJDictCore;
+using NLPJDict.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;

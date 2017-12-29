@@ -21,7 +21,7 @@ using NLPJDict.DatabaseTable.NLPJDictCore;
 using NLPJDict.HelperClasses;
 using NLPJDict.Kuromoji.Core;
 using NLPJDict.KuromojiIpadic.Ipadic;
-using NLPJDict.NLPJDictCore;
+using NLPJDict.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;

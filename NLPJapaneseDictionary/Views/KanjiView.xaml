@@ -23,11 +23,11 @@
            x:Name="popup"
            AllowsTransparency="True" 
            StaysOpen="False">
-        <Border BorderThickness="1" 
-                Padding="15,15,15,10"
+        <Border BorderThickness="1"                 
                 BorderBrush="{StaticResource OceanBlue}" 
                 Background="{Binding Background,ElementName=userControl,Mode=OneWay}">
             <ScrollViewer  VerticalScrollBarVisibility="Auto"              
+                           Padding="15,15,15,10"
                        VirtualizingPanel.ScrollUnit="Pixel"
                        VerticalAlignment="Stretch"
                        HorizontalAlignment="Stretch"

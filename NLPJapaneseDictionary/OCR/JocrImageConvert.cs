@@ -17,7 +17,6 @@
 
 using Jocr;
 using NLPJapaneseDictionary.Windows;
-using NLPJDictCompanion;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

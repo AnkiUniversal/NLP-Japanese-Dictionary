@@ -16,7 +16,7 @@
  */
 
 using NLPJDict.Models;
-using NLPJDict.NLPJDictCore.Collections;
+using NLPJDict.Core.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
