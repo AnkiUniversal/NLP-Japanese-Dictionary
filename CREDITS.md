@@ -1,11 +1,19 @@
+```
+Copyright © 2017-2018 Anki Universal Team <ankiuniversal@gmail.com>
 
-Copyright © 2017-2018 Anki Universal Team
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-Email: ankiuniversal@gmail.com
+    http://www.apache.org/licenses/LICENSE-2.0
 
-Licensed under the Apache License, Version 2.0.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
  
-
 Below is the list of Open Source libraries used in this application. We acknowledge and are grateful to the developers of these projects for their contributions to open source.
 
 # [Kuromoji Japanese Morphological Analyzer](https://github.com/atilika/kuromoji)
@@ -49,9 +57,18 @@ Copyright (c) 2007 James Newton-King. (MIT Licence)
 
 Copyright (c) 2013 Elegant Themes, Inc. (MIT Licence)
 
+# [Fody](https://github.com/Fody/Fody)
+Copyright (c) Simon Cropp and contributors. (MIT Licence)
+
+# [Costura](https://github.com/Fody/Costura/)
+
+Copyright (c) 2012 Simon Cropp and contributors. (MIT Licence)
+
+
+
 # Mecab-Ipadic
 The database for Kuromoji.
-
+```
 Nara Institute of Science and Technology (NAIST),
 the copyright holders, disclaims all warranties with regard to this
 software, including all implied warranties of merchantability and
@@ -114,3 +131,4 @@ grants independently of ICOT any specific warranty to the user in
 writing, such person, organization or entity, will also be exempted
 from and not be held liable to the user for any such damages as noted
 above as far as the program is concerned.
+```
