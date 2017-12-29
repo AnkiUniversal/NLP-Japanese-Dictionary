@@ -49,6 +49,15 @@ Copyright (c) 2007 James Newton-King. (MIT Licence)
 
 Copyright (c) 2013 Elegant Themes, Inc. (MIT Licence)
 
+# [Fody](https://github.com/Fody/Fody)
+Copyright (c) Simon Cropp and contributors. (MIT Licence)
+
+# [Costura](https://github.com/Fody/Costura/)
+
+Copyright (c) 2012 Simon Cropp and contributors. (MIT Licence)
+
+
+
 # Mecab-Ipadic
 The database for Kuromoji.
 
