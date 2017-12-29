@@ -10,7 +10,7 @@
     x:Name="userControl"
     mc:Ignorable="d">
 
-    <ListBox  AutomationProperties.AutomationId="GroupGridView"
+    <ListView  AutomationProperties.AutomationId="GroupGridView"
                Margin="5"
               PreviewMouseWheel="OnPreviewMouseWheel"
                BorderThickness="0"
@@ -23,13 +23,13 @@
                 ScrollViewer.VerticalScrollBarVisibility="Auto"
                 AutomationProperties.Name="TokenizedSentence"
                 ItemsSource="{Binding}"         
-                ItemContainerStyle="{StaticResource OneWordListBoxItem}"
+                ItemContainerStyle="{StaticResource SimpleListViewItem}"
                 Background="Transparent" >
-        <ListBox.ItemsPanel>
+        <ListView.ItemsPanel>
             <ItemsPanelTemplate>
-                <usercontrols:AlignableWrapPanel HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Top"/>
             </ItemsPanelTemplate>
-        </ListBox.ItemsPanel>
+        </ListView.ItemsPanel>
         <ListBox.ItemTemplate>
             <DataTemplate DataType="{x:Type data:OneWordModel}">
                 <Button Padding="0" Click="OnButtonClick" Style="{StaticResource ContentOpacityButton}"
@@ -39,6 +39,6 @@
                 </Button>
             </DataTemplate>
         </ListBox.ItemTemplate>
-    </ListBox>
+    </ListView>
        
 </UserControl>

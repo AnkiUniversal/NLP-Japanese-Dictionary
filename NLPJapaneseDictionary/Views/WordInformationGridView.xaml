@@ -51,11 +51,12 @@
                 ItemContainerStyle="{StaticResource OneWordListBoxItem}"
                 Background="Transparent"        
                 PreviewMouseWheel="OnWordsViewPreviewMouseWheel" 
-                BorderThickness="0"                
+                BorderThickness="0"           
+                
                 Padding="0">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <usercontrols:AlignableWrapPanel HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
                 <ListBox.ItemTemplate>

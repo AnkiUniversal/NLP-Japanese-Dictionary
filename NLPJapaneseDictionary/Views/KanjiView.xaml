@@ -65,7 +65,8 @@
 
                         <StackPanel Margin="0,10,0,0" x:Name="radicalListStack" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <TextBlock TextAlignment="Center" FontWeight="SemiBold" Text="PARTS" Margin="0,5,5,0" FontSize="20"  TextWrapping="Wrap" />
-                            <TextBlock TextAlignment="Center" Text="5" x:Name="radicalList" FontSize="20"  TextWrapping="Wrap" />
+                            <TextBox TextAlignment="Center" Text="5" x:Name="radicalList" FontSize="20"  TextWrapping="Wrap" Foreground="{Binding Foreground,ElementName=userControl,Mode=OneWay}"
+                                     BorderThickness="0" Background="Transparent" IsReadOnly="True"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Vertical" x:Name="variantStack">
