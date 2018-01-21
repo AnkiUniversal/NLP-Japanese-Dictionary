@@ -1,5 +1,5 @@
 # [NLP Japanese Dictionary](https://github.com/AnkiUniversal/NLP-Japanese-Dictionary/releases/download/v1.0.0.0/NLP_Japanese_Dictionary.zip)
-A Japanese - English dictionary software with OCR for Windows 7, 8, 10. (Require .Net Framework 4.6.1)
+A Japanese - English dictionary software with OCR for Windows 7, 8, 10. (require [.Net Framework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49981))
 
 More than just a simple dictionary, NLP Japanese Dictionary integrates advanced natural language processing algorithms to help you read Japanese as effortlessly as possible.
 
@@ -16,7 +16,11 @@ More than just a simple dictionary, NLP Japanese Dictionary integrates advanced 
 - Support text-to-speech for Japanese.
 - Allow switching between day and night mode instantly.
 
-[Download latest Release](https://github.com/AnkiUniversal/NLP-Japanese-Dictionary/releases/download/v1.0.0.0/NLP_Japanese_Dictionary.zip)
+Just extract and run **NLPJapaneseDictionary.exe** (require [.Net Framework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49981)):
+
+[Download via GitHub](https://github.com/AnkiUniversal/NLP-Japanese-Dictionary/releases/download/v1.0.0.0/NLP_Japanese_Dictionary.zip)
+
+[Download via GoolgeDrive](https://drive.google.com/open?id=1GzvVGoqs5hw5EHWCapjAgCZ2RaF2scVG)
 
 # 3rd Party Open Source Projects
 This application uses various open source projects (binary or source version). Please see `CREDITS.md` for details. The most important ones are:
