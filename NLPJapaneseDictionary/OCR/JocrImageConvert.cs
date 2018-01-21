@@ -103,26 +103,57 @@ namespace NLPJapaneseDictionary.OCR
         private static byte[] Argb32ToGray(BitmapData srcData, uint size)
         {
             float temp = 0;
-            byte[] image = new byte[size];            
+                    
             int stride = srcData.Stride;
             IntPtr Scan0 = srcData.Scan0;
 
             unsafe
             {
-                byte* p = (byte*)(void*)Scan0;
-                int i = 0;
-                uint totalLength = size * 4;
-                for (int index = 0; index < totalLength; i++, index++)
-                {
-                    temp = BLUE_COEF * p[index];
-                    index++;
-                    temp = temp + GREEN_COEF * p[index];
-                    index++;
-                    temp = temp + RED_COEF * p[index];
-                    index++;
+                if(BitConverter.IsLittleEndian)
+                    return ArgbToGrayLittleEndian(size, temp, Scan0); 
+                else
+                    return ArgbToGrayBigEndian(size, temp, Scan0);
+            }
+        }
 
-                    image[i] = (byte) temp;                    
-                }
+        private static unsafe byte[] ArgbToGrayLittleEndian(uint size, float temp, IntPtr Scan0)
+        {
+            byte[] image = new byte[size];
+            byte* p = (byte*)(void*)Scan0;
+            int i = 0;
+            uint totalLength = size * 4;
+            for (int index = 0; index < totalLength; i++, index++)
+            {
+                temp = BLUE_COEF * p[index];
+                index++;
+                temp = temp + GREEN_COEF * p[index];
+                index++;
+                temp = temp + RED_COEF * p[index];
+                index++;
+
+                image[i] = (byte)temp;
+            }
+
+            return image;
+        }
+
+        private static unsafe byte[] ArgbToGrayBigEndian(uint size, float temp, IntPtr Scan0)
+        {
+            byte[] image = new byte[size];
+            byte* p = (byte*)(void*)Scan0;
+            int i = 0;
+            uint totalLength = size * 4;
+            for (int index = 0; index < totalLength; i++)
+            {
+                index++; //skip alpha
+                temp = RED_COEF * p[index];
+                index++;
+                temp = temp + GREEN_COEF * p[index];
+                index++;
+                temp = temp + BLUE_COEF * p[index];
+                index++;
+
+                image[i] = (byte)temp;
             }
 
             return image;
