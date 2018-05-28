@@ -22,6 +22,8 @@ Just extract and run **NLPJapaneseDictionary.exe** (require [.Net Framework 4.6.
 
 [Download via GoolgeDrive](https://drive.google.com/open?id=1GzvVGoqs5hw5EHWCapjAgCZ2RaF2scVG)
 
+[Website](https://nlpjapanesedictionary.wordpress.com/) 
+
 # 3rd Party Open Source Projects
 This application uses various open source projects (binary or source version). Please see `CREDITS.md` for details. The most important ones are:
 - Japanese sentence segmentation: Kuromoji under Apache License 2.0 and Mecab-Ipadic.
