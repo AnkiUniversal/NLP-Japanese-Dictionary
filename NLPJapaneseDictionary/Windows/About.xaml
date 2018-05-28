@@ -13,7 +13,10 @@
         <ScrollViewer 
                 HorizontalScrollBarVisibility="Disabled"
                 VerticalScrollBarVisibility="Auto" >
-            <RichTextBox   Margin="5,20,15,5" 
+            <StackPanel>
+                <TextBlock Text="NLP Japanese Dictionary" TextAlignment="Center" FontWeight="Bold" FontSize="24" Margin="0,20,0,5" />
+                <TextBlock x:Name="versionText" TextAlignment="Center" FontWeight="Bold" FontSize="20" Margin="0" />
+                <RichTextBox   Margin="5,20,15,5" 
                            IsReadOnly="True" 
                            BorderThickness="0" 
                            FontSize="15"
@@ -21,7 +24,7 @@
                            Background="Transparent">
                 <FlowDocument TextAlignment="Center">
                     <Paragraph >
-                        <Bold FontSize="25">Copyright (C) 2017 - 2018 Anki Universal Team.</Bold>
+                        <Bold FontSize="15">Copyright (C) 2017 - 2018 Anki Universal Team</Bold>
                         <LineBreak />
                         <Bold>Email:</Bold> ankiuniversal@gmail.com
                         <LineBreak />
@@ -241,7 +244,8 @@
                         <LineBreak/>
                     </Paragraph>
                 </FlowDocument>
-            </RichTextBox>            
+            </RichTextBox>
+            </StackPanel>
         </ScrollViewer>
     </Grid>
 </Window>

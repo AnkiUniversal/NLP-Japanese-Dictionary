@@ -19,6 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -37,10 +38,13 @@ namespace NLPJapaneseDictionary.Windows
     /// </summary>
     public partial class About : Window
     {
+        public static Version AppVersion = Assembly.GetExecutingAssembly().GetName().Version;
+
         public About()
         {
             InitializeComponent();
             MainWindow.SetupWindowSizeAndPosition(this);
+            versionText.Text = "Version: " + AppVersion.ToString();
         }
 
         private void OnHyperlinkRequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
