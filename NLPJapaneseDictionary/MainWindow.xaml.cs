@@ -139,6 +139,8 @@ namespace NLPJapaneseDictionary
             App.KeyboadHook = KeyboardHook.GetInstance();
             App.KeyboadHook.KeyPressed += KeyPressed;
             SnippingTool.AreaSelected += SnippingToolOnAreaSelected;
+
+            App.NlpJdictService = NetTcp.NetTcpHelper.CreateNetNamedPipeServer(SearchTextFromAnotherProcess);
         }
 
         private void SetupNotifyIconIcon()
@@ -329,6 +331,13 @@ namespace NLPJapaneseDictionary
                 searchPage.SearchText(text);
         }
 
+        private void SearchTextFromAnotherProcess(string text)
+        {
+            ActivateWindow();
+            if(searchPage != null)
+                searchPage.SearchText(text);
+        }
+
         private void StartTTS(string Text)
         {
             try
@@ -376,7 +385,7 @@ namespace NLPJapaneseDictionary
             return isFoundVoices;
         }
 
-        private void ActivateWindow()
+        public void ActivateWindow()
         {
             if(this.WindowState == WindowState.Minimized)
             {

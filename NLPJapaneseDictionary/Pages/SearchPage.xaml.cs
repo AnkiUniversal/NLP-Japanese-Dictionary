@@ -96,7 +96,7 @@ namespace NLPJapaneseDictionary.Pages
 
             ChangeReadMode();
             HookEvents();
-        }
+        }        
 
         /// <summary>
         /// Tokenize and search a word/sentence/paragraph. All new line chars are removed before searching

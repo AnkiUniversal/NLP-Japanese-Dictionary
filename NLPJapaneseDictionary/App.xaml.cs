@@ -16,12 +16,14 @@
  */
 
 using NLPJapaneseDictionary.Core.Hooks;
+using NLPJapaneseDictionary.NetTcp;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
+using System.ServiceModel;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -35,33 +37,49 @@ namespace NLPJapaneseDictionary
         public static KeyboardHook KeyboadHook { get; set; }
         public static ClipBoardHook ClipBoardHook { get; set; }
 
+        public static ServiceHost NlpJdictService { get; set; }
+
         public App()
         {
         }
 
         private void OnApplicationExit(object sender, ExitEventArgs e)
         {
+            if(NlpJdictService != null)
+                NlpJdictService.Close();
+
             if (KeyboadHook != null)
                 KeyboadHook.Dispose();
 
             if (ClipBoardHook != null)
-                ClipBoardHook.Dispose();
+                ClipBoardHook.Dispose();            
         }
 
         protected override void OnStartup(StartupEventArgs e)
-        {
-            // Get Reference to the current Process
-            Process thisProc = Process.GetCurrentProcess();
-            // Check how many total processes have the same name as the current one
+        {            
+            Process thisProc = Process.GetCurrentProcess();            
             if (Process.GetProcessesByName(thisProc.ProcessName).Length > 1)
             {
-                // If ther is more than one, than it is already running.
-                MessageBox.Show("The app is already running.");
+                HandleArgs(e);
                 Application.Current.Shutdown();
                 return;
             }
-
+            
             base.OnStartup(e);
+        }
+
+        private static void HandleArgs(StartupEventArgs e)
+        {
+            if (e.Args.Length == 0)
+            {
+                MessageBox.Show("The app is already running.");
+                return;
+            }
+
+            using (var client = new NlpJdictServiceProxy())
+            {
+                client.SearchText(e.Args[0]);
+            }
         }
     }
 }
