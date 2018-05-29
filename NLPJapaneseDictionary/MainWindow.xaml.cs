@@ -234,16 +234,13 @@ namespace NLPJapaneseDictionary
                     return;
 
                 switch(currentCommand)
-                {
-                    case KeyboardCommand.OCRSentences:
-                        searchPage.SearchOCRSentences(grayImg);
-                        break;
-
+                {                    
                     case KeyboardCommand.OCROneLetter:
                         searchPage.SearchOCROneLetter(grayImg);
                         break;
 
                     default:
+                        searchPage.SearchOCRSentences(grayImg);
                         break;
                 }                
             }
