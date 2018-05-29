@@ -20,7 +20,7 @@
         </Storyboard>
         <Storyboard  x:Key="MenuOpen">
             <DoubleAnimation Storyboard.TargetName="splitPlane" Storyboard.TargetProperty="Width"
-                                 From="0" To="150" Duration="00:00:00.2" />
+                                 From="0" To="175" Duration="00:00:00.2" />
         </Storyboard>
 
         <Storyboard  x:Key="NoticeMe">
@@ -88,6 +88,15 @@
 
             <Grid x:Name="splitPlane" Grid.Column="0" Background="{StaticResource MoreDarkerGray}" Opacity="0.92" Width="0">
                 <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+                    
+                    <Button  HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="OnCheckForUpdateButtonClick"
+                             Background="Transparent" Padding="7,5,15,5"  BorderThickness="0">
+                        <StackPanel Orientation="Horizontal">
+                            <Path Style="{StaticResource WebIcon}" Margin="-2,0,0,0"  Stroke="Transparent" Fill="White" Width="25" Height="25" />
+                            <TextBlock Margin="12,0,0,0" Text="Check for Update" Foreground="White" VerticalAlignment="Center" FontSize="15"/>
+                        </StackPanel>
+                    </Button>
+                    
                     <Button  HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="OnHotkeysButtonClick"
                              Background="Transparent" Padding="7,5,15,5"  BorderThickness="0">
                         <StackPanel Orientation="Horizontal">
@@ -96,7 +105,7 @@
                             <usercontrols:HotkeysPopup x:Name="hotkeyPopup" />
                         </StackPanel>
                     </Button>
-                    
+
                     <Button  HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" 
                              Background="Transparent" Padding="7,5,15,5"  BorderThickness="0"
                              Click="OnFAQButtonClick">

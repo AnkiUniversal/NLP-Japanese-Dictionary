@@ -50,6 +50,11 @@ namespace NLPJapaneseDictionary.Helpers
 
         public static Color OceanBlue { get; private set; } = (Color)Application.Current.Resources["OceanBlueColor"];
 
+        public static MessageBoxResult AskUserPermission(string message, string title = "")
+        {
+           return MessageBox.Show(message, title, MessageBoxButton.YesNo, MessageBoxImage.Question);
+        }
+
         public static void ShowMessageDialog(string message, string title = "")
         {
             MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Information);

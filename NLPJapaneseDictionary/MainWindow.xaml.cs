@@ -576,7 +576,7 @@ namespace NLPJapaneseDictionary
         {
             try
             {
-                System.Diagnostics.Process.Start(@"https://github.com/AnkiUniversal/NLP-Japanese-Dictionary/wiki/Users'-FAQ");
+                System.Diagnostics.Process.Start(@"https://nlpjapanesedictionary.wordpress.com/faqs/");
             }
             catch(Exception ex)
             {
@@ -609,6 +609,34 @@ namespace NLPJapaneseDictionary
         {
             Settings settings = new Settings();
             settings.Show();
+        }
+
+        private async void OnCheckForUpdateButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (await IsNewestVersion())
+                UIUtilities.ShowMessageDialog("You're using the latest version.");
+            else
+            {
+                AskUserForAppUpdate();
+            }
+        }
+
+        private static void AskUserForAppUpdate()
+        {
+            var result = UIUtilities.AskUserPermission("A new update is available. Do you want to visit the download page?");
+            if (result == MessageBoxResult.Yes)
+                System.Diagnostics.Process.Start("http://nlpjapanesedictionary.wordpress.com");
+        }
+
+        public static async Task<bool> IsNewestVersion()
+        {
+            //All github releases have "v" prefix
+            var currentVersion = "v" + About.AppVersion.ToString();
+
+            var client = new Octokit.GitHubClient(new Octokit.ProductHeaderValue("NLP-Japanese-Dictionary"));
+            var releases = await client.Repository.Release.GetAll("AnkiUniversal", "NLP-Japanese-Dictionary");
+            var latest = releases[0];
+            return currentVersion.Equals(latest.TagName, StringComparison.OrdinalIgnoreCase);
         }
     }
 }
