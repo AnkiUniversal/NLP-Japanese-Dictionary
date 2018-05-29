@@ -18,10 +18,6 @@ More than just a simple dictionary, NLP Japanese Dictionary integrates advanced 
 
 Just extract and run **NLPJapaneseDictionary.exe** (require [.Net Framework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49981)):
 
-[Download via GitHub](https://github.com/AnkiUniversal/NLP-Japanese-Dictionary/releases/download/v1.0.0.0/NLP_Japanese_Dictionary.zip)
-
-[Download via GoolgeDrive](https://drive.google.com/open?id=1GzvVGoqs5hw5EHWCapjAgCZ2RaF2scVG)
-
 [Website](https://nlpjapanesedictionary.wordpress.com/) 
 
 # 3rd Party Open Source Projects
