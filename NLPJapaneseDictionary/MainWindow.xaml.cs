@@ -330,8 +330,8 @@ namespace NLPJapaneseDictionary
 
         private void SearchTextFromAnotherProcess(string text)
         {
-            ActivateWindow();
-            if(searchPage != null)
+            ForceWindowToFront();
+            if (searchPage != null)
                 searchPage.SearchText(text);
         }
 
@@ -390,6 +390,14 @@ namespace NLPJapaneseDictionary
                 this.WindowState = WindowState.Normal;
             }
             this.Activate();
+        }
+
+        public void ForceWindowToFront()
+        {               
+            Activate();
+            this.Topmost = true;  // important
+            this.Topmost = false; // important
+            this.Focus();         // important
         }
 
         private void OnSplitPlaneToggleClick(object sender, RoutedEventArgs e)
