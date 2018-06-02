@@ -393,11 +393,10 @@ namespace NLPJapaneseDictionary
         }
 
         public void ForceWindowToFront()
-        {               
-            Activate();
+        {
+            ActivateWindow();
             this.Topmost = true;  
-            this.Topmost = false; 
-            //this.Focus();         
+            this.Topmost = false;             
         }
 
         private void OnSplitPlaneToggleClick(object sender, RoutedEventArgs e)
