@@ -36,10 +36,10 @@ namespace NLPJapaneseDictionary.Windows
     public partial class Settings : Window
     {   
 
-        public Settings()
+        public Settings(Window mainWindow)
         {
             InitializeComponent();
-            MainWindow.SetupWindowSizeAndPosition(this);
+            MainWindow.MoveSubWindowOnMainWindow(mainWindow, this);
             InitViews();
         }
 
@@ -48,7 +48,11 @@ namespace NLPJapaneseDictionary.Windows
             katakanaReading.IsChecked = MainWindow.UserPrefs.IsShowReading;
             romajiReading.IsChecked = MainWindow.UserPrefs.IsShowPronun;
             omitCtrl.IsChecked = MainWindow.UserPrefs.IsOmitCtrl;
-            ttsSpeed.Value = MainWindow.UserPrefs.TtsSpeed;            
+            ttsSpeed.Value = MainWindow.UserPrefs.TtsSpeed;
+            enableOcrDebug.IsChecked = MainWindow.UserPrefs.IsOcrDebugMode;
+            saveOcrCheckBox.IsChecked = MainWindow.UserPrefs.IsSaveOcrImage;
+            saveOcrFolderTextBox.Text = MainWindow.UserPrefs.SaveOcrImageFolder;
+
             InitVoiceList();
         }
 
@@ -118,6 +122,39 @@ namespace NLPJapaneseDictionary.Windows
                 MainWindow.UserPrefs.IsOmitCtrl = false;
             else
                 MainWindow.UserPrefs.IsOmitCtrl = true;
+        }
+
+        private void OnOcrDebugCheckBoxClick(object sender, RoutedEventArgs e)
+        {
+            if (enableOcrDebug.IsChecked == null || enableOcrDebug.IsChecked == false)
+                MainWindow.UserPrefs.IsOcrDebugMode = false;
+            else
+                MainWindow.UserPrefs.IsOcrDebugMode = true;
+        }
+
+        private void SaveOcrCheckBoxClick(object sender, RoutedEventArgs e)
+        {
+            if (saveOcrCheckBox.IsChecked == null || saveOcrCheckBox.IsChecked == false)
+                MainWindow.UserPrefs.IsSaveOcrImage = false;
+            else
+                MainWindow.UserPrefs.IsSaveOcrImage = true;
+        }
+
+        private void OnSaveOcrFolderButtonClick(object sender, RoutedEventArgs e)
+        {
+            using (var dialog = new System.Windows.Forms.FolderBrowserDialog())
+            {
+                System.Windows.Forms.DialogResult result = dialog.ShowDialog();
+                if(result == System.Windows.Forms.DialogResult.OK)
+                {
+                    saveOcrFolderTextBox.Text = dialog.SelectedPath;            
+                }
+            }
+        }
+
+        private void OnSaveOcrFolderTextBoxTextChanged(object sender, TextChangedEventArgs e)
+        {
+            MainWindow.UserPrefs.SaveOcrImageFolder = saveOcrFolderTextBox.Text.Trim(); 
         }
     }
 }

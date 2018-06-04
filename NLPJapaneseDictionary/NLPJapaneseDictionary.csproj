@@ -244,6 +244,9 @@
     <Compile Include="Windows\SnippingTool.Designer.cs">
       <DependentUpon>SnippingTool.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\StringInputDialog.xaml.cs">
+      <DependentUpon>StringInputDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\StyleableWindow\ControlDoubleClickBehavior.cs" />
     <Compile Include="Windows\StyleableWindow\ShowSystemMenuBehavior.cs" />
     <Compile Include="Windows\StyleableWindow\SystemMenuManager.cs" />
@@ -367,6 +370,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\StringInputDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

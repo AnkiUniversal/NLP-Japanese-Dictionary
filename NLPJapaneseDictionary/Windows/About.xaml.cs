@@ -40,10 +40,10 @@ namespace NLPJapaneseDictionary.Windows
     {
         public static Version AppVersion = Assembly.GetExecutingAssembly().GetName().Version;
 
-        public About()
+        public About(Window mainWindow)
         {
             InitializeComponent();
-            MainWindow.SetupWindowSizeAndPosition(this);
+            MainWindow.MoveSubWindowOnMainWindow(mainWindow, this);
             versionText.Text = "Version: " + AppVersion.ToString();
         }
 

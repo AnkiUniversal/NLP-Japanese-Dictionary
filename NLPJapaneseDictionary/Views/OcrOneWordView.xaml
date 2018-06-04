@@ -18,7 +18,7 @@
                 HorizontalAlignment="Stretch"
                 HorizontalContentAlignment="Stretch"
                 VerticalContentAlignment="Stretch"                
-                ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                ScrollViewer.HorizontalScrollBarVisibility="Auto"
                 VirtualizingPanel.ScrollUnit="Pixel"
                 ScrollViewer.VerticalScrollBarVisibility="Disabled"
                 ItemsSource="{Binding}"                         

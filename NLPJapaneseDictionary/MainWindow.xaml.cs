@@ -50,6 +50,9 @@ namespace NLPJapaneseDictionary
 
     public partial class MainWindow : Window, IDisposable
     {
+        private const string OCR_IMAGE_SAVE_ENTRY_LIST = "EntryList.txt";
+        private const string OCR_ENTRY_SEPERATOR = "|*|";
+
         private bool isSplitPlaneOpen = false;
         private Storyboard openMenu;
         private Storyboard closeMenu;
@@ -116,6 +119,21 @@ namespace NLPJapaneseDictionary
             SizeToScreen();
             MoveIntoView();
             LoadWindowSize(window);
+        }
+
+        public static void MoveSubWindowOnMainWindow(Window mainWindow, Window subWindow)
+        {
+            subWindow.Top = mainWindow.Top;
+            subWindow.Left = mainWindow.Left;
+            subWindow.Width = mainWindow.Width;            
+            subWindow.Height = mainWindow.Height;
+        }
+
+        public static void MoveSubWindowVerticalCenter(Window mainWindow, Window subWindow)
+        {
+            subWindow.Top = mainWindow.Top + mainWindow.Height / 2 - subWindow.Height / 2;
+            subWindow.Width = mainWindow.Width - 10;
+            subWindow.Left = mainWindow.Left + 5;
         }
 
         private void RestoreUserPrefs()
@@ -231,9 +249,9 @@ namespace NLPJapaneseDictionary
                 ActivateWindow();
                 var grayImg = JorcImageConvert.BitmapToGrayImageJocr(SnippingTool.Bitmap);
                 if (searchPage == null)
-                    return;
+                    return;                
 
-                switch(currentCommand)
+                switch (currentCommand)
                 {                    
                     case KeyboardCommand.OCROneLetter:
                         searchPage.SearchOCROneLetter(grayImg);
@@ -242,7 +260,7 @@ namespace NLPJapaneseDictionary
                     default:
                         searchPage.SearchOCRSentences(grayImg);
                         break;
-                }                
+                }
             }
             catch (Exception ex)
             {
@@ -480,7 +498,39 @@ namespace NLPJapaneseDictionary
             if (showTextBoxButton.Visibility == Visibility.Collapsed)
             {
                 showTextBoxButton.Visibility = Visibility.Visible;
-                noticeMe.Begin();
+                noticeMe.Begin();                
+            }
+            SaveImageIfNeeded(SnippingTool.Bitmap);
+        }
+
+        private void SaveImageIfNeeded(System.Drawing.Bitmap bitmap)
+        {
+            try
+            {
+                if (MainWindow.UserPrefs.IsSaveOcrImage)
+                {
+                    var saveFolder = MainWindow.UserPrefs.SaveOcrImageFolder;
+                    if (!String.IsNullOrWhiteSpace(saveFolder) && Directory.Exists(saveFolder))
+                    {                        
+                        StringInputDialog dialog = new StringInputDialog(this, "Entry Name", searchPage.searchTextBox.Text);
+                        if (dialog.ShowDialog() == true)
+                        {
+                            string fileName = DateTime.UtcNow.Ticks.ToString() + ".bmp";
+                            char seperator = System.IO.Path.DirectorySeparatorChar;
+                            bitmap.Save(saveFolder + seperator + fileName, System.Drawing.Imaging.ImageFormat.Bmp);
+                            using (var writer = new StreamWriter(saveFolder + seperator + OCR_IMAGE_SAVE_ENTRY_LIST, true))
+                            {
+                                writer.WriteLine(OCR_ENTRY_SEPERATOR + fileName + OCR_ENTRY_SEPERATOR + dialog.InputText);
+                            }
+                        }
+                    }
+                    else
+                        UIUtilities.ShowErrorDialog("Please choose a valid folder path first!");
+                }
+            }
+            catch (Exception e)
+            {
+                UIUtilities.ShowErrorDialog(e.Message + "\n" + e.StackTrace);
             }
         }
 
@@ -608,13 +658,13 @@ namespace NLPJapaneseDictionary
 
         private void OnAboutButtonClick(object sender, RoutedEventArgs e)
         {
-            About about = new About();
+            About about = new About(this);
             about.Show();
         }
 
         private void OnSettingButtonClick(object sender, RoutedEventArgs e)
         {
-            Settings settings = new Settings();
+            Settings settings = new Settings(this);
             settings.Show();
         }
 

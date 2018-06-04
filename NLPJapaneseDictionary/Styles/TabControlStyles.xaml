@@ -35,15 +35,18 @@
                         <Border x:Name="Border"
                           Grid.Row="1"
                           Background="{TemplateBinding Background}"
-                          BorderThickness="0"           
-                          Padding="10"
+                          BorderThickness="0"                                     
                           BorderBrush="Transparent"      
                           KeyboardNavigation.TabNavigation="Local"
                           KeyboardNavigation.DirectionalNavigation="Contained"
                           KeyboardNavigation.TabIndex="2">
-                            <ContentPresenter x:Name="PART_SelectedContentHost"
+                            <ScrollViewer HorizontalScrollBarVisibility="Disabled" 
+                                          Padding="10"
+                                          VerticalScrollBarVisibility="Auto">
+                                <ContentPresenter x:Name="PART_SelectedContentHost"
                               Margin="0"
                               ContentSource="SelectedContent" />
+                            </ScrollViewer>
                         </Border>
                     </Grid>
                 </ControlTemplate>

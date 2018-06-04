@@ -17,6 +17,7 @@
 
 using Jocr;
 using NLPJapaneseDictionary.Helpers;
+using NLPJapaneseDictionary.Windows;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -60,7 +61,7 @@ namespace NLPJapaneseDictionary.OCR
         }
 
         public static List<TextBlock> ExtractTextFromBitmap(Bitmap bitmap)
-        {            
+        {
             var image = JorcImageConvert.BitmapToGrayImageJocr(bitmap);
             return RunOcr(image);
         }
@@ -73,12 +74,14 @@ namespace NLPJapaneseDictionary.OCR
                 if (!isValidSize)
                     return null;
                 if (runOcrHandler == null)
-                    return Jocr.Ocr.RecognizeSentences(image);
+                {
+                    if(MainWindow.UserPrefs.IsOcrDebugMode)
+                        return Jocr.Ocr.DebugRecognizeSentences(image, JorcImageConvert.ShowJocrGrayImage);
+                    else
+                        return Jocr.Ocr.RecognizeSentences(image);
+                }
                 else
-                    return runOcrHandler(image);
-
-                //Debuging purpose only
-                //return Jocr.Ocr.Start(image, JorcImageConvert.ShowJocrGrayImage);
+                    return runOcrHandler(image);                
             }
             catch (Exception e)
             {             

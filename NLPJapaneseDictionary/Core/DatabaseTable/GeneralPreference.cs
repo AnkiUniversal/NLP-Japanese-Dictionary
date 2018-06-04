@@ -43,7 +43,8 @@ namespace NLPJapaneseDictionary.Core.DatabaseTable
             TTSSpeed,
             ShowReading,
             ShowPronunication,
-            OcrEngine
+            OcrEngine,
+            OcrDebugMode
         }
 
         public const string USER_PREF = "Prefs.db";
@@ -189,6 +190,48 @@ namespace NLPJapaneseDictionary.Core.DatabaseTable
             }
         }
 
+        private bool isOcrDebugMode;
+        public bool IsOcrDebugMode
+        {
+            get { return isOcrDebugMode; }
+            set
+            {
+                if (isOcrDebugMode == value)
+                    return;
+
+                isOcrDebugMode = value;
+                isModified = true;
+            }
+        }
+
+        private bool isSaveOcrImage;
+        public bool IsSaveOcrImage
+        {
+            get { return isSaveOcrImage; }
+            set
+            {
+                if (isSaveOcrImage == value)
+                    return;
+
+                isSaveOcrImage = value;
+                isModified = true;
+            }
+        }
+
+        private string saveOcrImageFolder = "";
+        public string SaveOcrImageFolder
+        {
+            get { return saveOcrImageFolder; }
+            set
+            {
+                if (saveOcrImageFolder.Equals(value, StringComparison.Ordinal))
+                    return;
+
+                saveOcrImageFolder = value;
+                isModified = true;
+            }
+        }
+
         private double windowTop;
         public double WindowTop
         {
@@ -259,6 +302,8 @@ namespace NLPJapaneseDictionary.Core.DatabaseTable
                 isModified = true;
             }
         }
+
+
 
         static GeneralPreference()
         {
@@ -338,6 +383,9 @@ namespace NLPJapaneseDictionary.Core.DatabaseTable
             userPrefs.IsShownFirtNoitfy = false;
             userPrefs.TtsSpeed = 0;
             userPrefs.isOmitCtrl = false;
+            userPrefs.isOcrDebugMode = false;
+            userPrefs.isSaveOcrImage = false;
+            userPrefs.saveOcrImageFolder = "";
 
             userPrefs.WindowState = System.Windows.WindowState.Normal;
             userPrefs.WindowWidth = System.Windows.SystemParameters.VirtualScreenWidth/3;

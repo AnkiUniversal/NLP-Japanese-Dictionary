@@ -56,7 +56,7 @@ namespace Jocr
         /// <param name="image"></param>
         /// <param name="showImageFunction"></param>
         /// <returns></returns>
-        public static List<TextBlock> Start(GrayImage image, ShowImageHandle showImageFunction)
+        public static List<TextBlock> DebugRecognizeSentences(GrayImage image, ShowImageHandle showImageFunction)
         {
             ColorConverter.StartBinarized(image);
             var textBlocks = TextExtraction.FindTextBlocks(image);

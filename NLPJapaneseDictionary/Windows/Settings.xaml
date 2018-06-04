@@ -63,7 +63,7 @@
                               HorizontalAlignment="Stretch"
                               SelectedIndex="0">
                     </ComboBox>
-                    
+
                     <TextBlock Grid.Row="1" Grid.Column="0" FontSize="15" Text="Voice Speed" Foreground="Black" VerticalAlignment="Top"/>
                     <Slider Grid.Row="1" VerticalAlignment="Top" 
                             x:Name="ttsSpeed"
@@ -75,6 +75,57 @@
                             AutoToolTipPlacement="TopLeft" 
                             />
                 </Grid>
+            </TabItem>
+            <TabItem Header="DEV" Width="90" FontSize="18" Foreground="White" >
+                <StackPanel >
+                    <TextBlock Foreground="Red" TextWrapping="Wrap" 
+                               Text="Options For Developers Only!" 
+                               TextAlignment="Center" Margin="5" />
+                    <CheckBox IsChecked="False" Height="30" 
+                              HorizontalAlignment="Stretch"
+                              FontSize="15"
+                              VerticalContentAlignment="Center" 
+                              HorizontalContentAlignment="Left" 
+                              Content="Enable OCR Debug Mode"    
+                              x:Name="enableOcrDebug"
+                              Click="OnOcrDebugCheckBoxClick"/>
+
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <CheckBox IsChecked="False" Height="30" 
+                              FontSize="15"                
+                              Margin="0,0,10,0"
+                              HorizontalAlignment="Stretch"
+                              VerticalContentAlignment="Center" 
+                              HorizontalContentAlignment="Left" 
+                              Content="Save OCR Image"
+                              x:Name="saveOcrCheckBox"
+                              Click="SaveOcrCheckBoxClick"/>
+
+                        <TextBox Height="25"
+                             HorizontalAlignment="Stretch"
+                             x:Name="saveOcrFolderTextBox" 
+                             TextWrapping="NoWrap" 
+                             Width="150"
+                             Style="{StaticResource CustomTextBox}"                         
+                             BorderBrush="Green"
+                             Foreground="Black" 
+                             Background="Transparent"
+                             FontSize="15"
+                             CaretBrush="Green" 
+                             TextChanged="OnSaveOcrFolderTextBoxTextChanged"
+                             Margin="0,0,10,0"
+                             BorderThickness="0,0,0,2" Padding="0">
+                        </TextBox>
+                        <Button VerticalAlignment="Top"
+                                Background="Transparent"
+                                Width="25"
+                                Height="25"
+                                Content="..." 
+                                Click="OnSaveOcrFolderButtonClick"
+                                BorderThickness="1" 
+                                BorderBrush="Black" />
+                    </WrapPanel>
+                </StackPanel>
             </TabItem>
         </TabControl>
 
