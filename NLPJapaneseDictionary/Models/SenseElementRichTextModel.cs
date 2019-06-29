@@ -45,7 +45,7 @@ namespace NLPJapaneseDictionary.Models
         }
    
         public SenseElementRichTextModel(int order, string onlyForKanji, string onlyForRead, string crossReference, string antonym,
-                                string partOfSpeech, string field, string misc, string dialect, string gloss)
+                                string partOfSpeech, string field, string misc, string dialect, string gloss,string gloss_vi)
         {
             sense = new Paragraph();            
 
@@ -72,7 +72,28 @@ namespace NLPJapaneseDictionary.Models
             glossRun.Text = gloss;
             glossRun.FontSize = 20;            
             sense.Inlines.Add(glossRun);
+            if (!String.IsNullOrWhiteSpace(gloss_vi) && MainWindow.UserPrefs.IsShowVietnamese)
+            {
+                Run gloss_viBoldRun = new Run();
+                gloss_viBoldRun.Text = "\nVietnamese:\n";
+                gloss_viBoldRun.FontSize = 18;
+                gloss_viBoldRun.FontWeight = FontWeights.SemiBold;
+                sense.Inlines.Add(gloss_viBoldRun);
 
+                Run gloss_viRun = new Run();
+                int NumVi = MainWindow.UserPrefs.VietnameseLetterNumber;
+                gloss_viRun.Text = gloss_vi;
+                if (NumVi > 0 && NumVi < gloss_vi.Length)
+                {
+                    int index = gloss_vi.IndexOf(",", NumVi);
+                    if (index <= 0)
+                        index = gloss_vi.Length;
+
+                    gloss_viRun.Text = gloss_vi.Substring(0, index);
+                }
+                gloss_viRun.FontSize = 20;
+                sense.Inlines.Add(gloss_viRun);
+            }
             if (onlyForKanji != null && !String.IsNullOrWhiteSpace(onlyForKanji))
             {
                 Run onlyForKanjiRun = new Run();

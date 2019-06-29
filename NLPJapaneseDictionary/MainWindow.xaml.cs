@@ -86,7 +86,8 @@ namespace NLPJapaneseDictionary
             get
             {
                 if (exampleDictionary == null)
-                    exampleDictionary = new Database(Locations.ABS_DICT_CONVERT_PATH + "Example.db");
+                   exampleDictionary = new Database(Locations.ABS_DICT_CONVERT_PATH + "Example.db");
+          
                 return exampleDictionary;
             }
         }

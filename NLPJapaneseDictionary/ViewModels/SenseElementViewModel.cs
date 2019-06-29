@@ -57,7 +57,7 @@ namespace NLPJapaneseDictionary.ViewModels
                 GetRestrictKanjiAndRead(sense, out onlyForKanji, out onlyForRead);
 
                 senseModels.Add(new SenseElementModel(sense.Order, onlyForKanji, onlyForRead, sense.CrossReference, sense.Antonym,
-                                                      sense.PartOfSpeech, sense.Field, sense.Misc, sense.Dialect, sense.Gloss));
+                                                      sense.PartOfSpeech, sense.Field, sense.Misc, sense.Dialect, sense.Gloss,sense.Gloss_vi));
             }
             Senses = senseModels;
         }

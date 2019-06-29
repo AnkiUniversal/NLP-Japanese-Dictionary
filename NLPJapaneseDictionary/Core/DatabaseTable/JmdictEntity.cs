@@ -49,7 +49,7 @@ namespace NLPJapaneseDictionary.DatabaseTable.NLPJDictCore
         public const string POS_IADJ = " AND PartOfSpeech:adjective NOT PartOfSpeech:noun NOT PartOfSpeech:suru NOT PartOfSpeech:no NOT PartOfSpeech:na NOT PartOfSpeech:taru NOT PartOfSpeech:shiku NOT PartOfSpeech:ku";
         public const string POS_ICHIDAN = " AND PartOfSpeech:Ichidan";
         public const string POS_GODAN = " AND PartOfSpeech:Godan";
-        public const string POS_ADJ = " AND PartOfSpeech:adjective";
+        public const string POS_ADJ = " AND (PartOfSpeech:adjective OR PartOfSpeech:adjectival)";
         public const string POS_NOUN = " AND PartOfSpeech:noun";
         public const string POS_ADV = " AND PartOfSpeech:adverb";        
 

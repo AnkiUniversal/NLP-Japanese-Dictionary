@@ -167,6 +167,19 @@ namespace NLPJapaneseDictionary.Models
                 RaisePropertyChanged("Gloss");
             }
         }
+        private string gloss_vi;
+        public string Gloss_vi
+        {
+            get
+            {
+                return gloss_vi;
+            }
+            set
+            {
+                gloss_vi = value;
+                RaisePropertyChanged("Gloss_vi");
+            }
+        }
 
         public Visibility isDialgectVisible;
         public Visibility IsDialgectVisible
@@ -267,7 +280,7 @@ namespace NLPJapaneseDictionary.Models
         }
 
         public SenseElementModel(int order, string onlyForKanji, string onlyForRead, string crossReference, string antonym,
-                                string partOfSpeech, string field, string misc, string dialgect, string gloss)
+                                string partOfSpeech, string field, string misc, string dialgect, string gloss,string gloss_vi)
         {
             this.order = order;
             this.onlyForKanji = onlyForKanji;
@@ -279,6 +292,7 @@ namespace NLPJapaneseDictionary.Models
             this.misc = misc;
             this.dialgect = dialgect;
             this.gloss = gloss;
+            this.gloss_vi = gloss_vi;
 
             isDialgectVisible = dialgect != null ? Visibility.Visible : Visibility.Collapsed;
             isAntonymVisible = antonym != null ? Visibility.Visible : Visibility.Collapsed;

@@ -42,6 +42,27 @@
                               HorizontalContentAlignment="Left" 
                               Content="Omit Ctrl in hotkeys"
                               Click="OnOmitCtrlClick"/>
+
+                    <CheckBox IsChecked="True" Height="30" 
+                              FontSize="15"                              
+                              x:Name="vietnameseReading"
+                              HorizontalAlignment="Stretch"
+                              VerticalContentAlignment="Center" 
+                              HorizontalContentAlignment="Left" 
+                              Content="Show Vietnamese Means"
+                              Click="OnVietnameseReadingClick"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Label x:Name="label" FontSize="14" Content="Number of Vietnamese letters:"/>
+                        <TextBox  Height="22" Width="60" 
+                              FontSize="14"
+                              x:Name="NumLetterVi"
+                              HorizontalAlignment="Stretch"
+                              VerticalContentAlignment="Center" 
+                              HorizontalContentAlignment="Left" 
+                              KeyDown="OnNumberLetterKeydownEvent"/>
+                       
+                    </StackPanel>
+
                 </StackPanel>
             </TabItem>
             <TabItem Header="TTS" Width="90" FontSize="18" Foreground="White">
