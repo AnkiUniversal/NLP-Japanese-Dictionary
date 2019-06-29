@@ -77,7 +77,7 @@ namespace Jocr
             showImageFunction(displayImage);
         }
 
-        private static void DebugShapNormilization(GrayImage image, List<TextBlock> textBlocks, ShowImageHandle showImageFunction)
+        private static void DebugShapeNormilization(GrayImage image, List<TextBlock> textBlocks, ShowImageHandle showImageFunction)
         {
             foreach (var b in textBlocks)
             {

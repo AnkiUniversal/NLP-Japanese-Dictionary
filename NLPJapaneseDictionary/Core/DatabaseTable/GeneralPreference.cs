@@ -218,6 +218,35 @@ namespace NLPJapaneseDictionary.Core.DatabaseTable
             }
         }
 
+        private bool isShowVietnamese;
+        public bool IsShowVietnamese
+        {
+            get { return isShowVietnamese; }
+            set
+            {
+                if (isShowVietnamese == value)
+                    return;
+
+                isShowVietnamese = value;
+                isModified = true;
+            }
+        }
+
+        private int vietnameseLetterNumber;
+        public int VietnameseLetterNumber
+        {
+            get { return vietnameseLetterNumber; }
+            set
+            {
+                if (vietnameseLetterNumber == value)
+                    return;
+
+                vietnameseLetterNumber = value;
+                isModified = true;
+            }
+        }
+
+
         private string saveOcrImageFolder = "";
         public string SaveOcrImageFolder
         {
@@ -386,6 +415,8 @@ namespace NLPJapaneseDictionary.Core.DatabaseTable
             userPrefs.isOcrDebugMode = false;
             userPrefs.isSaveOcrImage = false;
             userPrefs.saveOcrImageFolder = "";
+            userPrefs.isShowVietnamese = true;
+            userPrefs.vietnameseLetterNumber = 100;
 
             userPrefs.WindowState = System.Windows.WindowState.Normal;
             userPrefs.WindowWidth = System.Windows.SystemParameters.VirtualScreenWidth/3;

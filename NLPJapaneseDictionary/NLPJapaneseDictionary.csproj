@@ -69,7 +69,7 @@
     <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -433,16 +433,8 @@
     <Content Include="Resource\DictCompiled\unknownDictionary.bin">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resource\DictConvert\Example.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resource\DictConvert\JapEngDict.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resource\DictConvert\KanjiDict.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resource\DictConvert\RomaHiraKata.db">
+    <Content Include="Resource\DictConvert\Example.db" />
+    <Content Include="Resource\DictConvert\HiraKata.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -475,9 +467,9 @@
     <Content Include="Resource\DictCompiled\userDict.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resource\DictConvert\HiraKata.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Resource\DictConvert\JapEngDict.db" />
+    <Content Include="Resource\DictConvert\KanjiDict.db" />
+    <Content Include="Resource\DictConvert\RomaHiraKata.db" />
     <Content Include="Resource\DictConvert\RomaHiraKata.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

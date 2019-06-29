@@ -56,7 +56,7 @@ namespace NLPJDictTest.NLPJDictCore
         {
             string word = "愛";
             var results = TokensDictSearcher.FindJapNonToken(word, dictionary);
-            Assert.AreEqual(171, results.Count);
+            Assert.AreEqual(175, results.Count);
 
             Assert.AreEqual(word, results[0].RepresentWord);
             Assert.AreEqual(word, results[1].RepresentWord);
@@ -97,7 +97,7 @@ namespace NLPJDictTest.NLPJDictCore
         {
             string word = "なる";
             var results = TokensDictSearcher.FindJapNonToken(word, dictionary);
-            Assert.AreEqual(17, results.Count);
+            Assert.AreEqual(19, results.Count);
 
             Assert.AreEqual("成る", results[0].RepresentWord);
             Assert.AreEqual("なる", results[3].RepresentWord);          
@@ -110,12 +110,12 @@ namespace NLPJDictTest.NLPJDictCore
 
             TokensDictSearcher.DefaultGetJapMethod = JmdictEntity.GetJapMatchVerb;
             var results = TokensDictSearcher.FindJapNonToken(word, dictionary);
-            Assert.AreEqual(45, results.Count);
+            Assert.AreEqual(46, results.Count);
             CheckIfSenseContain(results, "verb");
 
             TokensDictSearcher.DefaultGetJapMethod = JmdictEntity.GetJapMatchAdjective;            
             results = TokensDictSearcher.FindJapNonToken(word, dictionary);
-            Assert.AreEqual(20, results.Count);
+            Assert.AreEqual(13, results.Count);
             CheckIfSenseContain(results, "adjective");
 
             TokensDictSearcher.DefaultGetJapMethod = JmdictEntity.GetJapMatchAdverb;
@@ -125,7 +125,7 @@ namespace NLPJDictTest.NLPJDictCore
 
             TokensDictSearcher.DefaultGetJapMethod = JmdictEntity.GetJapMatchNoun;
             results = TokensDictSearcher.FindJapNonToken(word, dictionary);
-            Assert.AreEqual(132, results.Count);
+            Assert.AreEqual(136, results.Count);
             CheckIfSenseContain(results, "noun");
 
             TokensDictSearcher.DefaultGetJapMethod = JmdictEntity.GetJapMatchAll;
@@ -137,7 +137,7 @@ namespace NLPJDictTest.NLPJDictCore
             string word = "cry";
 
             var results = TokensDictSearcher.FindByGloss(word, dictionary);
-            Assert.AreEqual(63, results.Count);
+            Assert.AreEqual(71, results.Count);
 
             bool isFirsGlossRegion = true;            
             for (int i = 1; i < results.Count; i++)
@@ -165,16 +165,16 @@ namespace NLPJDictTest.NLPJDictCore
 
             TokensDictSearcher.DefaultGetGlossMethod = JmdictEntity.GetByGlossAll;
             var results = TokensDictSearcher.FindByGloss(word, dictionary);
-            Assert.AreEqual(63, results.Count);
+            Assert.AreEqual(71, results.Count);
 
             TokensDictSearcher.DefaultGetGlossMethod = JmdictEntity.GetByGlossVerb;
             results = TokensDictSearcher.FindByGloss(word, dictionary);
-            Assert.AreEqual(34, results.Count);
+            Assert.AreEqual(39, results.Count);
             CheckIfSenseContain(results, "verb");
 
             TokensDictSearcher.DefaultGetGlossMethod = JmdictEntity.GetByGlossAdjective;
             results = TokensDictSearcher.FindByGloss(word, dictionary);
-            Assert.AreEqual(3, results.Count);
+            Assert.AreEqual(2, results.Count);
             CheckIfSenseContain(results, "adjective");
 
             TokensDictSearcher.DefaultGetGlossMethod = JmdictEntity.GetByGlossAdverb;
@@ -184,7 +184,7 @@ namespace NLPJDictTest.NLPJDictCore
 
             TokensDictSearcher.DefaultGetGlossMethod = JmdictEntity.GetByGlossNoun;
             results = TokensDictSearcher.FindByGloss(word, dictionary);
-            Assert.AreEqual(33, results.Count);
+            Assert.AreEqual(35, results.Count);
             CheckIfSenseContain(results, "noun");
 
             TokensDictSearcher.DefaultGetGlossMethod = JmdictEntity.GetByGlossAll;
@@ -754,7 +754,7 @@ namespace NLPJDictTest.NLPJDictCore
             tokens = tokenizer.Tokenize("オレこれから用事あっから");
             words = TokensDictSearcher.ConvertTokensToWords(tokens, dictionary);
             results = TokensDictSearcher.SearchTokenWord(words[0], 0, words, dictionary);
-            Assert.AreEqual(4, results.Count);
+            Assert.AreEqual(5, results.Count);
             Assert.AreEqual("オーレ", results[0].RepresentWord);
             Assert.AreEqual("俺", results[1].RepresentWord);
         }

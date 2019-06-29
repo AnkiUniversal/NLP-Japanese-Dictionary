@@ -60,7 +60,7 @@ namespace NLPJapaneseDictionary.DatabaseTable.NLPJDictCore
             string idList = ToIdList(entries, startIndex, length);
             return dict.QueryColumn<ExampleTable>("SELECT JapaneseSentence, EnglishSentence FROM ExampleTable WHERE Id in " + idList);
         }
-
+        
         private static string ToIdList(List<ExampleTable> entries, int startIndex, int getLength)
         {
             int length = entries.Count > (startIndex + getLength) ? getLength : (entries.Count - startIndex);

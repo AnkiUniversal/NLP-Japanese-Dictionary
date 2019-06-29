@@ -37,6 +37,7 @@ namespace NLPJapaneseDictionary.Core.JmdictElements
         public string Misc { get; set; }
         public string Dialect { get; set; }
         public string Gloss { get; set; }
+        public string Gloss_vi { get; set; }
 
         public SenseElement(JObject senseElement, int order)
         {            
@@ -72,6 +73,9 @@ namespace NLPJapaneseDictionary.Core.JmdictElements
 
             if (senseElement.TryGetValue("gloss", out value))
                 Gloss = value.ToString();
+
+            if (senseElement.TryGetValue("gloss_vi", out value))
+                Gloss_vi = value.ToString();
 
             if (senseElement.TryGetValue("pos", out value))
                 PartOfSpeech = value.ToString();

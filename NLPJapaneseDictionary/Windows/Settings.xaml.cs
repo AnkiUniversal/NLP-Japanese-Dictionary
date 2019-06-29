@@ -47,12 +47,14 @@ namespace NLPJapaneseDictionary.Windows
         {
             katakanaReading.IsChecked = MainWindow.UserPrefs.IsShowReading;
             romajiReading.IsChecked = MainWindow.UserPrefs.IsShowPronun;
+
             omitCtrl.IsChecked = MainWindow.UserPrefs.IsOmitCtrl;
             ttsSpeed.Value = MainWindow.UserPrefs.TtsSpeed;
             enableOcrDebug.IsChecked = MainWindow.UserPrefs.IsOcrDebugMode;
+            vietnameseReading.IsChecked = MainWindow.UserPrefs.IsShowVietnamese;
             saveOcrCheckBox.IsChecked = MainWindow.UserPrefs.IsSaveOcrImage;
             saveOcrFolderTextBox.Text = MainWindow.UserPrefs.SaveOcrImageFolder;
-
+            NumLetterVi.Text = MainWindow.UserPrefs.VietnameseLetterNumber.ToString();
             InitVoiceList();
         }
 
@@ -155,6 +157,20 @@ namespace NLPJapaneseDictionary.Windows
         private void OnSaveOcrFolderTextBoxTextChanged(object sender, TextChangedEventArgs e)
         {
             MainWindow.UserPrefs.SaveOcrImageFolder = saveOcrFolderTextBox.Text.Trim(); 
+        }
+
+        private void OnVietnameseReadingClick(object sender, RoutedEventArgs e)
+        {
+            if (vietnameseReading.IsChecked == null || vietnameseReading.IsChecked == false)
+                MainWindow.UserPrefs.IsShowVietnamese = false;
+            else
+                MainWindow.UserPrefs.IsShowVietnamese = true;
+        }
+
+        private void OnNumberLetterKeydownEvent(object sender, KeyEventArgs e)
+        {
+            if(!String.IsNullOrWhiteSpace(NumLetterVi.Text))
+                MainWindow.UserPrefs.VietnameseLetterNumber =int.Parse(NumLetterVi.Text);
         }
     }
 }
