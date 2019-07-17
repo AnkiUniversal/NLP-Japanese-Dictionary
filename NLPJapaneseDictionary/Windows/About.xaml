@@ -23,18 +23,22 @@
                            IsDocumentEnabled="True"
                            Background="Transparent">
                 <FlowDocument TextAlignment="Center">
-                    <Paragraph >
-                        <Bold FontSize="15">Copyright (C) 2017 - 2018 Anki Universal Team</Bold>
-                        <LineBreak />
-                        <Bold>Email:</Bold> ankiuniversal@gmail.com
-                        <LineBreak />
-                        <Hyperlink NavigateUri="https://github.com/AnkiUniversal/NLP-Japanese-Dictionary" RequestNavigate="OnHyperlinkRequestNavigate">Project Page</Hyperlink>
-                        <LineBreak />
-                        <Hyperlink NavigateUri="https://github.com/AnkiUniversal/NLP-Japanese-Dictionary/LICENSE.md" RequestNavigate="OnHyperlinkRequestNavigate">Apache Licence 2.0</Hyperlink>
-                        <LineBreak/>
-                    </Paragraph>
-
-                    <Paragraph >
+                        <Paragraph>
+                            <Hyperlink NavigateUri="https://github.com/AnkiUniversal/NLP-Japanese-Dictionary" RequestNavigate="OnHyperlinkRequestNavigate">Project Page</Hyperlink>
+                            <LineBreak />
+                            <Hyperlink NavigateUri="https://github.com/AnkiUniversal/NLP-Japanese-Dictionary/LICENSE.md" RequestNavigate="OnHyperlinkRequestNavigate">Apache Licence 2.0</Hyperlink>
+                            <LineBreak />
+                            <Bold FontSize="15">Copyright (C) 2017 - 2019 Anki Universal Team</Bold>
+                            <LineBreak />
+                            <Bold>Email:</Bold> ankiuniversal@gmail.com
+                            <LineBreak />
+                            <Bold>Contributors:</Bold>
+                            <LineBreak />
+                            Lê Bình Sơn
+                            <LineBreak />
+                            Trần Minh Thông
+                        </Paragraph>
+                        <Paragraph >
                         <Bold FontSize="25">CREDITS</Bold>
                         <LineBreak />
                         Below is the list of Open Source libraries used in this application.                                    
